@@ -2,146 +2,64 @@
 
 ### Building practical AI systems for better decisions.
 
-I build **AI-powered tools, evaluation systems, workflows, and automation** across four areas:
+**Domain Expert → AI System Builder**
 
-**🤖 AI Engineering · 🎧 CS/CX Operations · 📈 Investment Analytics · ✍️ Content Automation**
+I build AI-powered tools, evaluation systems, workflows, and automation across:
 
-My focus is not just generating AI outputs. I build systems that can be:
+**🎧 CS/CX · 📈 Investment · 🤖 AI Systems · 🎬 Content**
 
 > **Structured → Tested → Evaluated → Improved → Reused**
-
----
-
-## 🚀 JoyLab
-
-**JoyLab** is my personal AI product lab.
-
-I explore how AI agents, automation, data, and domain expertise can be turned into practical systems that solve real operational problems.
-
-```text
-JoyLab
-│
-├── 🎧 CS / CX Intelligence
-│   ├── Quality Analysis
-│   ├── Agent Coaching
-│   ├── AutoQA / STT Analysis
-│   └── Adaptive Learning
-│
-├── 📈 Investment Intelligence
-│   ├── Equity Decision Engine
-│   ├── Opportunity Ranking
-│   ├── Valuation
-│   └── Market Research
-│
-├── 🤖 AI Systems
-│   ├── Agents
-│   ├── Evaluation
-│   ├── Workflow Automation
-│   └── Knowledge Systems
-│
-└── 🎬 Content Systems
-    ├── SEO / AEO
-    ├── Content Automation
-    ├── Shorts / Video
-    └── Design Automation
-```
 
 ---
 
 ## 🧩 Featured Projects
 
 ### 🎧 CS Ops Skills
-
-AI operating system for customer-service management covering quality evaluation, coaching, KPI analysis, T-NPS, VOC, STT analysis, operations planning, and reporting.
+AI operating system for customer-service management: quality evaluation, coaching, KPI, T-NPS, VOC, STT analysis, operations, and reporting.
 
 👉 [cs-ops-skills](https://github.com/ohbeopseok-ops/cs-ops-skills)
 
 ### 🧠 JoyLab CS Adaptive Learning
+Evaluation-first AI learning system using Gold datasets, prediction schemas, regression tests, and PASS/FAIL quality gates.
 
-Evaluation-first AI learning system for customer-service conversations using Gold datasets, prediction schemas, evidence-based scoring, regression tests, and PASS/FAIL quality gates.
-
-> Don't trust an AI system because the demo looks good. Build measurable evidence that it works.
+> **Evidence before confidence.**
 
 👉 [joylab-cs-adaptive-learning](https://github.com/ohbeopseok-ops/joylab-cs-adaptive-learning)
 
 ### 🔍 JoyLab SEO
-
-A reproducible workspace for:
+Reproducible content system for:
 
 **Research → Content → SEO/AEO → Testing → Publishing → Measurement**
 
 👉 [JoyLab-SEO](https://github.com/ohbeopseok-ops/JoyLab-SEO)
 
 ### 📈 JoyLab Core8 Engine
+Investment decision architecture combining valuation, EPS revisions, sustainable ROE, FCF, industry momentum, portfolio constraints, and risk gates.
 
-Investment decision architecture combining valuation, EPS revisions, sustainable ROE, free cash flow, industry momentum, portfolio constraints, and risk gates.
+🔒 **Private development — public release planned**
 
-**Status:** Active development
+---
+
+## 🚀 JoyLab
+
+**JoyLab** is my personal AI product lab — turning domain expertise into practical, testable systems.
+
+- 🎧 **CS/CX AI** — Quality · Coaching · AutoQA · Adaptive Learning
+- 📈 **Investment AI** — Valuation · Ranking · Portfolio · Risk
+- 🤖 **AI Systems** — Agents · Evaluation · Automation · Knowledge
+- 🎬 **Content AI** — SEO/AEO · Design · Video · Publishing
 
 ---
 
 ## 🧠 How I Build
 
-```text
-Problem
-   ↓
-Domain Rules
-   ↓
-Specification
-   ↓
-Gold Dataset
-   ↓
-AI / Software Engine
-   ↓
-Evaluation
-   ↓
-PASS / FAIL Gate
-   ↓
-Production
-   ↓
-Feedback Loop
-```
+**Problem → Domain Rules → Spec → Gold Dataset → Engine → Evaluation → Gate → Production → Feedback**
 
-### Evidence before confidence.
-
-Whenever possible, I prefer:
-
-- explicit schemas
-- deterministic rules
-- Gold Cases
-- regression tests
-- quality gates
-- versioned specifications
-- measurable evaluation
+I prefer explicit schemas, deterministic rules where possible, Gold Cases, regression tests, measurable evaluation, and versioned specifications.
 
 ---
 
-## 🏗️ What I'm Building Now
-
-**🎧 CS / CX** — AI-assisted quality analysis, coaching, adaptive learning, and workflow automation.
-
-**📈 Investing** — Decision engines combining fundamentals, valuation, revisions, portfolio constraints, and risk management.
-
-**🤖 AI Agents** — Reusable skills, agents, evaluation harnesses, and knowledge systems.
-
-**🎬 Content** — SEO/AEO publishing, design automation, video production, and multi-channel content workflows.
-
----
-
-## 🔬 Current Experiments
-
-- Agentic workflows
-- AI evaluation systems
-- Adaptive learning
-- AI-assisted CS operations
-- Investment decision engines
-- Content factories
-- Knowledge operating systems
-- Human × AI collaboration
-
----
-
-## 🛠️ Tools & Technologies
+## 🛠️ Tools
 
 `Python` · `TypeScript` · `React` · `Next.js` · `GitHub Actions`
 
@@ -151,21 +69,12 @@ Whenever possible, I prefer:
 
 ---
 
-## 🌱 JoyLab Principle
+## 🌱 Principle
 
 > **AI becomes valuable when intelligence is converted into a repeatable system.**
 
-I'm interested in building systems where AI doesn't just answer questions — it helps people **make better decisions, learn faster, and execute consistently.**
-
----
+**JoyLab — Build. Measure. Learn. Improve.**
 
 ### 🔗 Explore
 
-- [GitHub](https://github.com/ohbeopseok-ops)
-- [CS Ops Skills](https://github.com/ohbeopseok-ops/cs-ops-skills)
-- [CS Adaptive Learning](https://github.com/ohbeopseok-ops/joylab-cs-adaptive-learning)
-- [JoyLab SEO](https://github.com/ohbeopseok-ops/JoyLab-SEO)
-
----
-
-**JoyLab — Build. Measure. Learn. Improve.**
+[GitHub](https://github.com/ohbeopseok-ops) · [CS Ops Skills](https://github.com/ohbeopseok-ops/cs-ops-skills) · [CS Adaptive Learning](https://github.com/ohbeopseok-ops/joylab-cs-adaptive-learning) · [JoyLab SEO](https://github.com/ohbeopseok-ops/JoyLab-SEO)
