@@ -48,7 +48,17 @@ jobs:
           fi
           git config user.name "joylab-control-tower[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp reports/repository-health.json /tmp/repository-health.json
+          cp reports/repository-health.md /tmp/repository-health.md
+          git fetch origin main
+          git reset --hard origin/main
+          mkdir -p reports
+          cp /tmp/repository-health.json reports/repository-health.json
+          cp /tmp/repository-health.md reports/repository-health.md
+          if [ -z "$(git status --porcelain -- reports/repository-health.json reports/repository-health.md)" ]; then
+            echo "Generated report already matches current main."
+            exit 0
+          fi
           git add reports/repository-health.json reports/repository-health.md
           git commit -m "chore: refresh repository health registry"
-          git pull --rebase origin main
           git push
