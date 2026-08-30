@@ -58,7 +58,7 @@ def discover_repositories():
     # /user/repos includes private repositories when JOYLAB_GITHUB_TOKEN is a
     # PAT/fine-grained token with repository read access. GITHUB_TOKEN fallback
     # generally sees only the controller repository and public resources.
-    if TOKEN:
+    if PRIVATE_TOKEN:
         repos = _paginate("/user/repos?affiliation=owner&sort=full_name")
         owned = [r for r in repos if r.get("owner", {}).get("login", "").lower() == OWNER.lower()]
         if owned:
