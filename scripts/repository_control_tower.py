@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 import os
-import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -14,23 +14,33 @@ OWNER = os.environ.get("JOYLAB_GITHUB_OWNER", "ohbeopseok-ops")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 OUT_JSON = Path("control_tower/repository-health.json")
 OUT_MD = Path("GITHUB_HEALTH_REGISTRY_AUTO.md")
-
 ACTIVE_DAYS = 14
 STALE_DAYS = 60
 
 
 def api_get(path: str):
-    req = urllib.request.Request(
-        API + path,
-        headers={
-            "Accept": "application/vnd.github+json",
-            "Authorization": f"Bearer {TOKEN}",
-            "X-GitHub-Api-Version": "2022-11-28",
-            "User-Agent": "joylab-repository-control-tower-v0.1",
-        },
-    )
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "joylab-repository-control-tower-v0.1",
+    }
+    if TOKEN:
+        headers["Authorization"] = f"Bearer {TOKEN}"
+    req = urllib.request.Request(API + path, headers=headers)
     with urllib.request.urlopen(req, timeout=30) as response:
         return json.load(response)
+
+
+def discover_repos():
+    try:
+        repos = api_get("/user/repos?affiliation=owner&per_page=100&sort=updated")
+        owned = [r for r in repos if r.get("owner", {}).get("login") == OWNER]
+        return owned, "authenticated-owner-scan"
+    except urllib.error.HTTPError as exc:
+        if exc.code not in {401, 403, 404}:
+            raise
+        repos = api_get(f"/users/{OWNER}/repos?per_page=100&sort=updated")
+        return repos, "public-fallback"
 
 
 def parse_dt(value: str | None):
@@ -41,15 +51,12 @@ def parse_dt(value: str | None):
 
 def age_days(value: str | None, now: datetime):
     dt = parse_dt(value)
-    if not dt:
-        return None
-    return (now - dt).total_seconds() / 86400
+    return None if not dt else (now - dt).total_seconds() / 86400
 
 
 def latest_actions(repo: str):
     q = urllib.parse.urlencode({"per_page": 10})
     data = api_get(f"/repos/{OWNER}/{repo}/actions/runs?{q}")
-    runs = data.get("workflow_runs", [])
     return [
         {
             "id": run.get("id"),
@@ -61,7 +68,7 @@ def latest_actions(repo: str):
             "created_at": run.get("created_at"),
             "html_url": run.get("html_url"),
         }
-        for run in runs
+        for run in data.get("workflow_runs", [])
     ]
 
 
@@ -87,19 +94,16 @@ def classify(repo: dict, runs: list[dict], now: datetime):
 
 
 def main():
-    if not TOKEN:
-        print("GITHUB_TOKEN is required", file=sys.stderr)
-        return 2
-
     now = datetime.now(timezone.utc)
-    repos = api_get("/user/repos?affiliation=owner&per_page=100&sort=updated")
-    repos = [r for r in repos if r.get("owner", {}).get("login") == OWNER]
+    repos, scope_mode = discover_repos()
 
     rows = []
     for repo in sorted(repos, key=lambda x: x["name"].lower()):
-        runs = latest_actions(repo["name"])
+        try:
+            runs = latest_actions(repo["name"])
+        except urllib.error.HTTPError:
+            runs = []
         state, reason = classify(repo, runs, now)
-        latest = runs[0] if runs else None
         rows.append(
             {
                 "repository": repo["full_name"],
@@ -110,7 +114,7 @@ def main():
                 "pushed_at": repo.get("pushed_at"),
                 "state": state,
                 "reason": reason,
-                "latest_action": latest,
+                "latest_action": runs[0] if runs else None,
             }
         )
 
@@ -122,13 +126,8 @@ def main():
         "schema_version": "1.0",
         "generated_at": now.isoformat(),
         "owner": OWNER,
-        "classification": {
-            "ACTIVE_DAYS": ACTIVE_DAYS,
-            "STALE_DAYS": STALE_DAYS,
-            "failed_conclusions": [
-                "failure", "timed_out", "action_required", "startup_failure"
-            ],
-        },
+        "scope_mode": scope_mode,
+        "private_repositories_included": scope_mode == "authenticated-owner-scan",
         "counts": counts,
         "repositories": rows,
     }
@@ -140,8 +139,17 @@ def main():
         "# JoyLab Repository Control Tower V0.1",
         "",
         f"Generated: {now.isoformat()}",
+        f"Scope: **{scope_mode}**",
         "",
         "> AUTO-GENERATED. Do not manually edit this file.",
+    ]
+    if scope_mode == "public-fallback":
+        lines += [
+            "",
+            "> ⚠️ Private repositories are not included because this workflow does not have a cross-repository token. Add a repository secret named CONTROL_TOWER_TOKEN with read access to owned private repositories to enable the full scan.",
+        ]
+
+    lines += [
         "",
         "## Summary",
         "",
@@ -161,9 +169,7 @@ def main():
     order = {"BROKEN": 0, "ACTIVE": 1, "HEALTHY": 2, "STALE": 3, "EMPTY": 4, "ARCHIVE": 5}
     for row in sorted(rows, key=lambda r: (order.get(r["state"], 99), r["repository"].lower())):
         latest = row["latest_action"]
-        action = "—"
-        if latest:
-            action = f"{latest.get('name')} / {latest.get('status')} / {latest.get('conclusion') or '—'}"
+        action = "—" if not latest else f"{latest.get('name')} / {latest.get('status')} / {latest.get('conclusion') or '—'}"
         reason = str(row["reason"]).replace("|", "\\|")
         lines.append(f"| {row['repository']} | **{row['state']}** | {action} | {reason} |")
 
@@ -172,13 +178,13 @@ def main():
         "## Gate policy",
         "",
         "- BROKEN has highest remediation priority.",
-        "- A GREEN run is only current for its exact commit; stale historical GREEN does not certify newer code.",
-        "- EMPTY repositories are not given CI work until a project payload exists.",
-        "- ARCHIVE remains a governance decision; V0.1 does not archive repositories automatically.",
+        "- Historical GREEN never certifies a newer commit.",
+        "- EMPTY repositories do not receive synthetic CI work.",
+        "- V0.1 never archives or deletes repositories automatically.",
         "",
     ]
     OUT_MD.write_text("\n".join(lines), encoding="utf-8")
-    print(json.dumps(counts, ensure_ascii=False))
+    print(json.dumps({"scope_mode": scope_mode, "counts": counts}, ensure_ascii=False))
     return 0
 
 
