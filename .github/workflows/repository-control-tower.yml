@@ -4,6 +4,12 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "15 22 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "control_tower/**"
+      - ".github/workflows/repository-control-tower.yml"
 
 permissions:
   contents: write
