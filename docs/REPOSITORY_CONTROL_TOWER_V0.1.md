@@ -10,6 +10,19 @@ Continuously convert GitHub repository and Actions evidence into an auditable he
 - repository size / archived / pushed_at metadata
 - latest GitHub Actions workflow runs
 
+## Authentication modes
+
+### Full scan
+If repository secret `CONTROL_TOWER_TOKEN` is configured with read access to the owner's repositories, V0.1 scans public and private owned repositories.
+
+### Public fallback
+The repository-scoped default `GITHUB_TOKEN` cannot enumerate other private repositories. When cross-repository access is unavailable, V0.1 automatically falls back to the public owner API and records:
+
+- `scope_mode = public-fallback`
+- `private_repositories_included = false`
+
+The workflow remains GREEN and clearly marks the incomplete scope instead of pretending that private repositories were checked.
+
 ## States
 
 - `BROKEN`: latest completed Actions run has a blocking failure conclusion
@@ -26,6 +39,7 @@ Continuously convert GitHub repository and Actions evidence into an auditable he
 3. BROKEN outranks activity recency.
 4. EMPTY repos do not receive synthetic CI work.
 5. Generated evidence is committed so classification changes are reviewable in Git history.
+6. An incomplete authentication scope must be exposed, never silently treated as a full scan.
 
 ## Outputs
 
