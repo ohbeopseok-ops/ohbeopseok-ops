@@ -1,6 +1,6 @@
 # JoyLab Repository Control Tower V0.3
 
-- Generated: `2026-08-30T04:20:37.508773+00:00`
+- Generated: `2026-08-30T04:21:03.619059+00:00`
 - Owner: `ohbeopseok-ops`
 - Discovery scope: **public-only**
 - Thresholds: ACTIVE <= 14d, STALE >= 90d

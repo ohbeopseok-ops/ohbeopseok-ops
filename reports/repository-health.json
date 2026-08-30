@@ -1,6 +1,6 @@
 {
   "schema_version": "0.3",
-  "generated_at": "2026-08-30T04:20:37.508773+00:00",
+  "generated_at": "2026-08-30T04:21:03.619059+00:00",
   "owner": "ohbeopseok-ops",
   "scope": "public-only",
   "thresholds": {
@@ -174,7 +174,7 @@
       "default_branch": "main",
       "archived": false,
       "size": 26,
-      "pushed_at": "2026-08-30T04:20:31Z",
+      "pushed_at": "2026-08-30T04:20:59Z",
       "state": "ACTIVE",
       "reason": "pushed 0d ago",
       "latest_workflow": {
