@@ -1,0 +1,20 @@
+{
+  "schema_version": "repository-portfolio-governance.v0.1",
+  "priority_rules": {
+    "P0": ["BROKEN"],
+    "P1": ["ACTIVE"],
+    "P2": ["HEALTHY", "STALE", "EMPTY", "ARCHIVE"]
+  },
+  "lifecycle_rules": {
+    "ACTIVE": ["ACTIVE", "BROKEN"],
+    "MAINTENANCE": ["HEALTHY", "STALE"],
+    "ARCHIVE": ["EMPTY", "ARCHIVE"]
+  },
+  "overrides": {
+    "ohbeopseok-ops/joylab-core8-engine": {"priority": "P0", "lifecycle": "ACTIVE"},
+    "ohbeopseok-ops/joylab-agent-os": {"priority": "P0", "lifecycle": "ACTIVE"},
+    "ohbeopseok-ops/joylab-ai-voice-benchmark": {"priority": "P1", "lifecycle": "ACTIVE"},
+    "ohbeopseok-ops/joylab-money-os": {"priority": "P1", "lifecycle": "ACTIVE"},
+    "ohbeopseok-ops/joylab-html-tool": {"priority": "P1", "lifecycle": "ACTIVE"}
+  }
+}
