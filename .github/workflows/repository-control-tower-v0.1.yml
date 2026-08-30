@@ -34,7 +34,7 @@ jobs:
 
       - name: Generate repository health registry
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CONTROL_TOWER_TOKEN || secrets.GITHUB_TOKEN }}
           JOYLAB_GITHUB_OWNER: ohbeopseok-ops
         run: python scripts/repository_control_tower.py
 
