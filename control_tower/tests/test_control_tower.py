@@ -12,11 +12,7 @@ SPEC.loader.exec_module(ct)
 class ClassificationTests(unittest.TestCase):
     def setUp(self):
         self.now = dt.datetime(2026, 8, 30, tzinfo=dt.timezone.utc)
-        self.base = {
-            "archived": False,
-            "size": 10,
-            "pushed_at": "2026-08-29T00:00:00Z",
-        }
+        self.base = {"archived": False, "size": 10, "pushed_at": "2026-08-29T00:00:00Z"}
 
     def test_broken_wins_for_nonempty_repo(self):
         state, _ = ct.classify(self.base, {"name": "ci", "conclusion": "failure"}, self.now)
@@ -40,6 +36,42 @@ class ClassificationTests(unittest.TestCase):
         repo = dict(self.base, pushed_at="2026-01-01T00:00:00Z")
         state, _ = ct.classify(repo, None, self.now)
         self.assertEqual(state, "STALE")
+
+
+class IssueReconciliationTests(unittest.TestCase):
+    def row(self, repo, state):
+        return {
+            "repository": repo,
+            "state": state,
+            "reason": "latest workflow ci=failure" if state == "BROKEN" else "healthy",
+            "pushed_at": "2026-08-30T00:00:00Z",
+            "latest_workflow": {"name": "ci", "conclusion": "failure", "html_url": "https://example.test/run"},
+        }
+
+    def test_create_issue_for_new_broken_repo(self):
+        report = {"repositories": [self.row("ohbeopseok-ops/a", "BROKEN")]}
+        actions = ct.plan_issue_actions(report, [])
+        self.assertEqual(actions[0][0], "create")
+
+    def test_close_issue_after_recovery(self):
+        report = {"repositories": [self.row("ohbeopseok-ops/a", "HEALTHY")]}
+        issue = {
+            "number": 7,
+            "state": "open",
+            "body": ct.issue_marker("ohbeopseok-ops/a"),
+        }
+        actions = ct.plan_issue_actions(report, [issue])
+        self.assertEqual(actions[0][0], "close")
+
+    def test_reopen_issue_after_regression(self):
+        report = {"repositories": [self.row("ohbeopseok-ops/a", "BROKEN")]}
+        issue = {
+            "number": 7,
+            "state": "closed",
+            "body": ct.issue_marker("ohbeopseok-ops/a"),
+        }
+        actions = ct.plan_issue_actions(report, [issue])
+        self.assertEqual(actions[0][0], "reopen")
 
 
 if __name__ == "__main__":
