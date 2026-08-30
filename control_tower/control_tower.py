@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""JoyLab Repository Control Tower V0.2.
+"""JoyLab Repository Control Tower V0.3.
 
 Scans JoyLab repositories, writes health reports, and reconciles centralized
 BROKEN issues. Standard-library only.
@@ -34,7 +34,7 @@ def _request(path: str, *, token: str | None = None, method: str = "GET", data: 
     url = path if path.startswith("https://") else f"https://api.github.com{path}"
     headers = {
         "Accept": "application/vnd.github+json",
-        "User-Agent": "joylab-repository-control-tower-v0.2",
+        "User-Agent": "joylab-repository-control-tower-v0.3",
         "X-GitHub-Api-Version": "2022-11-28",
     }
     if token:
@@ -99,6 +99,59 @@ def latest_actions(repo_full_name: str):
     return None
 
 
+
+def _job_logs(repo_full_name: str, job_id: int) -> str:
+    encoded = urllib.parse.quote(repo_full_name, safe="/")
+    url = f"https://api.github.com/repos/{encoded}/actions/jobs/{job_id}/logs"
+    headers = {"User-Agent": "joylab-repository-control-tower-v0.3"}
+    if READ_TOKEN:
+        headers["Authorization"] = f"Bearer {READ_TOKEN}"
+    req = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(req, timeout=30) as response:
+        return response.read().decode("utf-8", errors="replace")
+
+
+def diagnose_failure(repo_full_name: str, run: dict | None) -> dict | None:
+    if not run or run.get("conclusion") not in FAIL_CONCLUSIONS or not run.get("id"):
+        return None
+    encoded = urllib.parse.quote(repo_full_name, safe="/")
+    data = _request(f"/repos/{encoded}/actions/runs/{run['id']}/jobs?per_page=100", token=READ_TOKEN or None)
+    failed = [j for j in data.get("jobs", []) if j.get("conclusion") == "failure"]
+    if not failed:
+        return {"failed_job": None, "failed_step": None, "root_cause": "Workflow failed but no failed job was visible.", "fix_candidate": "Inspect workflow-level configuration and permissions."}
+    job = failed[0]
+    steps = [s for s in job.get("steps", []) if s.get("conclusion") == "failure"]
+    step = steps[0].get("name") if steps else None
+    try:
+        log = _job_logs(repo_full_name, int(job["id"]))
+    except Exception as exc:
+        log = f"log unavailable: {exc}"
+    tail = "\n".join(log.splitlines()[-180:])
+    patterns = [
+        ("ModuleNotFoundError", "Python import path/package mismatch", "Align imports and PYTHONPATH/package layout; rerun collection and unit tests."),
+        ("npm ci can only install", "package-lock.json is out of sync with package.json", "Regenerate and commit the lockfile, then restore strict npm ci."),
+        ("ERESOLVE", "npm dependency resolution conflict", "Reconcile dependency versions and regenerate the lockfile."),
+        ("SyntaxError", "syntax error introduced by the current change", "Fix the reported syntax location and add a regression test."),
+        ("AssertionError", "test expectation or runtime behavior mismatch", "Inspect the first failing assertion and apply the smallest behavior/fixture correction."),
+        ("HTTP Error 403", "GitHub/API permission denied", "Adjust least-privilege token/workflow permissions for the failed API call."),
+        ("non-fast-forward", "concurrent or stale git push", "Fetch/rebase before push or serialize publishing."),
+        ("No module named", "Python module import failure", "Align import path with the installed package and pytest pythonpath."),
+    ]
+    root = "Unclassified failure; inspect the extracted error tail."
+    fix = "Use the failed job/step and log tail to create a minimal recovery change."
+    for needle, cause, candidate in patterns:
+        if needle in tail:
+            root, fix = cause, candidate
+            break
+    error_lines = [ln.strip() for ln in tail.splitlines() if any(k in ln for k in ("ERROR", "Error:", "E   ", "##[error]", "FAILED"))]
+    return {
+        "failed_job": job.get("name"),
+        "failed_step": step,
+        "root_cause": root,
+        "fix_candidate": fix,
+        "error_excerpt": error_lines[-3:],
+    }
+
 def classify(repo: dict, latest_run: dict | None, now: dt.datetime):
     if repo.get("archived"):
         return "ARCHIVE", "repository archived"
@@ -133,6 +186,7 @@ def build_report(repos: list[dict], scope: str, now: dt.datetime):
             actions_error = str(exc)
 
         state, reason = classify(repo, run, now)
+        diagnosis = diagnose_failure(full_name, run) if state == "BROKEN" else None
         counts[state] = counts.get(state, 0) + 1
         rows.append({
             "repository": full_name,
@@ -145,9 +199,10 @@ def build_report(repos: list[dict], scope: str, now: dt.datetime):
             "reason": reason,
             "latest_workflow": run,
             "actions_error": actions_error,
+            "diagnosis": diagnosis,
         })
     return {
-        "schema_version": "0.2",
+        "schema_version": "0.3",
         "generated_at": now.isoformat(),
         "owner": OWNER,
         "scope": scope,
@@ -176,7 +231,7 @@ def issue_body(row: dict) -> str:
     run_url = run.get("html_url") or "n/a"
     return "\n".join([
         issue_marker(row["repository"]),
-        "## JoyLab Repository Control Tower V0.2",
+        "## JoyLab Repository Control Tower V0.3",
         "",
         f"**Repository:** `{row['repository']}`",
         f"**State:** **BROKEN**",
@@ -184,6 +239,10 @@ def issue_body(row: dict) -> str:
         f"**Latest workflow:** {run.get('name') or 'unknown'}",
         f"**Workflow result:** {run.get('conclusion') or run.get('status') or 'unknown'}",
         f"**Workflow:** {run_url}",
+        f"**Failed job:** {(row.get('diagnosis') or {}).get('failed_job') or 'unknown'}",
+        f"**Failed step:** {(row.get('diagnosis') or {}).get('failed_step') or 'unknown'}",
+        f"**Root cause:** {(row.get('diagnosis') or {}).get('root_cause') or 'unclassified'}",
+        f"**FIX CANDIDATE:** {(row.get('diagnosis') or {}).get('fix_candidate') or 'inspect failure log'}",
         "",
         "### Recovery gate",
         "1. Identify failed job/step and root cause.",
@@ -270,7 +329,7 @@ def reconcile_broken_issues(report: dict):
 
 def render_markdown(report: dict):
     lines = [
-        "# JoyLab Repository Control Tower V0.2",
+        "# JoyLab Repository Control Tower V0.3",
         "",
         f"- Generated: `{report['generated_at']}`",
         f"- Owner: `{report['owner']}`",
