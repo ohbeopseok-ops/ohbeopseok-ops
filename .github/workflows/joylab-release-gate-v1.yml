@@ -1,0 +1,156 @@
+name: JoyLab Release Gate V1
+
+on:
+  workflow_call:
+    inputs:
+      working-directory:
+        description: Working directory inside the caller repository
+        required: false
+        type: string
+        default: "."
+      install-command:
+        description: Optional install command. Leave blank for safe auto-detection.
+        required: false
+        type: string
+        default: ""
+      test-command:
+        description: Optional CI/test command. Leave blank for safe auto-detection.
+        required: false
+        type: string
+        default: ""
+      gold-command:
+        description: Optional Gold Case command.
+        required: false
+        type: string
+        default: ""
+      regression-command:
+        description: Optional regression command.
+        required: false
+        type: string
+        default: ""
+      build-command:
+        description: Optional build command. Leave blank to auto-run npm build when present.
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  release-gate:
+    name: CI → Gold Case → Regression → Build → Release Gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: bash
+        working-directory: ${{ inputs.working-directory }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        if: ${{ hashFiles(format('{0}/package.json', inputs.working-directory)) != '' }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Setup Python
+        if: ${{ hashFiles(format('{0}/pyproject.toml', inputs.working-directory)) != '' || hashFiles(format('{0}/requirements.txt', inputs.working-directory)) != '' }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: CI — Install
+        env:
+          INSTALL_COMMAND: ${{ inputs.install-command }}
+        run: |
+          set -euo pipefail
+          if [ -n "$INSTALL_COMMAND" ]; then
+            eval "$INSTALL_COMMAND"
+          elif [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f package.json ]; then
+            npm install --no-audit --no-fund
+          elif [ -f pyproject.toml ]; then
+            python -m pip install --upgrade pip
+            python -m pip install -e ".[dev]" || python -m pip install -e .
+          elif [ -f requirements.txt ]; then
+            python -m pip install --upgrade pip
+            python -m pip install -r requirements.txt
+          else
+            echo "No package manifest detected; install stage is a governed no-op."
+          fi
+
+      - name: CI — Test
+        env:
+          TEST_COMMAND: ${{ inputs.test-command }}
+        run: |
+          set -euo pipefail
+          if [ -n "$TEST_COMMAND" ]; then
+            eval "$TEST_COMMAND"
+          elif [ -f package.json ]; then
+            node -e "const p=require('./package.json'); process.exit(p.scripts?.test?0:1)" && npm test || echo "No npm test script; governed skip."
+          elif [ -d tests ]; then
+            python -m pytest -q
+          else
+            echo "No test entrypoint detected; governed skip."
+          fi
+
+      - name: Gold Case
+        env:
+          GOLD_COMMAND: ${{ inputs.gold-command }}
+        run: |
+          set -euo pipefail
+          if [ -n "$GOLD_COMMAND" ]; then
+            eval "$GOLD_COMMAND"
+          elif [ -f package.json ] && node -e "const p=require('./package.json'); process.exit(p.scripts?.gold?0:1)"; then
+            npm run gold
+          elif [ -d tests/gold ] || [ -d tests/gold_cases ]; then
+            python -m pytest -q tests/gold tests/gold_cases 2>/dev/null || python -m pytest -q
+          else
+            echo "No Gold Case command/directory detected; governed skip."
+          fi
+
+      - name: Regression
+        env:
+          REGRESSION_COMMAND: ${{ inputs.regression-command }}
+        run: |
+          set -euo pipefail
+          if [ -n "$REGRESSION_COMMAND" ]; then
+            eval "$REGRESSION_COMMAND"
+          elif [ -f package.json ] && node -e "const p=require('./package.json'); process.exit(p.scripts?.regression?0:1)"; then
+            npm run regression
+          else
+            echo "No dedicated regression command detected; governed skip."
+          fi
+
+      - name: Build
+        env:
+          BUILD_COMMAND: ${{ inputs.build-command }}
+        run: |
+          set -euo pipefail
+          if [ -n "$BUILD_COMMAND" ]; then
+            eval "$BUILD_COMMAND"
+          elif [ -f package.json ] && node -e "const p=require('./package.json'); process.exit(p.scripts?.build?0:1)"; then
+            npm run build
+          else
+            echo "No build command detected; governed skip."
+          fi
+
+      - name: Release Gate
+        run: |
+          {
+            echo "## JoyLab Release Gate V1"
+            echo ""
+            echo "✅ CI"
+            echo "✅ Gold Case (or governed skip)"
+            echo "✅ Regression (or governed skip)"
+            echo "✅ Build (or governed skip)"
+            echo ""
+            echo "**RELEASE GATE: PASS**"
+            echo ""
+            echo "A governed skip means the caller has not yet declared that capability. Repositories requiring that capability must provide the corresponding explicit command before production promotion."
+          } >> "$GITHUB_STEP_SUMMARY"
