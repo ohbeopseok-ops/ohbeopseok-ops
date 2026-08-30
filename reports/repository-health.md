@@ -1,6 +1,6 @@
 # JoyLab Repository Control Tower V0.3
 
-- Generated: `2026-08-30T04:21:03.619059+00:00`
+- Generated: `2026-08-30T04:22:14.441472+00:00`
 - Owner: `ohbeopseok-ops`
 - Discovery scope: **public-only**
 - Thresholds: ACTIVE <= 14d, STALE >= 90d
@@ -18,26 +18,26 @@
 
 ## Repositories
 
-| Repository | State | Latest CI | Reason |
-|---|---|---|---|
-| ohbeopseok-ops/cs-ops-skills | **ACTIVE** | validate: success | pushed 0d ago |
-| ohbeopseok-ops/joylab-agent-os | **ACTIVE** | JoyLab Release Gate: success | pushed 0d ago |
-| ohbeopseok-ops/joylab-cs-adaptive-learning | **ACTIVE** | JoyLab Release Gate: success | pushed 0d ago |
-| ohbeopseok-ops/joylab-etf-intelligence | **ACTIVE** | JoyLab Release Gate: success | pushed 0d ago |
-| ohbeopseok-ops/joylab-money-os | **ACTIVE** | JoyLab Release Gate: success | pushed 0d ago |
-| ohbeopseok-ops/joylab-search-engine | **ACTIVE** | JoyLab Release Gate: success | pushed 0d ago |
-| ohbeopseok-ops/JoyLab-SEO | **ACTIVE** | JoyLab Release Gate: success | pushed 0d ago |
-| ohbeopseok-ops/ohbeopseok-ops | **ACTIVE** | Repository Control Tower V0.1: success | pushed 0d ago |
-| ohbeopseok-ops/https-github.com-uxjoseph-ppt_team_agent | **EMPTY** | none | repository size is 0 |
-| ohbeopseok-ops/meeting | **EMPTY** | none | repository size is 0 |
-| ohbeopseok-ops/codaro | **HEALTHY** | none | no current blocking signal |
-| ohbeopseok-ops/dartlab | **HEALTHY** | none | no current blocking signal |
-| ohbeopseok-ops/Hermes-Agent_One-Click_Kit | **HEALTHY** | none | no current blocking signal |
-| ohbeopseok-ops/hyperframes | **HEALTHY** | none | no current blocking signal |
-| ohbeopseok-ops/kordoc | **HEALTHY** | none | no current blocking signal |
-| ohbeopseok-ops/- | **STALE** | none | no push for 248d |
-| ohbeopseok-ops/copy-of-ai-meet | **STALE** | none | no push for 221d |
-| ohbeopseok-ops/sales-point | **STALE** | none | no push for 254d |
+| Repository | Priority | Lifecycle | State | Latest CI | Reason |
+|---|---|---|---|---|---|
+| ohbeopseok-ops/cs-ops-skills | **P1** | ACTIVE | **ACTIVE** | validate: success | pushed 0d ago |
+| ohbeopseok-ops/joylab-agent-os | **P0** | ACTIVE | **ACTIVE** | JoyLab Release Gate: success | pushed 0d ago |
+| ohbeopseok-ops/joylab-cs-adaptive-learning | **P1** | ACTIVE | **ACTIVE** | JoyLab Release Gate: success | pushed 0d ago |
+| ohbeopseok-ops/joylab-etf-intelligence | **P1** | ACTIVE | **ACTIVE** | JoyLab Release Gate: success | pushed 0d ago |
+| ohbeopseok-ops/joylab-money-os | **P1** | ACTIVE | **ACTIVE** | JoyLab Release Gate: success | pushed 0d ago |
+| ohbeopseok-ops/joylab-search-engine | **P1** | ACTIVE | **ACTIVE** | JoyLab Release Gate: success | pushed 0d ago |
+| ohbeopseok-ops/JoyLab-SEO | **P1** | ACTIVE | **ACTIVE** | JoyLab Release Gate: success | pushed 0d ago |
+| ohbeopseok-ops/ohbeopseok-ops | **P1** | ACTIVE | **ACTIVE** | Repository Control Tower V0.1: success | pushed 0d ago |
+| ohbeopseok-ops/https-github.com-uxjoseph-ppt_team_agent | **P2** | ARCHIVE | **EMPTY** | none | repository size is 0 |
+| ohbeopseok-ops/meeting | **P2** | ARCHIVE | **EMPTY** | none | repository size is 0 |
+| ohbeopseok-ops/codaro | **P2** | MAINTENANCE | **HEALTHY** | none | no current blocking signal |
+| ohbeopseok-ops/dartlab | **P2** | MAINTENANCE | **HEALTHY** | none | no current blocking signal |
+| ohbeopseok-ops/Hermes-Agent_One-Click_Kit | **P2** | MAINTENANCE | **HEALTHY** | none | no current blocking signal |
+| ohbeopseok-ops/hyperframes | **P2** | MAINTENANCE | **HEALTHY** | none | no current blocking signal |
+| ohbeopseok-ops/kordoc | **P2** | MAINTENANCE | **HEALTHY** | none | no current blocking signal |
+| ohbeopseok-ops/- | **P2** | MAINTENANCE | **STALE** | none | no push for 248d |
+| ohbeopseok-ops/copy-of-ai-meet | **P2** | MAINTENANCE | **STALE** | none | no push for 221d |
+| ohbeopseok-ops/sales-point | **P2** | MAINTENANCE | **STALE** | none | no push for 254d |
 
 ## Automation contract
 

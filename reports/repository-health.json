@@ -1,6 +1,6 @@
 {
   "schema_version": "0.3",
-  "generated_at": "2026-08-30T04:21:03.619059+00:00",
+  "generated_at": "2026-08-30T04:22:14.441472+00:00",
   "owner": "ohbeopseok-ops",
   "scope": "public-only",
   "thresholds": {
@@ -34,7 +34,11 @@
         "updated_at": "2026-08-17T12:41:15Z"
       },
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P1",
+        "lifecycle": "ACTIVE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/joylab-agent-os",
@@ -56,7 +60,11 @@
         "updated_at": "2026-08-30T02:21:31Z"
       },
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P0",
+        "lifecycle": "ACTIVE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/joylab-cs-adaptive-learning",
@@ -78,7 +86,11 @@
         "updated_at": "2026-08-30T02:20:57Z"
       },
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P1",
+        "lifecycle": "ACTIVE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/joylab-etf-intelligence",
@@ -100,7 +112,11 @@
         "updated_at": "2026-08-30T02:21:22Z"
       },
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P1",
+        "lifecycle": "ACTIVE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/joylab-money-os",
@@ -122,7 +138,11 @@
         "updated_at": "2026-08-30T02:21:46Z"
       },
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P1",
+        "lifecycle": "ACTIVE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/joylab-search-engine",
@@ -144,7 +164,11 @@
         "updated_at": "2026-08-30T02:21:18Z"
       },
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P1",
+        "lifecycle": "ACTIVE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/JoyLab-SEO",
@@ -166,7 +190,11 @@
         "updated_at": "2026-08-30T03:59:17Z"
       },
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P1",
+        "lifecycle": "ACTIVE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/ohbeopseok-ops",
@@ -174,7 +202,7 @@
       "default_branch": "main",
       "archived": false,
       "size": 26,
-      "pushed_at": "2026-08-30T04:20:59Z",
+      "pushed_at": "2026-08-30T04:22:07Z",
       "state": "ACTIVE",
       "reason": "pushed 0d ago",
       "latest_workflow": {
@@ -188,7 +216,11 @@
         "updated_at": "2026-08-30T02:47:41Z"
       },
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P1",
+        "lifecycle": "ACTIVE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/https-github.com-uxjoseph-ppt_team_agent",
@@ -201,7 +233,11 @@
       "reason": "repository size is 0",
       "latest_workflow": null,
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P2",
+        "lifecycle": "ARCHIVE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/meeting",
@@ -214,7 +250,11 @@
       "reason": "repository size is 0",
       "latest_workflow": null,
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P2",
+        "lifecycle": "ARCHIVE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/codaro",
@@ -227,7 +267,11 @@
       "reason": "no current blocking signal",
       "latest_workflow": null,
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P2",
+        "lifecycle": "MAINTENANCE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/dartlab",
@@ -240,7 +284,11 @@
       "reason": "no current blocking signal",
       "latest_workflow": null,
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P2",
+        "lifecycle": "MAINTENANCE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/Hermes-Agent_One-Click_Kit",
@@ -253,7 +301,11 @@
       "reason": "no current blocking signal",
       "latest_workflow": null,
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P2",
+        "lifecycle": "MAINTENANCE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/hyperframes",
@@ -266,7 +318,11 @@
       "reason": "no current blocking signal",
       "latest_workflow": null,
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P2",
+        "lifecycle": "MAINTENANCE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/kordoc",
@@ -279,7 +335,11 @@
       "reason": "no current blocking signal",
       "latest_workflow": null,
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P2",
+        "lifecycle": "MAINTENANCE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/-",
@@ -292,7 +352,11 @@
       "reason": "no push for 248d",
       "latest_workflow": null,
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P2",
+        "lifecycle": "MAINTENANCE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/copy-of-ai-meet",
@@ -305,7 +369,11 @@
       "reason": "no push for 221d",
       "latest_workflow": null,
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P2",
+        "lifecycle": "MAINTENANCE"
+      }
     },
     {
       "repository": "ohbeopseok-ops/sales-point",
@@ -318,7 +386,11 @@
       "reason": "no push for 254d",
       "latest_workflow": null,
       "actions_error": null,
-      "diagnosis": null
+      "diagnosis": null,
+      "governance": {
+        "priority": "P2",
+        "lifecycle": "MAINTENANCE"
+      }
     }
   ],
   "issue_reconciliation": {
