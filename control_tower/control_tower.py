@@ -173,6 +173,29 @@ def classify(repo: dict, latest_run: dict | None, now: dt.datetime):
     return "HEALTHY", "no current blocking signal"
 
 
+
+def portfolio_governance(row: dict) -> dict:
+    state = row["state"]
+    if state == "BROKEN":
+        priority, lifecycle = "P0", "ACTIVE"
+    elif state == "ACTIVE":
+        priority, lifecycle = "P1", "ACTIVE"
+    elif state in {"HEALTHY", "STALE"}:
+        priority, lifecycle = "P2", "MAINTENANCE"
+    else:
+        priority, lifecycle = "P2", "ARCHIVE"
+
+    overrides = {
+        "ohbeopseok-ops/joylab-core8-engine": ("P0", "ACTIVE"),
+        "ohbeopseok-ops/joylab-agent-os": ("P0", "ACTIVE"),
+        "ohbeopseok-ops/joylab-ai-voice-benchmark": ("P1", "ACTIVE"),
+        "ohbeopseok-ops/joylab-money-os": ("P1", "ACTIVE"),
+        "ohbeopseok-ops/joylab-html-tool": ("P1", "ACTIVE"),
+    }
+    if row["repository"] in overrides:
+        priority, lifecycle = overrides[row["repository"]]
+    return {"priority": priority, "lifecycle": lifecycle}
+
 def build_report(repos: list[dict], scope: str, now: dt.datetime):
     rows = []
     counts = {}
@@ -188,7 +211,7 @@ def build_report(repos: list[dict], scope: str, now: dt.datetime):
         state, reason = classify(repo, run, now)
         diagnosis = diagnose_failure(full_name, run) if state == "BROKEN" else None
         counts[state] = counts.get(state, 0) + 1
-        rows.append({
+        row = {
             "repository": full_name,
             "visibility": repo.get("visibility") or ("private" if repo.get("private") else "public"),
             "default_branch": repo.get("default_branch"),
@@ -200,7 +223,9 @@ def build_report(repos: list[dict], scope: str, now: dt.datetime):
             "latest_workflow": run,
             "actions_error": actions_error,
             "diagnosis": diagnosis,
-        })
+        }
+        row["governance"] = portfolio_governance(row)
+        rows.append(row)
     return {
         "schema_version": "0.3",
         "generated_at": now.isoformat(),
@@ -344,14 +369,15 @@ def render_markdown(report: dict):
     for state in ["BROKEN", "ACTIVE", "HEALTHY", "STALE", "EMPTY", "ARCHIVE"]:
         lines.append(f"| {state} | {report['counts'].get(state, 0)} |")
 
-    lines.extend(["", "## Repositories", "", "| Repository | State | Latest CI | Reason |", "|---|---|---|---|"])
+    lines.extend(["", "## Repositories", "", "| Repository | Priority | Lifecycle | State | Latest CI | Reason |", "|---|---|---|---|---|---|"])
     for row in report["repositories"]:
         run = row.get("latest_workflow")
         ci = "none"
         if run:
             ci = f"{run.get('name')}: {run.get('conclusion') or run.get('status')}"
         reason = str(row.get("reason") or "").replace("|", "\\|")
-        lines.append(f"| {row['repository']} | **{row['state']}** | {ci} | {reason} |")
+        gov = row.get("governance") or {}
+        lines.append(f"| {row['repository']} | **{gov.get('priority', 'P2')}** | {gov.get('lifecycle', 'MAINTENANCE')} | **{row['state']}** | {ci} | {reason} |")
 
     lines.extend([
         "",
