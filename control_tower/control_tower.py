@@ -15,7 +15,8 @@ import urllib.parse
 import urllib.request
 
 OWNER = os.getenv("JOYLAB_GITHUB_OWNER", "ohbeopseok-ops")
-PRIVATE_TOKEN = os.getenv("JOYLAB_GITHUB_TOKEN", "")\nTOKEN = PRIVATE_TOKEN or os.getenv("GITHUB_TOKEN", "")
+PRIVATE_TOKEN = os.getenv("JOYLAB_GITHUB_TOKEN", "")
+TOKEN = PRIVATE_TOKEN or os.getenv("GITHUB_TOKEN", "")
 OUT_DIR = pathlib.Path(os.getenv("JOYLAB_CONTROL_TOWER_OUT", "reports"))
 STALE_DAYS = int(os.getenv("JOYLAB_STALE_DAYS", "90"))
 ACTIVE_DAYS = int(os.getenv("JOYLAB_ACTIVE_DAYS", "14"))
