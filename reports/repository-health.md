@@ -1,6 +1,6 @@
-# JoyLab Repository Control Tower V0.1
+# JoyLab Repository Control Tower V0.2
 
-- Generated: `2026-08-30T03:51:21.161857+00:00`
+- Generated: `2026-08-30T03:55:03.298956+00:00`
 - Owner: `ohbeopseok-ops`
 - Discovery scope: **public-only**
 - Thresholds: ACTIVE <= 14d, STALE >= 90d
@@ -39,13 +39,9 @@
 | ohbeopseok-ops/copy-of-ai-meet | **STALE** | none | no push for 221d |
 | ohbeopseok-ops/sales-point | **STALE** | none | no push for 254d |
 
-## State contract
+## Automation contract
 
-- **BROKEN**: latest visible Actions run ended in failure/cancel/timeout/action-required.
-- **ACTIVE**: repository was pushed within the active window and has no visible blocker.
-- **HEALTHY**: no blocking signal and repository is between active/stale windows.
-- **STALE**: no push for the stale threshold.
-- **EMPTY**: repository size is zero.
-- **ARCHIVE**: GitHub repository is archived.
-
-> Private-repository coverage requires the `JOYLAB_GITHUB_TOKEN` Actions secret with read access to those repositories. Without it the report explicitly declares `public-only` scope.
+- **BROKEN** creates or refreshes one centralized managed issue per repository.
+- Recovery automatically closes the managed issue.
+- If a previously closed managed issue becomes BROKEN again, it reopens.
+- Private coverage requires the `JOYLAB_GITHUB_TOKEN` repository secret.

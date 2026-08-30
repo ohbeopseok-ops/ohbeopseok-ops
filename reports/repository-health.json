@@ -1,6 +1,6 @@
 {
-  "schema_version": "0.1",
-  "generated_at": "2026-08-30T03:51:21.161857+00:00",
+  "schema_version": "0.2",
+  "generated_at": "2026-08-30T03:55:03.298956+00:00",
   "owner": "ohbeopseok-ops",
   "scope": "public-only",
   "thresholds": {
@@ -146,7 +146,7 @@
       "default_branch": "main",
       "archived": false,
       "size": 4,
-      "pushed_at": "2026-08-30T02:20:18Z",
+      "pushed_at": "2026-08-30T03:54:33Z",
       "state": "ACTIVE",
       "reason": "pushed 0d ago",
       "latest_workflow": {
@@ -167,7 +167,7 @@
       "default_branch": "main",
       "archived": false,
       "size": 26,
-      "pushed_at": "2026-08-30T03:51:13Z",
+      "pushed_at": "2026-08-30T03:54:55Z",
       "state": "ACTIVE",
       "reason": "pushed 0d ago",
       "latest_workflow": {
@@ -302,5 +302,9 @@
       "latest_workflow": null,
       "actions_error": null
     }
-  ]
+  ],
+  "issue_reconciliation": {
+    "mode": "enabled",
+    "actions": []
+  }
 }
