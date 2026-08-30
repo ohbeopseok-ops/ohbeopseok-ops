@@ -37,6 +37,7 @@ jobs:
         env:
           JOYLAB_GITHUB_OWNER: ohbeopseok-ops
           JOYLAB_GITHUB_TOKEN: ${{ secrets.JOYLAB_GITHUB_TOKEN }}
+          JOYLAB_REPAIR_TOKEN: ${{ secrets.JOYLAB_REPAIR_TOKEN }}
           GITHUB_TOKEN: ${{ github.token }}
         run: python control_tower/control_tower.py
 
