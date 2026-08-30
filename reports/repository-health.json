@@ -1,0 +1,306 @@
+{
+  "schema_version": "0.1",
+  "generated_at": "2026-08-30T03:51:21.161857+00:00",
+  "owner": "ohbeopseok-ops",
+  "scope": "public-only",
+  "thresholds": {
+    "active_days": 14,
+    "stale_days": 90
+  },
+  "counts": {
+    "ACTIVE": 8,
+    "EMPTY": 2,
+    "HEALTHY": 5,
+    "STALE": 3
+  },
+  "repositories": [
+    {
+      "repository": "ohbeopseok-ops/cs-ops-skills",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 912,
+      "pushed_at": "2026-08-29T22:10:40Z",
+      "state": "ACTIVE",
+      "reason": "pushed 0d ago",
+      "latest_workflow": {
+        "id": 32031083393,
+        "name": "validate",
+        "status": "completed",
+        "conclusion": "success",
+        "event": "push",
+        "head_sha": "34aef71796676fd0bcae97ee3841df25d91da1e0",
+        "html_url": "https://github.com/ohbeopseok-ops/cs-ops-skills/actions/runs/32031083393",
+        "updated_at": "2026-08-17T12:41:15Z"
+      },
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-agent-os",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 171,
+      "pushed_at": "2026-08-30T02:21:12Z",
+      "state": "ACTIVE",
+      "reason": "pushed 0d ago",
+      "latest_workflow": {
+        "id": 33287785585,
+        "name": "JoyLab Release Gate",
+        "status": "completed",
+        "conclusion": "success",
+        "event": "push",
+        "head_sha": "44bfd9c73a0b0be67c3a28eeed477e48f6a8ccd9",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-agent-os/actions/runs/33287785585",
+        "updated_at": "2026-08-30T02:21:31Z"
+      },
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-cs-adaptive-learning",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 51,
+      "pushed_at": "2026-08-30T02:20:43Z",
+      "state": "ACTIVE",
+      "reason": "pushed 0d ago",
+      "latest_workflow": {
+        "id": 33287768685,
+        "name": "JoyLab Release Gate",
+        "status": "completed",
+        "conclusion": "success",
+        "event": "push",
+        "head_sha": "f861c32c1971f6eea6d38278c55c783c207e4491",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-cs-adaptive-learning/actions/runs/33287768685",
+        "updated_at": "2026-08-30T02:20:57Z"
+      },
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-etf-intelligence",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 247,
+      "pushed_at": "2026-08-30T02:21:02Z",
+      "state": "ACTIVE",
+      "reason": "pushed 0d ago",
+      "latest_workflow": {
+        "id": 33287779828,
+        "name": "JoyLab Release Gate",
+        "status": "completed",
+        "conclusion": "success",
+        "event": "push",
+        "head_sha": "8a4aaa8e6660fa6b832278cb36dcc9f4b420b11f",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-etf-intelligence/actions/runs/33287779828",
+        "updated_at": "2026-08-30T02:21:22Z"
+      },
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-money-os",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 43,
+      "pushed_at": "2026-08-30T02:21:16Z",
+      "state": "ACTIVE",
+      "reason": "pushed 0d ago",
+      "latest_workflow": {
+        "id": 33287788168,
+        "name": "JoyLab Release Gate",
+        "status": "completed",
+        "conclusion": "success",
+        "event": "push",
+        "head_sha": "f2cc7048f67b4ed16ff0bf20103a15201762430b",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-money-os/actions/runs/33287788168",
+        "updated_at": "2026-08-30T02:21:46Z"
+      },
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-search-engine",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 21,
+      "pushed_at": "2026-08-30T02:21:05Z",
+      "state": "ACTIVE",
+      "reason": "pushed 0d ago",
+      "latest_workflow": {
+        "id": 33287781788,
+        "name": "JoyLab Release Gate",
+        "status": "completed",
+        "conclusion": "success",
+        "event": "push",
+        "head_sha": "ebcf207b51fd284b7fd66ffbf13a22babb111ec4",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-search-engine/actions/runs/33287781788",
+        "updated_at": "2026-08-30T02:21:18Z"
+      },
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/JoyLab-SEO",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 4,
+      "pushed_at": "2026-08-30T02:20:18Z",
+      "state": "ACTIVE",
+      "reason": "pushed 0d ago",
+      "latest_workflow": {
+        "id": 33287750547,
+        "name": "JoyLab Release Gate",
+        "status": "completed",
+        "conclusion": "success",
+        "event": "push",
+        "head_sha": "a6f169e92ddad17998538399cec86255ae31a90a",
+        "html_url": "https://github.com/ohbeopseok-ops/JoyLab-SEO/actions/runs/33287750547",
+        "updated_at": "2026-08-30T02:20:28Z"
+      },
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/ohbeopseok-ops",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 26,
+      "pushed_at": "2026-08-30T03:51:13Z",
+      "state": "ACTIVE",
+      "reason": "pushed 0d ago",
+      "latest_workflow": {
+        "id": 33288799919,
+        "name": "Repository Control Tower V0.1",
+        "status": "completed",
+        "conclusion": "success",
+        "event": "push",
+        "head_sha": "3aebdcdca0af755d1c1c1a968260741919b8e0ba",
+        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/33288799919",
+        "updated_at": "2026-08-30T02:47:41Z"
+      },
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/https-github.com-uxjoseph-ppt_team_agent",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 0,
+      "pushed_at": "2025-12-24T15:17:34Z",
+      "state": "EMPTY",
+      "reason": "repository size is 0",
+      "latest_workflow": null,
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/meeting",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 0,
+      "pushed_at": "2025-12-15T10:40:49Z",
+      "state": "EMPTY",
+      "reason": "repository size is 0",
+      "latest_workflow": null,
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/codaro",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 47203,
+      "pushed_at": "2026-06-10T04:10:37Z",
+      "state": "HEALTHY",
+      "reason": "no current blocking signal",
+      "latest_workflow": null,
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/dartlab",
+      "visibility": "public",
+      "default_branch": "master",
+      "archived": false,
+      "size": 502273,
+      "pushed_at": "2026-06-11T08:02:13Z",
+      "state": "HEALTHY",
+      "reason": "no current blocking signal",
+      "latest_workflow": null,
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/Hermes-Agent_One-Click_Kit",
+      "visibility": "public",
+      "default_branch": "init-kit",
+      "archived": false,
+      "size": 216,
+      "pushed_at": "2026-06-11T22:40:58Z",
+      "state": "HEALTHY",
+      "reason": "no current blocking signal",
+      "latest_workflow": null,
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/hyperframes",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 359095,
+      "pushed_at": "2026-06-11T09:26:29Z",
+      "state": "HEALTHY",
+      "reason": "no current blocking signal",
+      "latest_workflow": null,
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/kordoc",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 8260,
+      "pushed_at": "2026-06-11T04:53:39Z",
+      "state": "HEALTHY",
+      "reason": "no current blocking signal",
+      "latest_workflow": null,
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/-",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 4,
+      "pushed_at": "2025-12-24T08:34:07Z",
+      "state": "STALE",
+      "reason": "no push for 248d",
+      "latest_workflow": null,
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/copy-of-ai-meet",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 9,
+      "pushed_at": "2026-01-21T01:50:18Z",
+      "state": "STALE",
+      "reason": "no push for 221d",
+      "latest_workflow": null,
+      "actions_error": null
+    },
+    {
+      "repository": "ohbeopseok-ops/sales-point",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 26,
+      "pushed_at": "2025-12-18T08:33:45Z",
+      "state": "STALE",
+      "reason": "no push for 254d",
+      "latest_workflow": null,
+      "actions_error": null
+    }
+  ]
+}
