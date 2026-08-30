@@ -76,3 +76,10 @@ class IssueReconciliationTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class FailureDiagnosisTests(unittest.TestCase):
+    def test_fix_candidate_pattern_contract(self):
+        self.assertIn(("ModuleNotFoundError", "Python import path/package mismatch", "Align imports and PYTHONPATH/package layout; rerun collection and unit tests."), [
+            ("ModuleNotFoundError", "Python import path/package mismatch", "Align imports and PYTHONPATH/package layout; rerun collection and unit tests.")
+        ])
