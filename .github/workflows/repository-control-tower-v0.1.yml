@@ -1,0 +1,54 @@
+name: Repository Control Tower V0.1
+
+on:
+  schedule:
+    - cron: "17 22 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/repository_control_tower.py"
+      - ".github/workflows/repository-control-tower-v0.1.yml"
+
+permissions:
+  contents: write
+  actions: read
+  pull-requests: read
+
+concurrency:
+  group: repository-control-tower-v0.1
+  cancel-in-progress: true
+
+jobs:
+  health-registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate repository health registry
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JOYLAB_GITHUB_OWNER: ohbeopseok-ops
+        run: python scripts/repository_control_tower.py
+
+      - name: Validate generated JSON
+        run: python -m json.tool control_tower/repository-health.json > /dev/null
+
+      - name: Commit registry changes
+        run: |
+          if git diff --quiet -- GITHUB_HEALTH_REGISTRY_AUTO.md control_tower/repository-health.json; then
+            echo "No health-state changes."
+            exit 0
+          fi
+          git config user.name "JoyLab Control Tower"
+          git config user.email "actions@users.noreply.github.com"
+          git add GITHUB_HEALTH_REGISTRY_AUTO.md control_tower/repository-health.json
+          git commit -m "chore(control-tower): refresh repository health"
+          git push
