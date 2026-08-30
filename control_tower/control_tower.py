@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""JoyLab Repository Control Tower V0.3.
+"""JoyLab Repository Control Tower V0.4.
 
 Scans JoyLab repositories, writes health reports, and reconciles centralized
 BROKEN issues. Standard-library only.
@@ -18,6 +18,7 @@ OWNER = os.getenv("JOYLAB_GITHUB_OWNER", "ohbeopseok-ops")
 PRIVATE_TOKEN = os.getenv("JOYLAB_GITHUB_TOKEN", "")
 WRITE_TOKEN = os.getenv("GITHUB_TOKEN", "")
 READ_TOKEN = PRIVATE_TOKEN or WRITE_TOKEN
+REPAIR_TOKEN = os.getenv("JOYLAB_REPAIR_TOKEN", "")
 CONTROLLER_REPO = os.getenv("JOYLAB_CONTROLLER_REPO") or os.getenv("GITHUB_REPOSITORY", f"{OWNER}/{OWNER}")
 OUT_DIR = pathlib.Path(os.getenv("JOYLAB_CONTROL_TOWER_OUT", "reports"))
 STALE_DAYS = int(os.getenv("JOYLAB_STALE_DAYS", "90"))
@@ -34,7 +35,7 @@ def _request(path: str, *, token: str | None = None, method: str = "GET", data: 
     url = path if path.startswith("https://") else f"https://api.github.com{path}"
     headers = {
         "Accept": "application/vnd.github+json",
-        "User-Agent": "joylab-repository-control-tower-v0.3",
+        "User-Agent": "joylab-repository-control-tower-v0.4",
         "X-GitHub-Api-Version": "2022-11-28",
     }
     if token:
@@ -103,7 +104,7 @@ def latest_actions(repo_full_name: str):
 def _job_logs(repo_full_name: str, job_id: int) -> str:
     encoded = urllib.parse.quote(repo_full_name, safe="/")
     url = f"https://api.github.com/repos/{encoded}/actions/jobs/{job_id}/logs"
-    headers = {"User-Agent": "joylab-repository-control-tower-v0.3"}
+    headers = {"User-Agent": "joylab-repository-control-tower-v0.4"}
     if READ_TOKEN:
         headers["Authorization"] = f"Bearer {READ_TOKEN}"
     req = urllib.request.Request(url, headers=headers)
@@ -196,6 +197,149 @@ def portfolio_governance(row: dict) -> dict:
         priority, lifecycle = overrides[row["repository"]]
     return {"priority": priority, "lifecycle": lifecycle}
 
+
+def release_readiness_score(row: dict, now: dt.datetime) -> dict:
+    run = row.get("latest_workflow") or {}
+    state = row.get("state")
+    ci = 0 if state == "BROKEN" else (30 if run.get("conclusion") == "success" else 10)
+    validation = 0 if state == "BROKEN" else (25 if run.get("name") == "JoyLab Release Gate" and run.get("conclusion") == "success" else 15)
+    pushed = row.get("pushed_at")
+    freshness = 5
+    if pushed:
+        pushed_at = dt.datetime.fromisoformat(pushed.replace("Z", "+00:00"))
+        age = max(0, (now - pushed_at).days)
+        freshness = 15 if age <= 14 else (10 if age <= 45 else (5 if age <= 90 else 0))
+    security_dependency = 0 if row.get("actions_error") else 5
+    docs_release = 0 if row.get("size") in (None, 0) else 7
+    broken_debt = 0 if state == "BROKEN" else 10
+    score = ci + validation + freshness + security_dependency + docs_release + broken_debt
+    label = "READY" if score >= 90 else ("WATCH" if score >= 75 else "BLOCKED")
+    return {
+        "score": score,
+        "label": label,
+        "components": {
+            "ci": ci,
+            "validation": validation,
+            "freshness": freshness,
+            "security_dependency": security_dependency,
+            "docs_release": docs_release,
+            "broken_debt": broken_debt,
+        },
+    }
+
+
+def governance_sla(governance: dict, state: str) -> dict:
+    priority = governance.get("priority", "P2")
+    if state != "BROKEN":
+        return {"breach": False, "target_hours": None}
+    target = {"P0": 4, "P1": 24, "P2": 72}.get(priority, 72)
+    return {"breach": True, "target_hours": target}
+
+
+def repair_proposal(row: dict) -> dict | None:
+    if row.get("state") != "BROKEN" or not row.get("diagnosis"):
+        return None
+    run = row.get("latest_workflow") or {}
+    run_id = run.get("id") or "unknown"
+    repo_slug = row["repository"].split("/")[-1].replace("_", "-").lower()
+    return {
+        "mode": "semi-autonomous",
+        "branch": f"recovery/ct-{run_id}-{repo_slug}"[:120],
+        "draft_pr": True,
+        "auto_merge_allowed": False,
+        "root_cause": row["diagnosis"].get("root_cause"),
+        "fix_candidate": row["diagnosis"].get("fix_candidate"),
+    }
+
+
+def _repair_request(path: str, *, method: str = "GET", data: dict | None = None):
+    if not REPAIR_TOKEN:
+        raise RuntimeError("JOYLAB_REPAIR_TOKEN is not configured")
+    return _request(path, token=REPAIR_TOKEN, method=method, data=data)
+
+
+def open_recovery_pr(row: dict) -> dict:
+    """Create an idempotent draft recovery PR containing the diagnostic artifact.
+
+    V0.4 deliberately never merges. The generated PR is a controlled handoff
+    point for an agent/human to apply the smallest code patch and let CI decide.
+    """
+    proposal = repair_proposal(row)
+    if proposal is None:
+        return {"mode": "not-applicable"}
+    if not REPAIR_TOKEN:
+        return {"mode": "disabled", "reason": "JOYLAB_REPAIR_TOKEN unavailable", "proposal": proposal}
+
+    import base64
+
+    repo = row["repository"]
+    encoded_repo = urllib.parse.quote(repo, safe="/")
+    default_branch = row.get("default_branch") or "main"
+    ref = _repair_request(f"/repos/{encoded_repo}/git/ref/heads/{urllib.parse.quote(default_branch, safe='')}")
+    base_sha = ref["object"]["sha"]
+    branch = proposal["branch"]
+
+    try:
+        _repair_request(
+            f"/repos/{encoded_repo}/git/refs",
+            method="POST",
+            data={"ref": f"refs/heads/{branch}", "sha": base_sha},
+        )
+    except urllib.error.HTTPError as exc:
+        if exc.code != 422:
+            raise
+
+    artifact = {
+        "schema_version": "control-tower.recovery.v0.4",
+        "repository": repo,
+        "source_run": row.get("latest_workflow"),
+        "diagnosis": row.get("diagnosis"),
+        "proposal": proposal,
+    }
+    artifact_path = f".joylab/recovery/{(row.get('latest_workflow') or {}).get('id', 'unknown')}.json"
+    content = base64.b64encode((json.dumps(artifact, ensure_ascii=False, indent=2) + "\n").encode("utf-8")).decode("ascii")
+    try:
+        _repair_request(
+            f"/repos/{encoded_repo}/contents/{urllib.parse.quote(artifact_path, safe='/')}",
+            method="PUT",
+            data={
+                "message": "chore: add Control Tower recovery candidate",
+                "content": content,
+                "branch": branch,
+            },
+        )
+    except urllib.error.HTTPError as exc:
+        if exc.code != 422:
+            raise
+
+    owner = repo.split("/", 1)[0]
+    pulls = _repair_request(
+        f"/repos/{encoded_repo}/pulls?state=open&head={urllib.parse.quote(owner + ':' + branch)}"
+    )
+    if pulls:
+        return {"mode": "existing", "pull_number": pulls[0]["number"], "proposal": proposal}
+
+    pr = _repair_request(
+        f"/repos/{encoded_repo}/pulls",
+        method="POST",
+        data={
+            "title": f"recovery: {row['diagnosis'].get('root_cause') or 'CI failure'}",
+            "head": branch,
+            "base": default_branch,
+            "draft": True,
+            "body": (
+                "Generated by JoyLab Repository Control Tower V0.4.\n\n"
+                f"**Failed job:** {row['diagnosis'].get('failed_job')}\n"
+                f"**Failed step:** {row['diagnosis'].get('failed_step')}\n"
+                f"**Root cause:** {row['diagnosis'].get('root_cause')}\n"
+                f"**FIX CANDIDATE:** {row['diagnosis'].get('fix_candidate')}\n\n"
+                "**Hard rule:** automatic merge is disabled. Apply the minimal repair and require CI GREEN."
+            ),
+        },
+    )
+    return {"mode": "created", "pull_number": pr.get("number"), "proposal": proposal}
+
+
 def build_report(repos: list[dict], scope: str, now: dt.datetime):
     rows = []
     counts = {}
@@ -225,9 +369,12 @@ def build_report(repos: list[dict], scope: str, now: dt.datetime):
             "diagnosis": diagnosis,
         }
         row["governance"] = portfolio_governance(row)
+        row["readiness"] = release_readiness_score(row, now)
+        row["sla"] = governance_sla(row["governance"], state)
+        row["repair_proposal"] = repair_proposal(row)
         rows.append(row)
     return {
-        "schema_version": "0.3",
+        "schema_version": "0.4",
         "generated_at": now.isoformat(),
         "owner": OWNER,
         "scope": scope,
@@ -256,7 +403,7 @@ def issue_body(row: dict) -> str:
     run_url = run.get("html_url") or "n/a"
     return "\n".join([
         issue_marker(row["repository"]),
-        "## JoyLab Repository Control Tower V0.3",
+        "## JoyLab Repository Control Tower V0.4",
         "",
         f"**Repository:** `{row['repository']}`",
         f"**State:** **BROKEN**",
@@ -369,7 +516,7 @@ def render_markdown(report: dict):
     for state in ["BROKEN", "ACTIVE", "HEALTHY", "STALE", "EMPTY", "ARCHIVE"]:
         lines.append(f"| {state} | {report['counts'].get(state, 0)} |")
 
-    lines.extend(["", "## Repositories", "", "| Repository | Priority | Lifecycle | State | Latest CI | Reason |", "|---|---|---|---|---|---|"])
+    lines.extend(["", "## Repositories", "", "| Repository | Priority | Lifecycle | Readiness | State | Latest CI | Reason |", "|---|---|---|---|---|---|---|"])
     for row in report["repositories"]:
         run = row.get("latest_workflow")
         ci = "none"
@@ -377,7 +524,8 @@ def render_markdown(report: dict):
             ci = f"{run.get('name')}: {run.get('conclusion') or run.get('status')}"
         reason = str(row.get("reason") or "").replace("|", "\\|")
         gov = row.get("governance") or {}
-        lines.append(f"| {row['repository']} | **{gov.get('priority', 'P2')}** | {gov.get('lifecycle', 'MAINTENANCE')} | **{row['state']}** | {ci} | {reason} |")
+        ready = row.get("readiness") or {}
+        lines.append(f"| {row['repository']} | **{gov.get('priority', 'P2')}** | {gov.get('lifecycle', 'MAINTENANCE')} | {ready.get('score', 0)} {ready.get('label', 'BLOCKED')} | **{row['state']}** | {ci} | {reason} |")
 
     lines.extend([
         "",
@@ -397,7 +545,12 @@ def main():
     repos, scope = discover_repositories()
     report = build_report(repos, scope, now)
     issue_result = reconcile_broken_issues(report)
+    repair_results = []
+    for row in report["repositories"]:
+        if row.get("state") == "BROKEN":
+            repair_results.append({"repository": row["repository"], **open_recovery_pr(row)})
     report["issue_reconciliation"] = issue_result
+    report["repair_reconciliation"] = repair_results
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     (OUT_DIR / "repository-health.json").write_text(
@@ -408,6 +561,7 @@ def main():
         "scope": scope,
         "counts": report["counts"],
         "issue_actions": issue_result.get("actions", []),
+        "repair_actions": repair_results,
     }, ensure_ascii=False))
 
 

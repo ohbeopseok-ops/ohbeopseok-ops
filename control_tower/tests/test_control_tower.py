@@ -83,3 +83,33 @@ class FailureDiagnosisTests(unittest.TestCase):
         self.assertIn(("ModuleNotFoundError", "Python import path/package mismatch", "Align imports and PYTHONPATH/package layout; rerun collection and unit tests."), [
             ("ModuleNotFoundError", "Python import path/package mismatch", "Align imports and PYTHONPATH/package layout; rerun collection and unit tests.")
         ])
+
+
+class GovernanceV04Tests(unittest.TestCase):
+    def test_broken_p0_has_four_hour_sla(self):
+        self.assertEqual(ct.governance_sla({"priority": "P0"}, "BROKEN"), {"breach": True, "target_hours": 4})
+
+    def test_repair_proposal_never_allows_auto_merge(self):
+        row = {
+            "repository": "ohbeopseok-ops/demo",
+            "state": "BROKEN",
+            "diagnosis": {"root_cause": "Python import path/package mismatch", "fix_candidate": "fix import"},
+            "latest_workflow": {"id": 123},
+        }
+        proposal = ct.repair_proposal(row)
+        self.assertIsNotNone(proposal)
+        self.assertTrue(proposal["draft_pr"])
+        self.assertFalse(proposal["auto_merge_allowed"])
+
+    def test_readiness_broken_is_blocked(self):
+        now = dt.datetime(2026, 8, 30, tzinfo=dt.timezone.utc)
+        row = {
+            "state": "BROKEN",
+            "latest_workflow": {"name": "test", "conclusion": "failure"},
+            "pushed_at": "2026-08-30T00:00:00Z",
+            "actions_error": None,
+            "size": 10,
+        }
+        result = ct.release_readiness_score(row, now)
+        self.assertEqual(result["label"], "BLOCKED")
+        self.assertLess(result["score"], 75)
