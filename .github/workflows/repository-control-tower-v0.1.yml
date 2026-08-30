@@ -43,7 +43,8 @@ jobs:
 
       - name: Commit registry changes
         run: |
-          if git diff --quiet -- GITHUB_HEALTH_REGISTRY_AUTO.md control_tower/repository-health.json; then
+          CHANGES="$(git status --porcelain -- GITHUB_HEALTH_REGISTRY_AUTO.md control_tower/repository-health.json)"
+          if [ -z "$CHANGES" ]; then
             echo "No health-state changes."
             exit 0
           fi
