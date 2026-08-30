@@ -1,6 +1,6 @@
 {
-  "schema_version": "0.3",
-  "generated_at": "2026-08-30T04:22:14.441472+00:00",
+  "schema_version": "0.4",
+  "generated_at": "2026-08-30T04:31:29.771839+00:00",
   "owner": "ohbeopseok-ops",
   "scope": "public-only",
   "thresholds": {
@@ -38,7 +38,24 @@
       "governance": {
         "priority": "P1",
         "lifecycle": "ACTIVE"
-      }
+      },
+      "readiness": {
+        "score": 82,
+        "label": "WATCH",
+        "components": {
+          "ci": 30,
+          "validation": 15,
+          "freshness": 15,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/joylab-agent-os",
@@ -64,7 +81,24 @@
       "governance": {
         "priority": "P0",
         "lifecycle": "ACTIVE"
-      }
+      },
+      "readiness": {
+        "score": 92,
+        "label": "READY",
+        "components": {
+          "ci": 30,
+          "validation": 25,
+          "freshness": 15,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/joylab-cs-adaptive-learning",
@@ -90,7 +124,24 @@
       "governance": {
         "priority": "P1",
         "lifecycle": "ACTIVE"
-      }
+      },
+      "readiness": {
+        "score": 92,
+        "label": "READY",
+        "components": {
+          "ci": 30,
+          "validation": 25,
+          "freshness": 15,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/joylab-etf-intelligence",
@@ -116,7 +167,24 @@
       "governance": {
         "priority": "P1",
         "lifecycle": "ACTIVE"
-      }
+      },
+      "readiness": {
+        "score": 92,
+        "label": "READY",
+        "components": {
+          "ci": 30,
+          "validation": 25,
+          "freshness": 15,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/joylab-money-os",
@@ -142,7 +210,24 @@
       "governance": {
         "priority": "P1",
         "lifecycle": "ACTIVE"
-      }
+      },
+      "readiness": {
+        "score": 92,
+        "label": "READY",
+        "components": {
+          "ci": 30,
+          "validation": 25,
+          "freshness": 15,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/joylab-search-engine",
@@ -168,7 +253,24 @@
       "governance": {
         "priority": "P1",
         "lifecycle": "ACTIVE"
-      }
+      },
+      "readiness": {
+        "score": 92,
+        "label": "READY",
+        "components": {
+          "ci": 30,
+          "validation": 25,
+          "freshness": 15,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/JoyLab-SEO",
@@ -194,7 +296,24 @@
       "governance": {
         "priority": "P1",
         "lifecycle": "ACTIVE"
-      }
+      },
+      "readiness": {
+        "score": 92,
+        "label": "READY",
+        "components": {
+          "ci": 30,
+          "validation": 25,
+          "freshness": 15,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/ohbeopseok-ops",
@@ -202,25 +321,42 @@
       "default_branch": "main",
       "archived": false,
       "size": 26,
-      "pushed_at": "2026-08-30T04:22:07Z",
+      "pushed_at": "2026-08-30T04:31:21Z",
       "state": "ACTIVE",
       "reason": "pushed 0d ago",
       "latest_workflow": {
-        "id": 33288799919,
-        "name": "Repository Control Tower V0.1",
+        "id": 33292662426,
+        "name": "Control Tower CI",
         "status": "completed",
         "conclusion": "success",
-        "event": "push",
-        "head_sha": "3aebdcdca0af755d1c1c1a968260741919b8e0ba",
-        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/33288799919",
-        "updated_at": "2026-08-30T02:47:41Z"
+        "event": "pull_request",
+        "head_sha": "a1d89b23b4846c2cf5c77600b825c7def5a19bf9",
+        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/33292662426",
+        "updated_at": "2026-08-30T04:31:07Z"
       },
       "actions_error": null,
       "diagnosis": null,
       "governance": {
         "priority": "P1",
         "lifecycle": "ACTIVE"
-      }
+      },
+      "readiness": {
+        "score": 82,
+        "label": "WATCH",
+        "components": {
+          "ci": 30,
+          "validation": 15,
+          "freshness": 15,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/https-github.com-uxjoseph-ppt_team_agent",
@@ -237,7 +373,24 @@
       "governance": {
         "priority": "P2",
         "lifecycle": "ARCHIVE"
-      }
+      },
+      "readiness": {
+        "score": 40,
+        "label": "BLOCKED",
+        "components": {
+          "ci": 10,
+          "validation": 15,
+          "freshness": 0,
+          "security_dependency": 5,
+          "docs_release": 0,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/meeting",
@@ -254,7 +407,24 @@
       "governance": {
         "priority": "P2",
         "lifecycle": "ARCHIVE"
-      }
+      },
+      "readiness": {
+        "score": 40,
+        "label": "BLOCKED",
+        "components": {
+          "ci": 10,
+          "validation": 15,
+          "freshness": 0,
+          "security_dependency": 5,
+          "docs_release": 0,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/codaro",
@@ -271,7 +441,24 @@
       "governance": {
         "priority": "P2",
         "lifecycle": "MAINTENANCE"
-      }
+      },
+      "readiness": {
+        "score": 52,
+        "label": "BLOCKED",
+        "components": {
+          "ci": 10,
+          "validation": 15,
+          "freshness": 5,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/dartlab",
@@ -288,7 +475,24 @@
       "governance": {
         "priority": "P2",
         "lifecycle": "MAINTENANCE"
-      }
+      },
+      "readiness": {
+        "score": 52,
+        "label": "BLOCKED",
+        "components": {
+          "ci": 10,
+          "validation": 15,
+          "freshness": 5,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/Hermes-Agent_One-Click_Kit",
@@ -305,7 +509,24 @@
       "governance": {
         "priority": "P2",
         "lifecycle": "MAINTENANCE"
-      }
+      },
+      "readiness": {
+        "score": 52,
+        "label": "BLOCKED",
+        "components": {
+          "ci": 10,
+          "validation": 15,
+          "freshness": 5,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/hyperframes",
@@ -322,7 +543,24 @@
       "governance": {
         "priority": "P2",
         "lifecycle": "MAINTENANCE"
-      }
+      },
+      "readiness": {
+        "score": 52,
+        "label": "BLOCKED",
+        "components": {
+          "ci": 10,
+          "validation": 15,
+          "freshness": 5,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/kordoc",
@@ -339,7 +577,24 @@
       "governance": {
         "priority": "P2",
         "lifecycle": "MAINTENANCE"
-      }
+      },
+      "readiness": {
+        "score": 52,
+        "label": "BLOCKED",
+        "components": {
+          "ci": 10,
+          "validation": 15,
+          "freshness": 5,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/-",
@@ -356,7 +611,24 @@
       "governance": {
         "priority": "P2",
         "lifecycle": "MAINTENANCE"
-      }
+      },
+      "readiness": {
+        "score": 47,
+        "label": "BLOCKED",
+        "components": {
+          "ci": 10,
+          "validation": 15,
+          "freshness": 0,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/copy-of-ai-meet",
@@ -373,7 +645,24 @@
       "governance": {
         "priority": "P2",
         "lifecycle": "MAINTENANCE"
-      }
+      },
+      "readiness": {
+        "score": 47,
+        "label": "BLOCKED",
+        "components": {
+          "ci": 10,
+          "validation": 15,
+          "freshness": 0,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/sales-point",
@@ -390,11 +679,29 @@
       "governance": {
         "priority": "P2",
         "lifecycle": "MAINTENANCE"
-      }
+      },
+      "readiness": {
+        "score": 47,
+        "label": "BLOCKED",
+        "components": {
+          "ci": 10,
+          "validation": 15,
+          "freshness": 0,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
     }
   ],
   "issue_reconciliation": {
     "mode": "enabled",
     "actions": []
-  }
+  },
+  "repair_reconciliation": []
 }
