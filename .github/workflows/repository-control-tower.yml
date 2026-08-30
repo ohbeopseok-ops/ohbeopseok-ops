@@ -41,7 +41,7 @@ jobs:
 
       - name: Publish changed registry
         run: |
-          if git diff --quiet -- reports/repository-health.json reports/repository-health.md; then
+          if [ -z "$(git status --porcelain -- reports/repository-health.json reports/repository-health.md)" ]; then
             echo "No health-state changes."
             exit 0
           fi
