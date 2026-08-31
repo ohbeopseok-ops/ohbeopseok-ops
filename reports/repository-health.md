@@ -1,6 +1,6 @@
 # JoyLab Repository Control Tower V0.3
 
-- Generated: `2026-08-30T04:31:29.771839+00:00`
+- Generated: `2026-08-31T00:35:34.386747+00:00`
 - Owner: `ohbeopseok-ops`
 - Discovery scope: **public-only**
 - Thresholds: ACTIVE <= 14d, STALE >= 90d
@@ -35,9 +35,9 @@
 | ohbeopseok-ops/Hermes-Agent_One-Click_Kit | **P2** | MAINTENANCE | 52 BLOCKED | **HEALTHY** | none | no current blocking signal |
 | ohbeopseok-ops/hyperframes | **P2** | MAINTENANCE | 52 BLOCKED | **HEALTHY** | none | no current blocking signal |
 | ohbeopseok-ops/kordoc | **P2** | MAINTENANCE | 52 BLOCKED | **HEALTHY** | none | no current blocking signal |
-| ohbeopseok-ops/- | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 248d |
+| ohbeopseok-ops/- | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 249d |
 | ohbeopseok-ops/copy-of-ai-meet | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 221d |
-| ohbeopseok-ops/sales-point | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 254d |
+| ohbeopseok-ops/sales-point | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 255d |
 
 ## Automation contract
 
