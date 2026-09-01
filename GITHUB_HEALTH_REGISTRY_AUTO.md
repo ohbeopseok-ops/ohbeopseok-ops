@@ -1,6 +1,6 @@
 # JoyLab Repository Control Tower V0.1
 
-Generated: 2026-08-31T00:36:06.335034+00:00
+Generated: 2026-09-01T01:17:30.594698+00:00
 Scope: **public-fallback**
 
 > AUTO-GENERATED. Do not manually edit this file.
@@ -25,7 +25,7 @@ Scope: **public-fallback**
 | ohbeopseok-ops/cs-ops-skills | **ACTIVE** | validate / completed / success | push activity within 14 days |
 | ohbeopseok-ops/joylab-agent-os | **ACTIVE** | JoyLab Release Gate / completed / success | push activity within 14 days |
 | ohbeopseok-ops/joylab-cs-adaptive-learning | **ACTIVE** | JoyLab Release Gate / completed / success | push activity within 14 days |
-| ohbeopseok-ops/joylab-etf-intelligence | **ACTIVE** | JoyLab Release Gate / completed / success | push activity within 14 days |
+| ohbeopseok-ops/joylab-etf-intelligence | **ACTIVE** | Gate Scan Alerts / completed / success | push activity within 14 days |
 | ohbeopseok-ops/joylab-money-os | **ACTIVE** | JoyLab Release Gate / completed / success | push activity within 14 days |
 | ohbeopseok-ops/joylab-search-engine | **ACTIVE** | JoyLab Release Gate / completed / success | push activity within 14 days |
 | ohbeopseok-ops/JoyLab-SEO | **ACTIVE** | JoyLab Release Gate / completed / success | push activity within 14 days |
