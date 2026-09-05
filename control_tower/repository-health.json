@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-04T00:05:22.679359+00:00",
+  "generated_at": "2026-09-05T00:04:31.936788+00:00",
   "owner": "ohbeopseok-ops",
   "scope_mode": "public-fallback",
   "private_repositories_included": false,
@@ -151,20 +151,20 @@
       "repository": "ohbeopseok-ops/joylab-etf-intelligence",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 255,
+      "size_kb": 198,
       "archived": false,
-      "pushed_at": "2026-09-03T07:17:00Z",
+      "pushed_at": "2026-09-04T07:01:18Z",
       "state": "ACTIVE",
       "reason": "push activity within 14 days",
       "latest_action": {
-        "id": 33727257120,
+        "id": 33846795273,
         "name": "Gate Scan Alerts",
         "event": "schedule",
         "status": "completed",
         "conclusion": "success",
         "head_sha": "8a4aaa8e6660fa6b832278cb36dcc9f4b420b11f",
-        "created_at": "2026-09-03T07:16:25Z",
-        "html_url": "https://github.com/ohbeopseok-ops/joylab-etf-intelligence/actions/runs/33727257120"
+        "created_at": "2026-09-04T07:00:42Z",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-etf-intelligence/actions/runs/33846795273"
       }
     },
     {
@@ -253,20 +253,20 @@
       "repository": "ohbeopseok-ops/ohbeopseok-ops",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 110,
+      "size_kb": 52,
       "archived": false,
-      "pushed_at": "2026-09-04T00:04:03Z",
+      "pushed_at": "2026-09-05T00:02:19Z",
       "state": "ACTIVE",
       "reason": "push activity within 14 days",
       "latest_action": {
-        "id": 33820317328,
+        "id": 33931749179,
         "name": "Repository Control Tower V0.1",
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
-        "head_sha": "69b574a56653ab81593fc64134728d831d9e88e7",
-        "created_at": "2026-09-04T00:05:15Z",
-        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/33820317328"
+        "head_sha": "5cb1e0d836d977ddd0ef66bd31efcd6de18bfe3f",
+        "created_at": "2026-09-05T00:04:27Z",
+        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/33931749179"
       }
     },
     {
