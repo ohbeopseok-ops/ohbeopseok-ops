@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-05T23:53:30.156756+00:00",
+  "generated_at": "2026-09-06T23:53:29.865624+00:00",
   "owner": "ohbeopseok-ops",
   "scope_mode": "public-fallback",
   "private_repositories_included": false,
@@ -47,9 +47,9 @@
       "repository": "ohbeopseok-ops/cs-ops-skills",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 1068,
+      "size_kb": 1091,
       "archived": false,
-      "pushed_at": "2026-09-02T22:13:39Z",
+      "pushed_at": "2026-09-06T23:37:01Z",
       "state": "ACTIVE",
       "reason": "push activity within 14 days",
       "latest_action": {
@@ -111,20 +111,20 @@
       "repository": "ohbeopseok-ops/joylab-agent-os",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 189,
+      "size_kb": 219,
       "archived": false,
-      "pushed_at": "2026-08-30T07:46:03Z",
+      "pushed_at": "2026-09-06T12:42:51Z",
       "state": "ACTIVE",
       "reason": "push activity within 14 days",
       "latest_action": {
-        "id": 33287785585,
+        "id": 34033926322,
         "name": "JoyLab Release Gate",
         "event": "push",
         "status": "completed",
         "conclusion": "success",
-        "head_sha": "44bfd9c73a0b0be67c3a28eeed477e48f6a8ccd9",
-        "created_at": "2026-08-30T02:21:15Z",
-        "html_url": "https://github.com/ohbeopseok-ops/joylab-agent-os/actions/runs/33287785585"
+        "head_sha": "8492ec93ef317903db65518f48a4db4fb9497894",
+        "created_at": "2026-09-06T12:42:54Z",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-agent-os/actions/runs/34033926322"
       }
     },
     {
@@ -253,20 +253,20 @@
       "repository": "ohbeopseok-ops/ohbeopseok-ops",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 57,
+      "size_kb": 58,
       "archived": false,
-      "pushed_at": "2026-09-05T23:52:57Z",
+      "pushed_at": "2026-09-06T23:51:12Z",
       "state": "ACTIVE",
       "reason": "push activity within 14 days",
       "latest_action": {
-        "id": 33999845084,
+        "id": 34068133402,
         "name": "Repository Control Tower V0.1",
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
-        "head_sha": "52cdcff809461f2cdd7ebf3f7c8b7559ac5bc590",
-        "created_at": "2026-09-05T23:53:20Z",
-        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/33999845084"
+        "head_sha": "bf234a080b07196612852219cbabcc4e8d57782d",
+        "created_at": "2026-09-06T23:53:24Z",
+        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/34068133402"
       }
     },
     {
