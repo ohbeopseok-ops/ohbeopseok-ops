@@ -1,6 +1,6 @@
 {
   "schema_version": "0.4",
-  "generated_at": "2026-09-10T00:12:42.153432+00:00",
+  "generated_at": "2026-09-11T00:08:12.945470+00:00",
   "owner": "ohbeopseok-ops",
   "scope": "public-only",
   "thresholds": {
@@ -18,10 +18,10 @@
       "visibility": "public",
       "default_branch": "main",
       "archived": false,
-      "size": 1111,
-      "pushed_at": "2026-09-08T01:50:14Z",
+      "size": 1120,
+      "pushed_at": "2026-09-10T22:12:14Z",
       "state": "ACTIVE",
-      "reason": "pushed 1d ago",
+      "reason": "pushed 0d ago",
       "latest_workflow": {
         "id": 32031083393,
         "name": "validate",
@@ -64,7 +64,7 @@
       "size": 219,
       "pushed_at": "2026-09-06T12:42:51Z",
       "state": "ACTIVE",
-      "reason": "pushed 3d ago",
+      "reason": "pushed 4d ago",
       "latest_workflow": {
         "id": 34033926322,
         "name": "JoyLab Release Gate",
@@ -107,7 +107,7 @@
       "size": 57,
       "pushed_at": "2026-09-01T13:13:19Z",
       "state": "ACTIVE",
-      "reason": "pushed 8d ago",
+      "reason": "pushed 9d ago",
       "latest_workflow": {
         "id": 33512094068,
         "name": "JoyLab Release Gate",
@@ -147,19 +147,19 @@
       "visibility": "public",
       "default_branch": "main",
       "archived": false,
-      "size": 201,
-      "pushed_at": "2026-09-09T02:08:56Z",
+      "size": 203,
+      "pushed_at": "2026-09-10T07:24:51Z",
       "state": "ACTIVE",
       "reason": "pushed 0d ago",
       "latest_workflow": {
-        "id": 34324015514,
+        "id": 34449781046,
         "name": "Gate Scan Alerts",
         "status": "completed",
         "conclusion": "success",
         "event": "schedule",
         "head_sha": "8a4aaa8e6660fa6b832278cb36dcc9f4b420b11f",
-        "html_url": "https://github.com/ohbeopseok-ops/joylab-etf-intelligence/actions/runs/34324015514",
-        "updated_at": "2026-09-09T07:29:04Z"
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-etf-intelligence/actions/runs/34449781046",
+        "updated_at": "2026-09-10T07:24:54Z"
       },
       "actions_error": null,
       "diagnosis": null,
@@ -193,7 +193,7 @@
       "size": 43,
       "pushed_at": "2026-08-30T02:21:16Z",
       "state": "ACTIVE",
-      "reason": "pushed 10d ago",
+      "reason": "pushed 11d ago",
       "latest_workflow": {
         "id": 33287788168,
         "name": "JoyLab Release Gate",
@@ -233,19 +233,19 @@
       "visibility": "public",
       "default_branch": "main",
       "archived": false,
-      "size": 93,
-      "pushed_at": "2026-09-09T23:16:39Z",
+      "size": 175,
+      "pushed_at": "2026-09-10T22:16:24Z",
       "state": "ACTIVE",
       "reason": "pushed 0d ago",
       "latest_workflow": {
-        "id": 34416203261,
+        "id": 34536615005,
         "name": "Build",
         "status": "completed",
         "conclusion": "success",
-        "event": "push",
-        "head_sha": "978fd35ff1a127a2f1c8669f8917c6b2e57f8a63",
-        "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/34416203261",
-        "updated_at": "2026-09-09T23:17:19Z"
+        "event": "pull_request",
+        "head_sha": "1e2fd0356e2c22b98041e53280293f8e3becf9d7",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/34536615005",
+        "updated_at": "2026-09-10T22:17:05Z"
       },
       "actions_error": null,
       "diagnosis": null,
@@ -279,7 +279,7 @@
       "size": 21,
       "pushed_at": "2026-08-30T02:21:05Z",
       "state": "ACTIVE",
-      "reason": "pushed 10d ago",
+      "reason": "pushed 11d ago",
       "latest_workflow": {
         "id": 33287781788,
         "name": "JoyLab Release Gate",
@@ -322,7 +322,7 @@
       "size": 18,
       "pushed_at": "2026-08-30T03:58:52Z",
       "state": "ACTIVE",
-      "reason": "pushed 10d ago",
+      "reason": "pushed 11d ago",
       "latest_workflow": {
         "id": 33291470319,
         "name": "JoyLab Release Gate",
@@ -362,19 +362,19 @@
       "visibility": "public",
       "default_branch": "main",
       "archived": false,
-      "size": 68,
-      "pushed_at": "2026-09-09T00:13:55Z",
+      "size": 69,
+      "pushed_at": "2026-09-10T00:13:51Z",
       "state": "ACTIVE",
       "reason": "pushed 0d ago",
       "latest_workflow": {
-        "id": 34294094598,
+        "id": 34420378684,
         "name": "Repository Control Tower V0.1",
         "status": "completed",
         "conclusion": "success",
         "event": "schedule",
-        "head_sha": "7a67a6189817f38cb73d73ce03aae47087597734",
-        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/34294094598",
-        "updated_at": "2026-09-09T00:13:58Z"
+        "head_sha": "b5eef73991f9db7fd988b17d0917e6d19028814c",
+        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/34420378684",
+        "updated_at": "2026-09-10T00:13:54Z"
       },
       "actions_error": null,
       "diagnosis": null,
@@ -476,7 +476,7 @@
       "size": 4,
       "pushed_at": "2025-12-24T08:34:07Z",
       "state": "STALE",
-      "reason": "no push for 259d",
+      "reason": "no push for 260d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -510,7 +510,7 @@
       "size": 47203,
       "pushed_at": "2026-06-10T04:10:37Z",
       "state": "STALE",
-      "reason": "no push for 91d",
+      "reason": "no push for 92d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -544,7 +544,7 @@
       "size": 9,
       "pushed_at": "2026-01-21T01:50:18Z",
       "state": "STALE",
-      "reason": "no push for 231d",
+      "reason": "no push for 232d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -578,7 +578,7 @@
       "size": 502273,
       "pushed_at": "2026-06-11T08:02:13Z",
       "state": "STALE",
-      "reason": "no push for 90d",
+      "reason": "no push for 91d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -587,12 +587,12 @@
         "lifecycle": "MAINTENANCE"
       },
       "readiness": {
-        "score": 52,
+        "score": 47,
         "label": "BLOCKED",
         "components": {
           "ci": 10,
           "validation": 15,
-          "freshness": 5,
+          "freshness": 0,
           "security_dependency": 5,
           "docs_release": 7,
           "broken_debt": 10
@@ -612,7 +612,7 @@
       "size": 216,
       "pushed_at": "2026-06-11T22:40:58Z",
       "state": "STALE",
-      "reason": "no push for 90d",
+      "reason": "no push for 91d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -621,12 +621,12 @@
         "lifecycle": "MAINTENANCE"
       },
       "readiness": {
-        "score": 52,
+        "score": 47,
         "label": "BLOCKED",
         "components": {
           "ci": 10,
           "validation": 15,
-          "freshness": 5,
+          "freshness": 0,
           "security_dependency": 5,
           "docs_release": 7,
           "broken_debt": 10
@@ -646,7 +646,7 @@
       "size": 359095,
       "pushed_at": "2026-06-11T09:26:29Z",
       "state": "STALE",
-      "reason": "no push for 90d",
+      "reason": "no push for 91d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -655,12 +655,12 @@
         "lifecycle": "MAINTENANCE"
       },
       "readiness": {
-        "score": 52,
+        "score": 47,
         "label": "BLOCKED",
         "components": {
           "ci": 10,
           "validation": 15,
-          "freshness": 5,
+          "freshness": 0,
           "security_dependency": 5,
           "docs_release": 7,
           "broken_debt": 10
@@ -680,7 +680,7 @@
       "size": 8260,
       "pushed_at": "2026-06-11T04:53:39Z",
       "state": "STALE",
-      "reason": "no push for 90d",
+      "reason": "no push for 91d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -689,12 +689,12 @@
         "lifecycle": "MAINTENANCE"
       },
       "readiness": {
-        "score": 52,
+        "score": 47,
         "label": "BLOCKED",
         "components": {
           "ci": 10,
           "validation": 15,
-          "freshness": 5,
+          "freshness": 0,
           "security_dependency": 5,
           "docs_release": 7,
           "broken_debt": 10
@@ -714,7 +714,7 @@
       "size": 26,
       "pushed_at": "2025-12-18T08:33:45Z",
       "state": "STALE",
-      "reason": "no push for 265d",
+      "reason": "no push for 266d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
