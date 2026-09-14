@@ -1,6 +1,6 @@
 # JoyLab Repository Control Tower V0.1
 
-Generated: 2026-09-12T00:17:21.546231+00:00
+Generated: 2026-09-14T00:10:52.661089+00:00
 Scope: **public-fallback**
 
 > AUTO-GENERATED. Do not manually edit this file.
@@ -12,8 +12,8 @@ Scope: **public-fallback**
 | State | Count |
 |---|---:|
 | BROKEN | 0 |
-| ACTIVE | 9 |
-| HEALTHY | 0 |
+| ACTIVE | 6 |
+| HEALTHY | 3 |
 | STALE | 8 |
 | EMPTY | 2 |
 | ARCHIVE | 0 |
@@ -26,11 +26,11 @@ Scope: **public-fallback**
 | ohbeopseok-ops/joylab-agent-os | **ACTIVE** | JoyLab Release Gate / completed / success | push activity within 14 days |
 | ohbeopseok-ops/joylab-cs-adaptive-learning | **ACTIVE** | JoyLab Release Gate / completed / success | push activity within 14 days |
 | ohbeopseok-ops/joylab-etf-intelligence | **ACTIVE** | Gate Scan Alerts / completed / success | push activity within 14 days |
-| ohbeopseok-ops/joylab-money-os | **ACTIVE** | JoyLab Release Gate / completed / success | push activity within 14 days |
-| ohbeopseok-ops/joylab-publishing-os | **ACTIVE** | Deploy to Cloudflare Workers / completed / success | push activity within 14 days |
-| ohbeopseok-ops/joylab-search-engine | **ACTIVE** | JoyLab Release Gate / completed / success | push activity within 14 days |
-| ohbeopseok-ops/JoyLab-SEO | **ACTIVE** | JoyLab Release Gate / completed / success | push activity within 14 days |
+| ohbeopseok-ops/joylab-publishing-os | **ACTIVE** | Production Health / completed / success | push activity within 14 days |
 | ohbeopseok-ops/ohbeopseok-ops | **ACTIVE** | Repository Control Tower V0.1 / in_progress / — | push activity within 14 days |
+| ohbeopseok-ops/joylab-money-os | **HEALTHY** | JoyLab Release Gate / completed / success | no known blocking failure |
+| ohbeopseok-ops/joylab-search-engine | **HEALTHY** | JoyLab Release Gate / completed / success | no known blocking failure |
+| ohbeopseok-ops/JoyLab-SEO | **HEALTHY** | JoyLab Release Gate / completed / success | no known blocking failure |
 | ohbeopseok-ops/- | **STALE** | — | no push for more than 60 days |
 | ohbeopseok-ops/codaro | **STALE** | — | no push for more than 60 days |
 | ohbeopseok-ops/copy-of-ai-meet | **STALE** | — | no push for more than 60 days |

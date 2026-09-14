@@ -1,13 +1,14 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-12T00:17:21.546231+00:00",
+  "generated_at": "2026-09-14T00:10:52.661089+00:00",
   "owner": "ohbeopseok-ops",
   "scope_mode": "public-fallback",
   "private_repositories_included": false,
   "counts": {
     "STALE": 8,
-    "ACTIVE": 9,
-    "EMPTY": 2
+    "ACTIVE": 6,
+    "EMPTY": 2,
+    "HEALTHY": 3
   },
   "repositories": [
     {
@@ -47,9 +48,9 @@
       "repository": "ohbeopseok-ops/cs-ops-skills",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 1120,
+      "size_kb": 1127,
       "archived": false,
-      "pushed_at": "2026-09-10T22:12:14Z",
+      "pushed_at": "2026-09-13T22:15:37Z",
       "state": "ACTIVE",
       "reason": "push activity within 14 days",
       "latest_action": {
@@ -174,8 +175,8 @@
       "size_kb": 43,
       "archived": false,
       "pushed_at": "2026-08-30T02:21:16Z",
-      "state": "ACTIVE",
-      "reason": "push activity within 14 days",
+      "state": "HEALTHY",
+      "reason": "no known blocking failure",
       "latest_action": {
         "id": 33287788168,
         "name": "JoyLab Release Gate",
@@ -191,20 +192,20 @@
       "repository": "ohbeopseok-ops/joylab-publishing-os",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 303,
+      "size_kb": 990,
       "archived": false,
-      "pushed_at": "2026-09-11T21:52:51Z",
+      "pushed_at": "2026-09-13T23:35:53Z",
       "state": "ACTIVE",
       "reason": "push activity within 14 days",
       "latest_action": {
-        "id": 34651475665,
-        "name": "Deploy to Cloudflare Workers",
-        "event": "push",
+        "id": 34788901759,
+        "name": "Production Health",
+        "event": "schedule",
         "status": "completed",
         "conclusion": "success",
-        "head_sha": "aafe766ae6998d9eb51b7b3f00d5550b30653486",
-        "created_at": "2026-09-11T21:52:53Z",
-        "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/34651475665"
+        "head_sha": "7386b4198d25bf91cb801193eeb7e44791b63dbb",
+        "created_at": "2026-09-13T23:09:56Z",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/34788901759"
       }
     },
     {
@@ -214,8 +215,8 @@
       "size_kb": 21,
       "archived": false,
       "pushed_at": "2026-08-30T02:21:05Z",
-      "state": "ACTIVE",
-      "reason": "push activity within 14 days",
+      "state": "HEALTHY",
+      "reason": "no known blocking failure",
       "latest_action": {
         "id": 33287781788,
         "name": "JoyLab Release Gate",
@@ -234,8 +235,8 @@
       "size_kb": 18,
       "archived": false,
       "pushed_at": "2026-08-30T03:58:52Z",
-      "state": "ACTIVE",
-      "reason": "push activity within 14 days",
+      "state": "HEALTHY",
+      "reason": "no known blocking failure",
       "latest_action": {
         "id": 33291470319,
         "name": "JoyLab Release Gate",
@@ -273,20 +274,20 @@
       "repository": "ohbeopseok-ops/ohbeopseok-ops",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 74,
+      "size_kb": 77,
       "archived": false,
-      "pushed_at": "2026-09-12T00:16:03Z",
+      "pushed_at": "2026-09-14T00:09:32Z",
       "state": "ACTIVE",
       "reason": "push activity within 14 days",
       "latest_action": {
-        "id": 34661119086,
+        "id": 34791854288,
         "name": "Repository Control Tower V0.1",
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
-        "head_sha": "b0dc034fb37dc935b1a95215641f2f0c59b69065",
-        "created_at": "2026-09-12T00:17:16Z",
-        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/34661119086"
+        "head_sha": "160f0ab900174452433a2f899960a2b693d2514b",
+        "created_at": "2026-09-14T00:10:47Z",
+        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/34791854288"
       }
     },
     {
