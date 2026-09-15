@@ -1,6 +1,6 @@
 # JoyLab Repository Control Tower V0.3
 
-- Generated: `2026-09-14T00:09:21.812195+00:00`
+- Generated: `2026-09-15T00:36:21.530171+00:00`
 - Owner: `ohbeopseok-ops`
 - Discovery scope: **public-only**
 - Thresholds: ACTIVE <= 14d, STALE >= 90d
@@ -9,9 +9,9 @@
 
 | State | Count |
 |---|---:|
-| BROKEN | 1 |
-| ACTIVE | 8 |
-| HEALTHY | 0 |
+| BROKEN | 0 |
+| ACTIVE | 6 |
+| HEALTHY | 3 |
 | STALE | 8 |
 | EMPTY | 2 |
 | ARCHIVE | 0 |
@@ -20,25 +20,25 @@
 
 | Repository | Priority | Lifecycle | Readiness | State | Latest CI | Reason |
 |---|---|---|---|---|---|---|
-| ohbeopseok-ops/cs-ops-skills | **P1** | ACTIVE | 82 WATCH | **ACTIVE** | validate: success | pushed 0d ago |
-| ohbeopseok-ops/joylab-agent-os | **P0** | ACTIVE | 92 READY | **ACTIVE** | JoyLab Release Gate: success | pushed 7d ago |
-| ohbeopseok-ops/joylab-cs-adaptive-learning | **P1** | ACTIVE | 92 READY | **ACTIVE** | JoyLab Release Gate: success | pushed 12d ago |
-| ohbeopseok-ops/joylab-etf-intelligence | **P1** | ACTIVE | 82 WATCH | **ACTIVE** | Gate Scan Alerts: success | pushed 2d ago |
-| ohbeopseok-ops/joylab-money-os | **P1** | ACTIVE | 92 READY | **ACTIVE** | JoyLab Release Gate: success | pushed 14d ago |
+| ohbeopseok-ops/cs-ops-skills | **P1** | ACTIVE | 82 WATCH | **ACTIVE** | validate: success | pushed 1d ago |
+| ohbeopseok-ops/joylab-agent-os | **P0** | ACTIVE | 92 READY | **ACTIVE** | JoyLab Release Gate: success | pushed 8d ago |
+| ohbeopseok-ops/joylab-cs-adaptive-learning | **P1** | ACTIVE | 92 READY | **ACTIVE** | JoyLab Release Gate: success | pushed 13d ago |
+| ohbeopseok-ops/joylab-etf-intelligence | **P1** | ACTIVE | 82 WATCH | **ACTIVE** | Gate Scan Alerts: success | pushed 0d ago |
 | ohbeopseok-ops/joylab-publishing-os | **P1** | ACTIVE | 82 WATCH | **ACTIVE** | Production Health: success | pushed 0d ago |
-| ohbeopseok-ops/joylab-search-engine | **P1** | ACTIVE | 92 READY | **ACTIVE** | JoyLab Release Gate: success | pushed 14d ago |
-| ohbeopseok-ops/JoyLab-SEO | **P1** | ACTIVE | 92 READY | **ACTIVE** | JoyLab Release Gate: success | pushed 14d ago |
-| ohbeopseok-ops/ohbeopseok-ops | **P0** | ACTIVE | 27 BLOCKED | **BROKEN** | Repository Control Tower V0.1: failure | latest workflow Repository Control Tower V0.1=failure |
+| ohbeopseok-ops/ohbeopseok-ops | **P1** | ACTIVE | 82 WATCH | **ACTIVE** | Repository Control Tower V0.1: success | pushed 1d ago |
 | ohbeopseok-ops/https-github.com-uxjoseph-ppt_team_agent | **P2** | ARCHIVE | 40 BLOCKED | **EMPTY** | none | repository size is 0 |
 | ohbeopseok-ops/meeting | **P2** | ARCHIVE | 40 BLOCKED | **EMPTY** | none | repository size is 0 |
-| ohbeopseok-ops/- | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 263d |
-| ohbeopseok-ops/codaro | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 95d |
-| ohbeopseok-ops/copy-of-ai-meet | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 235d |
-| ohbeopseok-ops/dartlab | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 94d |
-| ohbeopseok-ops/Hermes-Agent_One-Click_Kit | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 94d |
-| ohbeopseok-ops/hyperframes | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 94d |
-| ohbeopseok-ops/kordoc | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 94d |
-| ohbeopseok-ops/sales-point | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 269d |
+| ohbeopseok-ops/joylab-money-os | **P1** | ACTIVE | 87 WATCH | **HEALTHY** | JoyLab Release Gate: success | no current blocking signal |
+| ohbeopseok-ops/joylab-search-engine | **P2** | MAINTENANCE | 87 WATCH | **HEALTHY** | JoyLab Release Gate: success | no current blocking signal |
+| ohbeopseok-ops/JoyLab-SEO | **P2** | MAINTENANCE | 87 WATCH | **HEALTHY** | JoyLab Release Gate: success | no current blocking signal |
+| ohbeopseok-ops/- | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 264d |
+| ohbeopseok-ops/codaro | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 96d |
+| ohbeopseok-ops/copy-of-ai-meet | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 236d |
+| ohbeopseok-ops/dartlab | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 95d |
+| ohbeopseok-ops/Hermes-Agent_One-Click_Kit | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 95d |
+| ohbeopseok-ops/hyperframes | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 95d |
+| ohbeopseok-ops/kordoc | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 95d |
+| ohbeopseok-ops/sales-point | **P2** | MAINTENANCE | 47 BLOCKED | **STALE** | none | no push for 270d |
 
 ## Automation contract
 
