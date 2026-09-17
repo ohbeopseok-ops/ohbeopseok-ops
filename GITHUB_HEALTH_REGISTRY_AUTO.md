@@ -1,6 +1,6 @@
 # JoyLab Repository Control Tower V0.1
 
-Generated: 2026-09-16T00:18:21.473911+00:00
+Generated: 2026-09-17T00:31:25.984796+00:00
 Scope: **public-fallback**
 
 > AUTO-GENERATED. Do not manually edit this file.
@@ -11,8 +11,8 @@ Scope: **public-fallback**
 
 | State | Count |
 |---|---:|
-| BROKEN | 0 |
-| ACTIVE | 5 |
+| BROKEN | 1 |
+| ACTIVE | 4 |
 | HEALTHY | 4 |
 | STALE | 8 |
 | EMPTY | 2 |
@@ -22,10 +22,10 @@ Scope: **public-fallback**
 
 | Repository | State | Latest Actions | Reason |
 |---|---|---|---|
+| ohbeopseok-ops/joylab-publishing-os | **BROKEN** | Rates Dashboard Refresh / completed / failure | latest completed Actions run failed: Rates Dashboard Refresh |
 | ohbeopseok-ops/cs-ops-skills | **ACTIVE** | validate / completed / success | push activity within 14 days |
 | ohbeopseok-ops/joylab-agent-os | **ACTIVE** | JoyLab Release Gate / completed / success | push activity within 14 days |
 | ohbeopseok-ops/joylab-etf-intelligence | **ACTIVE** | Gate Scan Alerts / completed / success | push activity within 14 days |
-| ohbeopseok-ops/joylab-publishing-os | **ACTIVE** | Rates Dashboard Refresh / queued / — | push activity within 14 days |
 | ohbeopseok-ops/ohbeopseok-ops | **ACTIVE** | Repository Control Tower V0.1 / in_progress / — | push activity within 14 days |
 | ohbeopseok-ops/joylab-cs-adaptive-learning | **HEALTHY** | JoyLab Release Gate / completed / success | no known blocking failure |
 | ohbeopseok-ops/joylab-money-os | **HEALTHY** | JoyLab Release Gate / completed / success | no known blocking failure |
