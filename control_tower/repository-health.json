@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-19T00:19:46.027243+00:00",
+  "generated_at": "2026-09-21T00:15:35.000177+00:00",
   "owner": "ohbeopseok-ops",
   "scope_mode": "public-fallback",
   "private_repositories_included": false,
@@ -115,8 +115,8 @@
       "size_kb": 219,
       "archived": false,
       "pushed_at": "2026-09-06T12:42:51Z",
-      "state": "ACTIVE",
-      "reason": "push activity within 14 days",
+      "state": "HEALTHY",
+      "reason": "no known blocking failure",
       "latest_action": {
         "id": 34033926322,
         "name": "JoyLab Release Gate",
@@ -192,20 +192,20 @@
       "repository": "ohbeopseok-ops/joylab-publishing-os",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 3411,
+      "size_kb": 3873,
       "archived": false,
-      "pushed_at": "2026-09-16T22:08:08Z",
+      "pushed_at": "2026-09-20T14:52:06Z",
       "state": "ACTIVE",
       "reason": "push activity within 14 days",
       "latest_action": {
-        "id": 35408958866,
-        "name": "Rates Dashboard Refresh",
+        "id": 35546416979,
+        "name": "Research Evidence Audit",
         "event": "schedule",
-        "status": "in_progress",
-        "conclusion": null,
-        "head_sha": "a8eaab02bd95552571c0e4c0020f6d02a847801c",
-        "created_at": "2026-09-19T00:19:27Z",
-        "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35408958866"
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "6d989f4058cec2d781004e73c6970231f8bc29a9",
+        "created_at": "2026-09-21T00:03:15Z",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35546416979"
       }
     },
     {
@@ -232,20 +232,20 @@
       "repository": "ohbeopseok-ops/JoyLab-SEO",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 18,
+      "size_kb": 46,
       "archived": false,
-      "pushed_at": "2026-08-30T03:58:52Z",
-      "state": "HEALTHY",
-      "reason": "no known blocking failure",
+      "pushed_at": "2026-09-20T21:51:10Z",
+      "state": "ACTIVE",
+      "reason": "push activity within 14 days",
       "latest_action": {
-        "id": 33291470319,
+        "id": 35540030841,
         "name": "JoyLab Release Gate",
         "event": "pull_request",
         "status": "completed",
         "conclusion": "success",
-        "head_sha": "10e1da53ee88baae032d4b2d4a0647080c9d6aec",
-        "created_at": "2026-08-30T03:59:10Z",
-        "html_url": "https://github.com/ohbeopseok-ops/JoyLab-SEO/actions/runs/33291470319"
+        "head_sha": "1a0c5b08ede1936d573a5de81d183897f6410379",
+        "created_at": "2026-09-20T21:53:36Z",
+        "html_url": "https://github.com/ohbeopseok-ops/JoyLab-SEO/actions/runs/35540030841"
       }
     },
     {
@@ -274,20 +274,20 @@
       "repository": "ohbeopseok-ops/ohbeopseok-ops",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 95,
+      "size_kb": 98,
       "archived": false,
-      "pushed_at": "2026-09-19T00:18:15Z",
+      "pushed_at": "2026-09-21T00:14:06Z",
       "state": "ACTIVE",
       "reason": "push activity within 14 days",
       "latest_action": {
-        "id": 35408971943,
+        "id": 35547120451,
         "name": "Repository Control Tower V0.1",
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
-        "head_sha": "f14fb1e6df78593ecffd1a33bba4c8508eed3adf",
-        "created_at": "2026-09-19T00:19:41Z",
-        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/35408971943"
+        "head_sha": "a0bbcd68c3518ba15be3c3f6671124f8c4adce3e",
+        "created_at": "2026-09-21T00:15:29Z",
+        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/35547120451"
       }
     },
     {

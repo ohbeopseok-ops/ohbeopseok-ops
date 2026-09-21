@@ -1,6 +1,6 @@
 # JoyLab Repository Control Tower V0.1
 
-Generated: 2026-09-19T00:19:46.027243+00:00
+Generated: 2026-09-21T00:15:35.000177+00:00
 Scope: **public-fallback**
 
 > AUTO-GENERATED. Do not manually edit this file.
@@ -23,14 +23,14 @@ Scope: **public-fallback**
 | Repository | State | Latest Actions | Reason |
 |---|---|---|---|
 | ohbeopseok-ops/cs-ops-skills | **ACTIVE** | validate / completed / success | push activity within 14 days |
-| ohbeopseok-ops/joylab-agent-os | **ACTIVE** | JoyLab Release Gate / completed / success | push activity within 14 days |
 | ohbeopseok-ops/joylab-etf-intelligence | **ACTIVE** | Gate Scan Alerts / completed / success | push activity within 14 days |
-| ohbeopseok-ops/joylab-publishing-os | **ACTIVE** | Rates Dashboard Refresh / in_progress / — | push activity within 14 days |
+| ohbeopseok-ops/joylab-publishing-os | **ACTIVE** | Research Evidence Audit / completed / success | push activity within 14 days |
+| ohbeopseok-ops/JoyLab-SEO | **ACTIVE** | JoyLab Release Gate / completed / success | push activity within 14 days |
 | ohbeopseok-ops/ohbeopseok-ops | **ACTIVE** | Repository Control Tower V0.1 / in_progress / — | push activity within 14 days |
+| ohbeopseok-ops/joylab-agent-os | **HEALTHY** | JoyLab Release Gate / completed / success | no known blocking failure |
 | ohbeopseok-ops/joylab-cs-adaptive-learning | **HEALTHY** | JoyLab Release Gate / completed / success | no known blocking failure |
 | ohbeopseok-ops/joylab-money-os | **HEALTHY** | JoyLab Release Gate / completed / success | no known blocking failure |
 | ohbeopseok-ops/joylab-search-engine | **HEALTHY** | JoyLab Release Gate / completed / success | no known blocking failure |
-| ohbeopseok-ops/JoyLab-SEO | **HEALTHY** | JoyLab Release Gate / completed / success | no known blocking failure |
 | ohbeopseok-ops/- | **STALE** | — | no push for more than 60 days |
 | ohbeopseok-ops/codaro | **STALE** | — | no push for more than 60 days |
 | ohbeopseok-ops/copy-of-ai-meet | **STALE** | — | no push for more than 60 days |
