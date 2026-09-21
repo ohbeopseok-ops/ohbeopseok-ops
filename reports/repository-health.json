@@ -1,6 +1,6 @@
 {
   "schema_version": "0.4",
-  "generated_at": "2026-09-20T00:08:12.272935+00:00",
+  "generated_at": "2026-09-21T00:13:55.508296+00:00",
   "owner": "ohbeopseok-ops",
   "scope": "public-only",
   "thresholds": {
@@ -9,8 +9,9 @@
   },
   "counts": {
     "ACTIVE": 5,
+    "BROKEN": 1,
     "EMPTY": 2,
-    "HEALTHY": 4,
+    "HEALTHY": 3,
     "STALE": 8
   },
   "repositories": [
@@ -22,7 +23,7 @@
       "size": 1127,
       "pushed_at": "2026-09-13T22:15:37Z",
       "state": "ACTIVE",
-      "reason": "pushed 6d ago",
+      "reason": "pushed 7d ago",
       "latest_workflow": {
         "id": 32031083393,
         "name": "validate",
@@ -65,7 +66,7 @@
       "size": 219,
       "pushed_at": "2026-09-06T12:42:51Z",
       "state": "ACTIVE",
-      "reason": "pushed 13d ago",
+      "reason": "pushed 14d ago",
       "latest_workflow": {
         "id": 34033926322,
         "name": "JoyLab Release Gate",
@@ -108,7 +109,7 @@
       "size": 238,
       "pushed_at": "2026-09-18T07:30:40Z",
       "state": "ACTIVE",
-      "reason": "pushed 1d ago",
+      "reason": "pushed 2d ago",
       "latest_workflow": {
         "id": 35319704188,
         "name": "Gate Scan Alerts",
@@ -148,19 +149,19 @@
       "visibility": "public",
       "default_branch": "main",
       "archived": false,
-      "size": 3411,
-      "pushed_at": "2026-09-16T22:08:08Z",
+      "size": 3873,
+      "pushed_at": "2026-09-20T14:52:06Z",
       "state": "ACTIVE",
-      "reason": "pushed 3d ago",
+      "reason": "pushed 0d ago",
       "latest_workflow": {
-        "id": 35475061822,
-        "name": "Production Health",
+        "id": 35546416979,
+        "name": "Research Evidence Audit",
         "status": "completed",
         "conclusion": "success",
         "event": "schedule",
-        "head_sha": "a8eaab02bd95552571c0e4c0020f6d02a847801c",
-        "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35475061822",
-        "updated_at": "2026-09-19T23:04:02Z"
+        "head_sha": "6d989f4058cec2d781004e73c6970231f8bc29a9",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35546416979",
+        "updated_at": "2026-09-21T00:03:27Z"
       },
       "actions_error": null,
       "diagnosis": null,
@@ -187,23 +188,23 @@
       "repair_proposal": null
     },
     {
-      "repository": "ohbeopseok-ops/ohbeopseok-ops",
+      "repository": "ohbeopseok-ops/JoyLab-SEO",
       "visibility": "public",
       "default_branch": "main",
       "archived": false,
-      "size": 96,
-      "pushed_at": "2026-09-19T00:19:53Z",
+      "size": 46,
+      "pushed_at": "2026-09-20T21:51:10Z",
       "state": "ACTIVE",
       "reason": "pushed 0d ago",
       "latest_workflow": {
-        "id": 35477967714,
-        "name": "Repository Control Tower V0.1",
-        "status": "in_progress",
-        "conclusion": null,
-        "event": "schedule",
-        "head_sha": "f321f20ba6236f9805cd296546c39016f1fd0cf6",
-        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/35477967714",
-        "updated_at": "2026-09-20T00:08:17Z"
+        "id": 35540030841,
+        "name": "JoyLab Release Gate",
+        "status": "completed",
+        "conclusion": "success",
+        "event": "pull_request",
+        "head_sha": "1a0c5b08ede1936d573a5de81d183897f6410379",
+        "html_url": "https://github.com/ohbeopseok-ops/JoyLab-SEO/actions/runs/35540030841",
+        "updated_at": "2026-09-20T21:53:47Z"
       },
       "actions_error": null,
       "diagnosis": null,
@@ -212,11 +213,11 @@
         "lifecycle": "ACTIVE"
       },
       "readiness": {
-        "score": 62,
-        "label": "BLOCKED",
+        "score": 92,
+        "label": "READY",
         "components": {
-          "ci": 10,
-          "validation": 15,
+          "ci": 30,
+          "validation": 25,
           "freshness": 15,
           "security_dependency": 5,
           "docs_release": 7,
@@ -228,6 +229,62 @@
         "target_hours": null
       },
       "repair_proposal": null
+    },
+    {
+      "repository": "ohbeopseok-ops/ohbeopseok-ops",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 98,
+      "pushed_at": "2026-09-20T00:08:23Z",
+      "state": "BROKEN",
+      "reason": "latest workflow Repository Control Tower V0.1=failure",
+      "latest_workflow": {
+        "id": 35477967714,
+        "name": "Repository Control Tower V0.1",
+        "status": "completed",
+        "conclusion": "failure",
+        "event": "schedule",
+        "head_sha": "f321f20ba6236f9805cd296546c39016f1fd0cf6",
+        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/35477967714",
+        "updated_at": "2026-09-20T00:08:27Z"
+      },
+      "actions_error": null,
+      "diagnosis": {
+        "failed_job": "health-registry",
+        "failed_step": "Commit registry changes",
+        "root_cause": "Unclassified failure; inspect the extracted error tail.",
+        "fix_candidate": "Use the failed job/step and log tail to create a minimal recovery change.",
+        "error_excerpt": []
+      },
+      "governance": {
+        "priority": "P0",
+        "lifecycle": "ACTIVE"
+      },
+      "readiness": {
+        "score": 27,
+        "label": "BLOCKED",
+        "components": {
+          "ci": 0,
+          "validation": 0,
+          "freshness": 15,
+          "security_dependency": 5,
+          "docs_release": 7,
+          "broken_debt": 0
+        }
+      },
+      "sla": {
+        "breach": true,
+        "target_hours": 4
+      },
+      "repair_proposal": {
+        "mode": "semi-autonomous",
+        "branch": "recovery/ct-35477967714-ohbeopseok-ops",
+        "draft_pr": true,
+        "auto_merge_allowed": false,
+        "root_cause": "Unclassified failure; inspect the extracted error tail.",
+        "fix_candidate": "Use the failed job/step and log tail to create a minimal recovery change."
+      }
     },
     {
       "repository": "ohbeopseok-ops/https-github.com-uxjoseph-ppt_team_agent",
@@ -427,49 +484,6 @@
       "repair_proposal": null
     },
     {
-      "repository": "ohbeopseok-ops/JoyLab-SEO",
-      "visibility": "public",
-      "default_branch": "main",
-      "archived": false,
-      "size": 18,
-      "pushed_at": "2026-08-30T03:58:52Z",
-      "state": "HEALTHY",
-      "reason": "no current blocking signal",
-      "latest_workflow": {
-        "id": 33291470319,
-        "name": "JoyLab Release Gate",
-        "status": "completed",
-        "conclusion": "success",
-        "event": "pull_request",
-        "head_sha": "10e1da53ee88baae032d4b2d4a0647080c9d6aec",
-        "html_url": "https://github.com/ohbeopseok-ops/JoyLab-SEO/actions/runs/33291470319",
-        "updated_at": "2026-08-30T03:59:17Z"
-      },
-      "actions_error": null,
-      "diagnosis": null,
-      "governance": {
-        "priority": "P2",
-        "lifecycle": "MAINTENANCE"
-      },
-      "readiness": {
-        "score": 87,
-        "label": "WATCH",
-        "components": {
-          "ci": 30,
-          "validation": 25,
-          "freshness": 10,
-          "security_dependency": 5,
-          "docs_release": 7,
-          "broken_debt": 10
-        }
-      },
-      "sla": {
-        "breach": false,
-        "target_hours": null
-      },
-      "repair_proposal": null
-    },
-    {
       "repository": "ohbeopseok-ops/-",
       "visibility": "public",
       "default_branch": "main",
@@ -477,7 +491,7 @@
       "size": 4,
       "pushed_at": "2025-12-24T08:34:07Z",
       "state": "STALE",
-      "reason": "no push for 269d",
+      "reason": "no push for 270d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -511,7 +525,7 @@
       "size": 47203,
       "pushed_at": "2026-06-10T04:10:37Z",
       "state": "STALE",
-      "reason": "no push for 101d",
+      "reason": "no push for 102d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -545,7 +559,7 @@
       "size": 9,
       "pushed_at": "2026-01-21T01:50:18Z",
       "state": "STALE",
-      "reason": "no push for 241d",
+      "reason": "no push for 242d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -579,7 +593,7 @@
       "size": 502273,
       "pushed_at": "2026-06-11T08:02:13Z",
       "state": "STALE",
-      "reason": "no push for 100d",
+      "reason": "no push for 101d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -613,7 +627,7 @@
       "size": 216,
       "pushed_at": "2026-06-11T22:40:58Z",
       "state": "STALE",
-      "reason": "no push for 100d",
+      "reason": "no push for 101d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -647,7 +661,7 @@
       "size": 359095,
       "pushed_at": "2026-06-11T09:26:29Z",
       "state": "STALE",
-      "reason": "no push for 100d",
+      "reason": "no push for 101d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -681,7 +695,7 @@
       "size": 8260,
       "pushed_at": "2026-06-11T04:53:39Z",
       "state": "STALE",
-      "reason": "no push for 100d",
+      "reason": "no push for 101d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -715,7 +729,7 @@
       "size": 26,
       "pushed_at": "2025-12-18T08:33:45Z",
       "state": "STALE",
-      "reason": "no push for 275d",
+      "reason": "no push for 276d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -744,7 +758,27 @@
   ],
   "issue_reconciliation": {
     "mode": "enabled",
-    "actions": []
+    "actions": [
+      {
+        "action": "reopen",
+        "repository": "ohbeopseok-ops/ohbeopseok-ops",
+        "issue": 3
+      }
+    ]
   },
-  "repair_reconciliation": []
+  "repair_reconciliation": [
+    {
+      "repository": "ohbeopseok-ops/ohbeopseok-ops",
+      "mode": "disabled",
+      "reason": "JOYLAB_REPAIR_TOKEN unavailable",
+      "proposal": {
+        "mode": "semi-autonomous",
+        "branch": "recovery/ct-35477967714-ohbeopseok-ops",
+        "draft_pr": true,
+        "auto_merge_allowed": false,
+        "root_cause": "Unclassified failure; inspect the extracted error tail.",
+        "fix_candidate": "Use the failed job/step and log tail to create a minimal recovery change."
+      }
+    }
+  ]
 }
