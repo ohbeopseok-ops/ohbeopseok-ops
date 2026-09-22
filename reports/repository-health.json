@@ -1,6 +1,6 @@
 {
   "schema_version": "0.4",
-  "generated_at": "2026-09-21T00:13:55.508296+00:00",
+  "generated_at": "2026-09-22T00:48:41.671594+00:00",
   "owner": "ohbeopseok-ops",
   "scope": "public-only",
   "thresholds": {
@@ -9,9 +9,8 @@
   },
   "counts": {
     "ACTIVE": 5,
-    "BROKEN": 1,
     "EMPTY": 2,
-    "HEALTHY": 3,
+    "HEALTHY": 4,
     "STALE": 8
   },
   "repositories": [
@@ -23,7 +22,7 @@
       "size": 1127,
       "pushed_at": "2026-09-13T22:15:37Z",
       "state": "ACTIVE",
-      "reason": "pushed 7d ago",
+      "reason": "pushed 8d ago",
       "latest_workflow": {
         "id": 32031083393,
         "name": "validate",
@@ -59,66 +58,23 @@
       "repair_proposal": null
     },
     {
-      "repository": "ohbeopseok-ops/joylab-agent-os",
-      "visibility": "public",
-      "default_branch": "main",
-      "archived": false,
-      "size": 219,
-      "pushed_at": "2026-09-06T12:42:51Z",
-      "state": "ACTIVE",
-      "reason": "pushed 14d ago",
-      "latest_workflow": {
-        "id": 34033926322,
-        "name": "JoyLab Release Gate",
-        "status": "completed",
-        "conclusion": "success",
-        "event": "push",
-        "head_sha": "8492ec93ef317903db65518f48a4db4fb9497894",
-        "html_url": "https://github.com/ohbeopseok-ops/joylab-agent-os/actions/runs/34033926322",
-        "updated_at": "2026-09-06T12:43:10Z"
-      },
-      "actions_error": null,
-      "diagnosis": null,
-      "governance": {
-        "priority": "P0",
-        "lifecycle": "ACTIVE"
-      },
-      "readiness": {
-        "score": 92,
-        "label": "READY",
-        "components": {
-          "ci": 30,
-          "validation": 25,
-          "freshness": 15,
-          "security_dependency": 5,
-          "docs_release": 7,
-          "broken_debt": 10
-        }
-      },
-      "sla": {
-        "breach": false,
-        "target_hours": null
-      },
-      "repair_proposal": null
-    },
-    {
       "repository": "ohbeopseok-ops/joylab-etf-intelligence",
       "visibility": "public",
       "default_branch": "main",
       "archived": false,
-      "size": 238,
-      "pushed_at": "2026-09-18T07:30:40Z",
+      "size": 241,
+      "pushed_at": "2026-09-21T08:05:26Z",
       "state": "ACTIVE",
-      "reason": "pushed 2d ago",
+      "reason": "pushed 0d ago",
       "latest_workflow": {
-        "id": 35319704188,
+        "id": 35576031393,
         "name": "Gate Scan Alerts",
         "status": "completed",
         "conclusion": "success",
         "event": "schedule",
         "head_sha": "8a4aaa8e6660fa6b832278cb36dcc9f4b420b11f",
-        "html_url": "https://github.com/ohbeopseok-ops/joylab-etf-intelligence/actions/runs/35319704188",
-        "updated_at": "2026-09-18T07:30:44Z"
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-etf-intelligence/actions/runs/35576031393",
+        "updated_at": "2026-09-21T08:05:29Z"
       },
       "actions_error": null,
       "diagnosis": null,
@@ -149,19 +105,19 @@
       "visibility": "public",
       "default_branch": "main",
       "archived": false,
-      "size": 3873,
-      "pushed_at": "2026-09-20T14:52:06Z",
+      "size": 4017,
+      "pushed_at": "2026-09-21T23:28:00Z",
       "state": "ACTIVE",
       "reason": "pushed 0d ago",
       "latest_workflow": {
-        "id": 35546416979,
-        "name": "Research Evidence Audit",
+        "id": 35670512058,
+        "name": "Production Health",
         "status": "completed",
         "conclusion": "success",
         "event": "schedule",
-        "head_sha": "6d989f4058cec2d781004e73c6970231f8bc29a9",
-        "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35546416979",
-        "updated_at": "2026-09-21T00:03:27Z"
+        "head_sha": "3f8e630548cbfa6b6f76d42b606d6f4a1bceece8",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35670512058",
+        "updated_at": "2026-09-22T00:06:29Z"
       },
       "actions_error": null,
       "diagnosis": null,
@@ -195,7 +151,7 @@
       "size": 46,
       "pushed_at": "2026-09-20T21:51:10Z",
       "state": "ACTIVE",
-      "reason": "pushed 0d ago",
+      "reason": "pushed 1d ago",
       "latest_workflow": {
         "id": 35540030841,
         "name": "JoyLab Release Gate",
@@ -235,56 +191,43 @@
       "visibility": "public",
       "default_branch": "main",
       "archived": false,
-      "size": 98,
-      "pushed_at": "2026-09-20T00:08:23Z",
-      "state": "BROKEN",
-      "reason": "latest workflow Repository Control Tower V0.1=failure",
+      "size": 102,
+      "pushed_at": "2026-09-21T00:15:45Z",
+      "state": "ACTIVE",
+      "reason": "pushed 1d ago",
       "latest_workflow": {
-        "id": 35477967714,
+        "id": 35547120451,
         "name": "Repository Control Tower V0.1",
         "status": "completed",
-        "conclusion": "failure",
+        "conclusion": "success",
         "event": "schedule",
-        "head_sha": "f321f20ba6236f9805cd296546c39016f1fd0cf6",
-        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/35477967714",
-        "updated_at": "2026-09-20T00:08:27Z"
+        "head_sha": "a0bbcd68c3518ba15be3c3f6671124f8c4adce3e",
+        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/35547120451",
+        "updated_at": "2026-09-21T00:15:49Z"
       },
       "actions_error": null,
-      "diagnosis": {
-        "failed_job": "health-registry",
-        "failed_step": "Commit registry changes",
-        "root_cause": "Unclassified failure; inspect the extracted error tail.",
-        "fix_candidate": "Use the failed job/step and log tail to create a minimal recovery change.",
-        "error_excerpt": []
-      },
+      "diagnosis": null,
       "governance": {
-        "priority": "P0",
+        "priority": "P1",
         "lifecycle": "ACTIVE"
       },
       "readiness": {
-        "score": 27,
-        "label": "BLOCKED",
+        "score": 82,
+        "label": "WATCH",
         "components": {
-          "ci": 0,
-          "validation": 0,
+          "ci": 30,
+          "validation": 15,
           "freshness": 15,
           "security_dependency": 5,
           "docs_release": 7,
-          "broken_debt": 0
+          "broken_debt": 10
         }
       },
       "sla": {
-        "breach": true,
-        "target_hours": 4
+        "breach": false,
+        "target_hours": null
       },
-      "repair_proposal": {
-        "mode": "semi-autonomous",
-        "branch": "recovery/ct-35477967714-ohbeopseok-ops",
-        "draft_pr": true,
-        "auto_merge_allowed": false,
-        "root_cause": "Unclassified failure; inspect the extracted error tail.",
-        "fix_candidate": "Use the failed job/step and log tail to create a minimal recovery change."
-      }
+      "repair_proposal": null
     },
     {
       "repository": "ohbeopseok-ops/https-github.com-uxjoseph-ppt_team_agent",
@@ -345,6 +288,49 @@
           "freshness": 0,
           "security_dependency": 5,
           "docs_release": 0,
+          "broken_debt": 10
+        }
+      },
+      "sla": {
+        "breach": false,
+        "target_hours": null
+      },
+      "repair_proposal": null
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-agent-os",
+      "visibility": "public",
+      "default_branch": "main",
+      "archived": false,
+      "size": 219,
+      "pushed_at": "2026-09-06T12:42:51Z",
+      "state": "HEALTHY",
+      "reason": "no current blocking signal",
+      "latest_workflow": {
+        "id": 34033926322,
+        "name": "JoyLab Release Gate",
+        "status": "completed",
+        "conclusion": "success",
+        "event": "push",
+        "head_sha": "8492ec93ef317903db65518f48a4db4fb9497894",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-agent-os/actions/runs/34033926322",
+        "updated_at": "2026-09-06T12:43:10Z"
+      },
+      "actions_error": null,
+      "diagnosis": null,
+      "governance": {
+        "priority": "P0",
+        "lifecycle": "ACTIVE"
+      },
+      "readiness": {
+        "score": 87,
+        "label": "WATCH",
+        "components": {
+          "ci": 30,
+          "validation": 25,
+          "freshness": 10,
+          "security_dependency": 5,
+          "docs_release": 7,
           "broken_debt": 10
         }
       },
@@ -491,7 +477,7 @@
       "size": 4,
       "pushed_at": "2025-12-24T08:34:07Z",
       "state": "STALE",
-      "reason": "no push for 270d",
+      "reason": "no push for 271d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -525,7 +511,7 @@
       "size": 47203,
       "pushed_at": "2026-06-10T04:10:37Z",
       "state": "STALE",
-      "reason": "no push for 102d",
+      "reason": "no push for 103d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -559,7 +545,7 @@
       "size": 9,
       "pushed_at": "2026-01-21T01:50:18Z",
       "state": "STALE",
-      "reason": "no push for 242d",
+      "reason": "no push for 243d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -593,7 +579,7 @@
       "size": 502273,
       "pushed_at": "2026-06-11T08:02:13Z",
       "state": "STALE",
-      "reason": "no push for 101d",
+      "reason": "no push for 102d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -627,7 +613,7 @@
       "size": 216,
       "pushed_at": "2026-06-11T22:40:58Z",
       "state": "STALE",
-      "reason": "no push for 101d",
+      "reason": "no push for 102d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -661,7 +647,7 @@
       "size": 359095,
       "pushed_at": "2026-06-11T09:26:29Z",
       "state": "STALE",
-      "reason": "no push for 101d",
+      "reason": "no push for 102d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -695,7 +681,7 @@
       "size": 8260,
       "pushed_at": "2026-06-11T04:53:39Z",
       "state": "STALE",
-      "reason": "no push for 101d",
+      "reason": "no push for 102d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -729,7 +715,7 @@
       "size": 26,
       "pushed_at": "2025-12-18T08:33:45Z",
       "state": "STALE",
-      "reason": "no push for 276d",
+      "reason": "no push for 277d",
       "latest_workflow": null,
       "actions_error": null,
       "diagnosis": null,
@@ -760,25 +746,11 @@
     "mode": "enabled",
     "actions": [
       {
-        "action": "reopen",
+        "action": "close",
         "repository": "ohbeopseok-ops/ohbeopseok-ops",
         "issue": 3
       }
     ]
   },
-  "repair_reconciliation": [
-    {
-      "repository": "ohbeopseok-ops/ohbeopseok-ops",
-      "mode": "disabled",
-      "reason": "JOYLAB_REPAIR_TOKEN unavailable",
-      "proposal": {
-        "mode": "semi-autonomous",
-        "branch": "recovery/ct-35477967714-ohbeopseok-ops",
-        "draft_pr": true,
-        "auto_merge_allowed": false,
-        "root_cause": "Unclassified failure; inspect the extracted error tail.",
-        "fix_candidate": "Use the failed job/step and log tail to create a minimal recovery change."
-      }
-    }
-  ]
+  "repair_reconciliation": []
 }
