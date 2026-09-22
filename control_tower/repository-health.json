@@ -1,14 +1,15 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-21T00:15:35.000177+00:00",
+  "generated_at": "2026-09-22T00:49:15.792564+00:00",
   "owner": "ohbeopseok-ops",
   "scope_mode": "public-fallback",
   "private_repositories_included": false,
   "counts": {
     "STALE": 8,
-    "ACTIVE": 5,
+    "ACTIVE": 4,
     "EMPTY": 2,
-    "HEALTHY": 4
+    "HEALTHY": 4,
+    "BROKEN": 1
   },
   "repositories": [
     {
@@ -152,20 +153,20 @@
       "repository": "ohbeopseok-ops/joylab-etf-intelligence",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 238,
+      "size_kb": 241,
       "archived": false,
-      "pushed_at": "2026-09-18T07:30:40Z",
+      "pushed_at": "2026-09-21T08:05:26Z",
       "state": "ACTIVE",
       "reason": "push activity within 14 days",
       "latest_action": {
-        "id": 35319704188,
+        "id": 35576031393,
         "name": "Gate Scan Alerts",
         "event": "schedule",
         "status": "completed",
         "conclusion": "success",
         "head_sha": "8a4aaa8e6660fa6b832278cb36dcc9f4b420b11f",
-        "created_at": "2026-09-18T07:30:01Z",
-        "html_url": "https://github.com/ohbeopseok-ops/joylab-etf-intelligence/actions/runs/35319704188"
+        "created_at": "2026-09-21T08:04:49Z",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-etf-intelligence/actions/runs/35576031393"
       }
     },
     {
@@ -192,20 +193,20 @@
       "repository": "ohbeopseok-ops/joylab-publishing-os",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 3873,
+      "size_kb": 4017,
       "archived": false,
-      "pushed_at": "2026-09-20T14:52:06Z",
-      "state": "ACTIVE",
-      "reason": "push activity within 14 days",
+      "pushed_at": "2026-09-22T00:49:15Z",
+      "state": "BROKEN",
+      "reason": "latest completed Actions run failed: Rates Dashboard Refresh",
       "latest_action": {
-        "id": 35546416979,
-        "name": "Research Evidence Audit",
+        "id": 35673477882,
+        "name": "Rates Dashboard Refresh",
         "event": "schedule",
         "status": "completed",
-        "conclusion": "success",
-        "head_sha": "6d989f4058cec2d781004e73c6970231f8bc29a9",
-        "created_at": "2026-09-21T00:03:15Z",
-        "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35546416979"
+        "conclusion": "failure",
+        "head_sha": "3f8e630548cbfa6b6f76d42b606d6f4a1bceece8",
+        "created_at": "2026-09-22T00:48:56Z",
+        "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35673477882"
       }
     },
     {
@@ -274,20 +275,20 @@
       "repository": "ohbeopseok-ops/ohbeopseok-ops",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 98,
+      "size_kb": 102,
       "archived": false,
-      "pushed_at": "2026-09-21T00:14:06Z",
+      "pushed_at": "2026-09-22T00:48:53Z",
       "state": "ACTIVE",
       "reason": "push activity within 14 days",
       "latest_action": {
-        "id": 35547120451,
+        "id": 35673491151,
         "name": "Repository Control Tower V0.1",
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
-        "head_sha": "a0bbcd68c3518ba15be3c3f6671124f8c4adce3e",
-        "created_at": "2026-09-21T00:15:29Z",
-        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/35547120451"
+        "head_sha": "6cc8f178aa0e79a9859fb873124796928896a14a",
+        "created_at": "2026-09-22T00:49:09Z",
+        "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/35673491151"
       }
     },
     {
