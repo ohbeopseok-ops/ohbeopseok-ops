@@ -1,0 +1,1273 @@
+{
+  "schema_version": "2.0",
+  "generated_at": "2026-09-23T13:02:12.232550+00:00",
+  "owner": "ohbeopseok-ops",
+  "scope_mode": "authenticated-owner-scan",
+  "private_repositories_included": true,
+  "scan_complete": true,
+  "counts": {
+    "ARCHIVE": 9,
+    "GREEN": 22,
+    "EMPTY": 3,
+    "STALE": 5,
+    "RED": 4,
+    "YELLOW": 1
+  },
+  "portfolio_counts": {
+    "Archive": 9,
+    "Experiment": 4,
+    "Reference": 5,
+    "Product": 16,
+    "Core": 10
+  },
+  "missing_from_scan": [],
+  "ungoverned_repositories": [],
+  "repositories": [
+    {
+      "repository": "ohbeopseok-ops/-",
+      "portfolio": "Archive",
+      "business_owner": "JoyLab",
+      "purpose": "placeholder repository",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 4,
+      "archived": false,
+      "pushed_at": "2025-12-24T08:34:07Z",
+      "state": "ARCHIVE",
+      "code": "ARCHIVE_POLICY",
+      "reason": "governance portfolio is Archive or repository is archived",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/-joylab-plan-ai",
+      "portfolio": "Experiment",
+      "business_owner": "JoyLab",
+      "purpose": "planning AI experiment",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 2,
+      "archived": false,
+      "pushed_at": "2026-09-02T14:18:28Z",
+      "state": "GREEN",
+      "code": "NO_KNOWN_BLOCKER",
+      "reason": "no known blocking failure in latest workflow state",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/basic-comics",
+      "portfolio": "Experiment",
+      "business_owner": "JoyLab",
+      "purpose": "prototype; currently empty",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 0,
+      "archived": false,
+      "pushed_at": "2026-01-19T02:17:45Z",
+      "state": "EMPTY",
+      "code": "EMPTY_REPOSITORY",
+      "reason": "repository size is 0",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/codaro",
+      "portfolio": "Reference",
+      "business_owner": "JoyLab",
+      "purpose": "reference codebase",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 47203,
+      "archived": false,
+      "pushed_at": "2026-06-10T04:10:37Z",
+      "state": "STALE",
+      "code": "NO_RECENT_PUSH",
+      "reason": "no push for more than 60 days",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/copy-of-ai-meet",
+      "portfolio": "Archive",
+      "business_owner": "JoyLab",
+      "purpose": "one-off copied prototype",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 9,
+      "archived": false,
+      "pushed_at": "2026-01-21T01:50:18Z",
+      "state": "ARCHIVE",
+      "code": "ARCHIVE_POLICY",
+      "reason": "governance portfolio is Archive or repository is archived",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/cs-ops-skills",
+      "portfolio": "Product",
+      "business_owner": "CS Ops",
+      "purpose": "customer-service operations skills",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 1127,
+      "archived": false,
+      "pushed_at": "2026-09-13T22:15:37Z",
+      "state": "GREEN",
+      "code": "ACTIVE_AND_CLEAR",
+      "reason": "push activity within 14 days and no blocking workflow failure",
+      "workflow_state": {
+        "validate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "34aef71796676fd0bcae97ee3841df25d91da1e0",
+          "created_at": "2026-08-17T12:41:07Z",
+          "html_url": "https://github.com/ohbeopseok-ops/cs-ops-skills/actions/runs/32031083393"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/dartlab",
+      "portfolio": "Reference",
+      "business_owner": "JoyLab",
+      "purpose": "reference codebase",
+      "visibility": "public",
+      "default_branch": "master",
+      "size_kb": 502273,
+      "archived": false,
+      "pushed_at": "2026-06-11T08:02:13Z",
+      "state": "STALE",
+      "code": "NO_RECENT_PUSH",
+      "reason": "no push for more than 60 days",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/desktop-tutorial",
+      "portfolio": "Archive",
+      "business_owner": "JoyLab",
+      "purpose": "tutorial placeholder",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 0,
+      "archived": false,
+      "pushed_at": "2026-08-12T03:02:28Z",
+      "state": "ARCHIVE",
+      "code": "ARCHIVE_POLICY",
+      "reason": "governance portfolio is Archive or repository is archived",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/Hermes-Agent_One-Click_Kit",
+      "portfolio": "Reference",
+      "business_owner": "JoyLab",
+      "purpose": "agent kit reference",
+      "visibility": "public",
+      "default_branch": "init-kit",
+      "size_kb": 216,
+      "archived": false,
+      "pushed_at": "2026-06-11T22:40:58Z",
+      "state": "STALE",
+      "code": "NO_RECENT_PUSH",
+      "reason": "no push for more than 60 days",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/https-github.com-uxjoseph-ppt_team_agent",
+      "portfolio": "Archive",
+      "business_owner": "JoyLab",
+      "purpose": "empty import placeholder",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 0,
+      "archived": false,
+      "pushed_at": "2025-12-24T15:17:34Z",
+      "state": "ARCHIVE",
+      "code": "ARCHIVE_POLICY",
+      "reason": "governance portfolio is Archive or repository is archived",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/hyperframes",
+      "portfolio": "Reference",
+      "business_owner": "JoyLab",
+      "purpose": "reference codebase",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 359095,
+      "archived": false,
+      "pushed_at": "2026-06-11T09:26:29Z",
+      "state": "STALE",
+      "code": "NO_RECENT_PUSH",
+      "reason": "no push for more than 60 days",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-agent-os",
+      "portfolio": "Product",
+      "business_owner": "JoyLab AI",
+      "purpose": "agent runtime/product",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 219,
+      "archived": false,
+      "pushed_at": "2026-09-06T12:42:51Z",
+      "state": "GREEN",
+      "code": "NO_KNOWN_BLOCKER",
+      "reason": "no known blocking failure in latest workflow state",
+      "workflow_state": {
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "8492ec93ef317903db65518f48a4db4fb9497894",
+          "created_at": "2026-09-06T12:42:54Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-agent-os/actions/runs/34033926322"
+        },
+        "ci": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "8492ec93ef317903db65518f48a4db4fb9497894",
+          "created_at": "2026-09-06T12:42:54Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-agent-os/actions/runs/34033925868"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-ai-voice-benchmark",
+      "portfolio": "Product",
+      "business_owner": "JoyLab AI",
+      "purpose": "voice benchmark product",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 202,
+      "archived": false,
+      "pushed_at": "2026-08-30T02:20:46Z",
+      "state": "GREEN",
+      "code": "NO_KNOWN_BLOCKER",
+      "reason": "no known blocking failure in latest workflow state",
+      "workflow_state": {
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "27331d0749f8b693515b0c4b0c013bcecc91dccb",
+          "created_at": "2026-08-30T02:20:49Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-ai-voice-benchmark/actions/runs/33287770740"
+        },
+        "Backend CI": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "27331d0749f8b693515b0c4b0c013bcecc91dccb",
+          "created_at": "2026-08-30T02:20:48Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-ai-voice-benchmark/actions/runs/33287770275"
+        },
+        "Import V0.5 Source Baseline": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "1468daa5ce9c31c44c4d9b84abde1abe7974f68a",
+          "created_at": "2026-08-23T03:41:17Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-ai-voice-benchmark/actions/runs/32615974726"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/JoyLab-Book-Mining",
+      "portfolio": "Product",
+      "business_owner": "JoyLab Books",
+      "purpose": "book capture/mining engine",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 30,
+      "archived": false,
+      "pushed_at": "2026-08-30T02:20:52Z",
+      "state": "RED",
+      "code": "RELEASE_GATE_FAILURE",
+      "reason": "critical workflow failed: JoyLab Release Gate",
+      "workflow_state": {
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "failure",
+          "event": "push",
+          "head_sha": "638191bb0f648c34178d1bac7b6d729addf9dbfb",
+          "created_at": "2026-08-30T02:20:55Z",
+          "html_url": "https://github.com/ohbeopseok-ops/JoyLab-Book-Mining/actions/runs/33287774368"
+        },
+        "Test Capture Engine": {
+          "status": "completed",
+          "conclusion": "failure",
+          "event": "push",
+          "head_sha": "638191bb0f648c34178d1bac7b6d729addf9dbfb",
+          "created_at": "2026-08-30T02:20:55Z",
+          "html_url": "https://github.com/ohbeopseok-ops/JoyLab-Book-Mining/actions/runs/33287774106"
+        },
+        "Validate Book Assets": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "638191bb0f648c34178d1bac7b6d729addf9dbfb",
+          "created_at": "2026-08-30T02:20:55Z",
+          "html_url": "https://github.com/ohbeopseok-ops/JoyLab-Book-Mining/actions/runs/33287774084"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-command-center",
+      "portfolio": "Core",
+      "business_owner": "JoyLab",
+      "purpose": "multi-agent command center",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 65,
+      "archived": false,
+      "pushed_at": "2026-09-23T12:28:37Z",
+      "state": "GREEN",
+      "code": "ACTIVE_AND_CLEAR",
+      "reason": "push activity within 14 days and no blocking workflow failure",
+      "workflow_state": {
+        "CI": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "7ae8850948b002594330ced00653ece6e93aa2ce",
+          "created_at": "2026-09-23T12:28:40Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-command-center/actions/runs/35860704822"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-content-os",
+      "portfolio": "Core",
+      "business_owner": "JoyLab Content",
+      "purpose": "content scoring and ingestion",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 73,
+      "archived": false,
+      "pushed_at": "2026-08-30T06:53:56Z",
+      "state": "RED",
+      "code": "DATA_PIPELINE_FAILURE",
+      "reason": "critical workflow failed: Daily Scoring",
+      "workflow_state": {
+        "Daily Scoring": {
+          "status": "completed",
+          "conclusion": "failure",
+          "event": "schedule",
+          "head_sha": "96827eaf5ff9e49d2bd0ac89a9691890575dbcff",
+          "created_at": "2026-09-23T00:21:29Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-content-os/actions/runs/35801699433"
+        },
+        "GSC Performance": {
+          "status": "completed",
+          "conclusion": "failure",
+          "event": "schedule",
+          "head_sha": "96827eaf5ff9e49d2bd0ac89a9691890575dbcff",
+          "created_at": "2026-09-22T23:47:58Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-content-os/actions/runs/35799127480"
+        },
+        "NAVER Search Demand": {
+          "status": "completed",
+          "conclusion": "failure",
+          "event": "schedule",
+          "head_sha": "96827eaf5ff9e49d2bd0ac89a9691890575dbcff",
+          "created_at": "2026-09-22T23:44:23Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-content-os/actions/runs/35798840809"
+        },
+        "Weekly Review": {
+          "status": "completed",
+          "conclusion": "failure",
+          "event": "schedule",
+          "head_sha": "96827eaf5ff9e49d2bd0ac89a9691890575dbcff",
+          "created_at": "2026-09-21T00:19:19Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-content-os/actions/runs/35547332462"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-core8-engine",
+      "portfolio": "Core",
+      "business_owner": "JoyLab Investment",
+      "purpose": "investment decision engine",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 668,
+      "archived": false,
+      "pushed_at": "2026-09-23T12:59:57Z",
+      "state": "YELLOW",
+      "code": "OPERATIONAL_AUTOMATION_FAILURE",
+      "reason": "operational workflow needs attention: Investment Lab Portfolio Refresh",
+      "workflow_state": {
+        "Daily EPS Revision Collector": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "schedule",
+          "head_sha": "b0e282c5d56fb22d80dd2855e2b8a14685d3b8bb",
+          "created_at": "2026-09-23T12:59:41Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-core8-engine/actions/runs/35864041706"
+        },
+        "Investment Lab Portfolio Refresh": {
+          "status": "completed",
+          "conclusion": "failure",
+          "event": "schedule",
+          "head_sha": "b0e282c5d56fb22d80dd2855e2b8a14685d3b8bb",
+          "created_at": "2026-09-23T12:43:48Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-core8-engine/actions/runs/35862331304"
+        },
+        "day004-auto-snapshot": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "schedule",
+          "head_sha": "b0e282c5d56fb22d80dd2855e2b8a14685d3b8bb",
+          "created_at": "2026-09-23T12:40:39Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-core8-engine/actions/runs/35861991950"
+        },
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "b0e282c5d56fb22d80dd2855e2b8a14685d3b8bb",
+          "created_at": "2026-09-23T11:11:26Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-core8-engine/actions/runs/35853090930"
+        },
+        "ci-standard-v1": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "b0e282c5d56fb22d80dd2855e2b8a14685d3b8bb",
+          "created_at": "2026-09-23T11:11:26Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-core8-engine/actions/runs/35853090716"
+        },
+        "test": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "b0e282c5d56fb22d80dd2855e2b8a14685d3b8bb",
+          "created_at": "2026-09-23T11:11:26Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-core8-engine/actions/runs/35853090187"
+        },
+        "Investment Lab Dashboard Sync": {
+          "status": "completed",
+          "conclusion": "failure",
+          "event": "push",
+          "head_sha": "b0e282c5d56fb22d80dd2855e2b8a14685d3b8bb",
+          "created_at": "2026-09-23T11:11:26Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-core8-engine/actions/runs/35853090172"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-cs-accuracy-os",
+      "portfolio": "Product",
+      "business_owner": "CS Ops",
+      "purpose": "CS accuracy tooling",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 336,
+      "archived": false,
+      "pushed_at": "2026-09-02T13:32:13Z",
+      "state": "GREEN",
+      "code": "NO_KNOWN_BLOCKER",
+      "reason": "no known blocking failure in latest workflow state",
+      "workflow_state": {
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "eeca9b20fc58f4e8f54baeca7af21c1b694d6ec1",
+          "created_at": "2026-09-02T13:32:26Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-cs-accuracy-os/actions/runs/33636338168"
+        },
+        "Agent Governance Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "4b18dc5976cbc931d17ae1110bd0047f1501889b",
+          "created_at": "2026-09-01T15:33:43Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-cs-accuracy-os/actions/runs/33526478582"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-cs-adaptive-learning",
+      "portfolio": "Product",
+      "business_owner": "CS Ops",
+      "purpose": "adaptive learning product",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 57,
+      "archived": false,
+      "pushed_at": "2026-09-01T13:13:19Z",
+      "state": "GREEN",
+      "code": "NO_KNOWN_BLOCKER",
+      "reason": "no known blocking failure in latest workflow state",
+      "workflow_state": {
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "e280768f0e0495c03fd4903adf917efbc69eabcd",
+          "created_at": "2026-09-01T13:13:25Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-cs-adaptive-learning/actions/runs/33512094068"
+        },
+        "Gold Regression": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "e280768f0e0495c03fd4903adf917efbc69eabcd",
+          "created_at": "2026-09-01T13:13:25Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-cs-adaptive-learning/actions/runs/33512093430"
+        },
+        "Live Gold30 A-B Benchmark": {
+          "status": "completed",
+          "conclusion": "failure",
+          "event": "push",
+          "head_sha": "06853245c1c9d9e46f9f194653732643e4d6211a",
+          "created_at": "2026-08-23T02:05:17Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-cs-adaptive-learning/actions/runs/32611957762"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-etf-intelligence",
+      "portfolio": "Product",
+      "business_owner": "JoyLab Investment",
+      "purpose": "ETF intelligence",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 243,
+      "archived": false,
+      "pushed_at": "2026-09-23T07:52:24Z",
+      "state": "GREEN",
+      "code": "ACTIVE_AND_CLEAR",
+      "reason": "push activity within 14 days and no blocking workflow failure",
+      "workflow_state": {
+        "Gate Scan Alerts": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "schedule",
+          "head_sha": "8a4aaa8e6660fa6b832278cb36dcc9f4b420b11f",
+          "created_at": "2026-09-23T07:51:46Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-etf-intelligence/actions/runs/35833953672"
+        },
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "a131afda89b814884b664484fdc8089c7c7d50f4",
+          "created_at": "2026-09-17T03:33:32Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-etf-intelligence/actions/runs/35178616676"
+        },
+        "ci-standard-v1": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "a131afda89b814884b664484fdc8089c7c7d50f4",
+          "created_at": "2026-09-17T03:33:31Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-etf-intelligence/actions/runs/35178616441"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-html-tool",
+      "portfolio": "Product",
+      "business_owner": "JoyLab",
+      "purpose": "HTML/Tauri utility",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 124,
+      "archived": false,
+      "pushed_at": "2026-08-30T02:20:25Z",
+      "state": "GREEN",
+      "code": "NO_KNOWN_BLOCKER",
+      "reason": "no known blocking failure in latest workflow state",
+      "workflow_state": {
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "e73ce780815b53e0d4df9ce18482cfdfb39b2c58",
+          "created_at": "2026-08-30T02:20:27Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-html-tool/actions/runs/33287755321"
+        },
+        "Build JoyLab Counselor Windows": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "e73ce780815b53e0d4df9ce18482cfdfb39b2c58",
+          "created_at": "2026-08-30T02:20:27Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-html-tool/actions/runs/33287754810"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-knowledge-os",
+      "portfolio": "Core",
+      "business_owner": "JoyLab",
+      "purpose": "knowledge operating system",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 362,
+      "archived": false,
+      "pushed_at": "2026-08-30T02:20:39Z",
+      "state": "GREEN",
+      "code": "NO_KNOWN_BLOCKER",
+      "reason": "no known blocking failure in latest workflow state",
+      "workflow_state": {
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "93e1f938cb454eb8ad27995659813e6f0c4627fc",
+          "created_at": "2026-08-30T02:20:42Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-knowledge-os/actions/runs/33287766156"
+        },
+        "D2S P1 Vertical Slice": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "daa150729167c6fb6cb59d27eebb464df843378a",
+          "created_at": "2026-08-30T02:10:48Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-knowledge-os/actions/runs/33287371066"
+        },
+        "Update Knowledge Dashboard": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "2d3199594c2f98f6f298ddbada79b27fb8b98fba",
+          "created_at": "2026-08-22T10:24:48Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-knowledge-os/actions/runs/32567536648"
+        },
+        "Hypothesis Tournament Integrity": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "affd34cba2d1955dcf7d07f02dffae25069e872b",
+          "created_at": "2026-08-22T10:23:14Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-knowledge-os/actions/runs/32567468803"
+        },
+        "Hypothesis Tournament Leaderboard": {
+          "status": "completed",
+          "conclusion": "failure",
+          "event": "push",
+          "head_sha": "6a3ac1df03f1953677d372d064ae42ac830f6f9b",
+          "created_at": "2026-08-22T03:43:41Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-knowledge-os/actions/runs/32549764764"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-moment15-ios",
+      "portfolio": "Product",
+      "business_owner": "JoyLab",
+      "purpose": "Moment15 iOS product",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 44,
+      "archived": false,
+      "pushed_at": "2026-09-09T00:54:58Z",
+      "state": "GREEN",
+      "code": "NO_KNOWN_BLOCKER",
+      "reason": "no known blocking failure in latest workflow state",
+      "workflow_state": {
+        "iOS Build": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "891396ca61f6e3e38bce7a9e5621e800f6976368",
+          "created_at": "2026-09-09T00:55:03Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-moment15-ios/actions/runs/34297014981"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-money-os",
+      "portfolio": "Product",
+      "business_owner": "JoyLab",
+      "purpose": "money management utility",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 43,
+      "archived": false,
+      "pushed_at": "2026-08-30T02:21:16Z",
+      "state": "RED",
+      "code": "BUILD_FAILURE",
+      "reason": "critical workflow failed: Build Portable EXE",
+      "workflow_state": {
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "f2cc7048f67b4ed16ff0bf20103a15201762430b",
+          "created_at": "2026-08-30T02:21:19Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-money-os/actions/runs/33287788168"
+        },
+        "Build Portable EXE": {
+          "status": "completed",
+          "conclusion": "failure",
+          "event": "workflow_dispatch",
+          "head_sha": "0bb5e457f822341ebbe8a282bcb04a436e2931d7",
+          "created_at": "2026-08-29T12:27:40Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-money-os/actions/runs/33252556212"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-notes",
+      "portfolio": "Core",
+      "business_owner": "JoyLab",
+      "purpose": "shared notes/data hub",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 236,
+      "archived": false,
+      "pushed_at": "2026-09-17T11:25:50Z",
+      "state": "GREEN",
+      "code": "ACTIVE_AND_CLEAR",
+      "reason": "push activity within 14 days and no blocking workflow failure",
+      "workflow_state": {
+        "web-vertical-slice": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "222fa27b11e06ac7c21acd46efb6fce1e076075c",
+          "created_at": "2026-09-17T11:25:52Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-notes/actions/runs/35215637967"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-portfolio-os",
+      "portfolio": "Core",
+      "business_owner": "JoyLab Investment",
+      "purpose": "portfolio operating system",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 119,
+      "archived": false,
+      "pushed_at": "2026-08-31T04:11:51Z",
+      "state": "GREEN",
+      "code": "NO_KNOWN_BLOCKER",
+      "reason": "no known blocking failure in latest workflow state",
+      "workflow_state": {
+        "Portfolio Engine Tests": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "338ce0011bbc416e3afe24da33e658402b3bc955",
+          "created_at": "2026-08-31T04:11:54Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-portfolio-os/actions/runs/33356241163"
+        },
+        "Database Tests": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "338ce0011bbc416e3afe24da33e658402b3bc955",
+          "created_at": "2026-08-31T04:11:54Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-portfolio-os/actions/runs/33356241162"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-product-hub",
+      "portfolio": "Core",
+      "business_owner": "JoyLab",
+      "purpose": "product registry/hub",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 688,
+      "archived": false,
+      "pushed_at": "2026-08-30T02:20:58Z",
+      "state": "GREEN",
+      "code": "NO_KNOWN_BLOCKER",
+      "reason": "no known blocking failure in latest workflow state",
+      "workflow_state": {
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "a916346b0dc3add29875bc84dcea63ac2c837e31",
+          "created_at": "2026-08-30T02:21:04Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-product-hub/actions/runs/33287779803"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-publishing-os",
+      "portfolio": "Core",
+      "business_owner": "JoyLab Publishing",
+      "purpose": "primary publishing platform",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 4643,
+      "archived": false,
+      "pushed_at": "2026-09-23T13:00:02Z",
+      "state": "GREEN",
+      "code": "ACTIVE_AND_CLEAR",
+      "reason": "push activity within 14 days and no blocking workflow failure",
+      "workflow_state": {
+        "Article Hero Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "720e95db514f08c5c5737988ab112a75a3307871",
+          "created_at": "2026-09-23T13:00:27Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35864125112"
+        },
+        "Build": {
+          "status": "in_progress",
+          "conclusion": null,
+          "event": "pull_request",
+          "head_sha": "720e95db514f08c5c5737988ab112a75a3307871",
+          "created_at": "2026-09-23T13:00:27Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35864125088"
+        },
+        "Research Quality Gate V2": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "3ae54285ab28be19da8fd63e2fa9791d5aa4c2ec",
+          "created_at": "2026-09-23T12:55:29Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35863593888"
+        },
+        "Distribution Execution GOLD": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "e0fd69fe9f952dc2c4d4b9516c525f4698fb3415",
+          "created_at": "2026-09-23T12:44:41Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35862426484"
+        },
+        "Deploy to Cloudflare Workers": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "747c5a36674c879100bf8f640181bd93c7cfa0fa",
+          "created_at": "2026-09-23T12:19:07Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35859721844"
+        },
+        "Books Visual QA V1": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "8fb174f9be09dc9c6c1810d54e83e11579f25107",
+          "created_at": "2026-09-23T12:15:57Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35859401008"
+        },
+        "Book SEO Analytics Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "8fb174f9be09dc9c6c1810d54e83e11579f25107",
+          "created_at": "2026-09-23T12:15:57Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35859400882"
+        },
+        "Book Web Reader V1": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "8fb174f9be09dc9c6c1810d54e83e11579f25107",
+          "created_at": "2026-09-23T12:15:57Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35859400860"
+        },
+        "Books Domain Core": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "8fb174f9be09dc9c6c1810d54e83e11579f25107",
+          "created_at": "2026-09-23T12:15:57Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35859400846"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-search-engine",
+      "portfolio": "Core",
+      "business_owner": "JoyLab",
+      "purpose": "search engine",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 21,
+      "archived": false,
+      "pushed_at": "2026-08-30T02:21:05Z",
+      "state": "GREEN",
+      "code": "NO_KNOWN_BLOCKER",
+      "reason": "no known blocking failure in latest workflow state",
+      "workflow_state": {
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "ebcf207b51fd284b7fd66ffbf13a22babb111ec4",
+          "created_at": "2026-08-30T02:21:08Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-search-engine/actions/runs/33287781788"
+        },
+        "V0.1 Trust Layer Tests": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "b60f8edfd3986749732be9f0b1da1272a2e566d7",
+          "created_at": "2026-08-27T04:01:51Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-search-engine/actions/runs/33038143224"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/JoyLab-SEO",
+      "portfolio": "Product",
+      "business_owner": "JoyLab Publishing",
+      "purpose": "SEO tooling",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 46,
+      "archived": false,
+      "pushed_at": "2026-09-20T21:51:10Z",
+      "state": "GREEN",
+      "code": "ACTIVE_AND_CLEAR",
+      "reason": "push activity within 14 days and no blocking workflow failure",
+      "workflow_state": {
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "1a0c5b08ede1936d573a5de81d183897f6410379",
+          "created_at": "2026-09-20T21:53:36Z",
+          "html_url": "https://github.com/ohbeopseok-ops/JoyLab-SEO/actions/runs/35540030841"
+        },
+        "Content OS DB Foundation": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "10e1da53ee88baae032d4b2d4a0647080c9d6aec",
+          "created_at": "2026-08-30T03:59:10Z",
+          "html_url": "https://github.com/ohbeopseok-ops/JoyLab-SEO/actions/runs/33291470119"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab-vercel-site",
+      "portfolio": "Product",
+      "business_owner": "JoyLab",
+      "purpose": "Vercel web property",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 45,
+      "archived": false,
+      "pushed_at": "2026-08-30T02:20:29Z",
+      "state": "GREEN",
+      "code": "NO_KNOWN_BLOCKER",
+      "reason": "no known blocking failure in latest workflow state",
+      "workflow_state": {
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "d0849c64ebede5a19090aca23ad023abfb7a090b",
+          "created_at": "2026-08-30T02:20:32Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-vercel-site/actions/runs/33287758764"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/joylab_ai_coach_tutor",
+      "portfolio": "Experiment",
+      "business_owner": "JoyLab",
+      "purpose": "AI coach prototype; currently empty",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 0,
+      "archived": false,
+      "pushed_at": "2026-08-12T03:03:03Z",
+      "state": "EMPTY",
+      "code": "EMPTY_REPOSITORY",
+      "reason": "repository size is 0",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/JoyLab_Vibe_Coding_OS_v1.0",
+      "portfolio": "Product",
+      "business_owner": "JoyLab AI",
+      "purpose": "vibe coding operating system",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 59,
+      "archived": false,
+      "pushed_at": "2026-08-30T02:20:34Z",
+      "state": "GREEN",
+      "code": "NO_KNOWN_BLOCKER",
+      "reason": "no known blocking failure in latest workflow state",
+      "workflow_state": {
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "610b9357e1374c0b5f56fef0aa596fa75cf4be89",
+          "created_at": "2026-08-30T02:20:37Z",
+          "html_url": "https://github.com/ohbeopseok-ops/JoyLab_Vibe_Coding_OS_v1.0/actions/runs/33287762609"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/kordoc",
+      "portfolio": "Reference",
+      "business_owner": "JoyLab",
+      "purpose": "document/reference codebase",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 8260,
+      "archived": false,
+      "pushed_at": "2026-06-11T04:53:39Z",
+      "state": "STALE",
+      "code": "NO_RECENT_PUSH",
+      "reason": "no push for more than 60 days",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/leaderdesk",
+      "portfolio": "Product",
+      "business_owner": "CS Ops",
+      "purpose": "LeaderDesk Ops and Coaching",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 327,
+      "archived": false,
+      "pushed_at": "2026-09-15T09:04:40Z",
+      "state": "GREEN",
+      "code": "ACTIVE_AND_CLEAR",
+      "reason": "push activity within 14 days and no blocking workflow failure",
+      "workflow_state": {
+        "Build LeaderDesk Ops Windows Release": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "0cf01e83459ded34bc793ded911fd1a427cf22af",
+          "created_at": "2026-09-15T09:04:42Z",
+          "html_url": "https://github.com/ohbeopseok-ops/leaderdesk/actions/runs/34950503649"
+        },
+        "Build Windows Release": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "1bba51330fb28f47fd7d885e59ab039812e37401",
+          "created_at": "2026-09-15T09:03:48Z",
+          "html_url": "https://github.com/ohbeopseok-ops/leaderdesk/actions/runs/34950417380"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/masterplan_0722",
+      "portfolio": "Archive",
+      "business_owner": "JoyLab",
+      "purpose": "old empty planning repository",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 0,
+      "archived": false,
+      "pushed_at": "2026-07-22T08:07:41Z",
+      "state": "ARCHIVE",
+      "code": "ARCHIVE_POLICY",
+      "reason": "governance portfolio is Archive or repository is archived",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/meeting",
+      "portfolio": "Archive",
+      "business_owner": "JoyLab",
+      "purpose": "old empty meeting repository",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 0,
+      "archived": false,
+      "pushed_at": "2025-12-15T10:40:49Z",
+      "state": "ARCHIVE",
+      "code": "ARCHIVE_POLICY",
+      "reason": "governance portfolio is Archive or repository is archived",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/ohbeopseok-ops",
+      "portfolio": "Core",
+      "business_owner": "JoyLab",
+      "purpose": "account control tower and governance",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 109,
+      "archived": false,
+      "pushed_at": "2026-09-23T13:02:03Z",
+      "state": "GREEN",
+      "code": "ACTIVE_AND_CLEAR",
+      "reason": "push activity within 14 days and no blocking workflow failure",
+      "workflow_state": {
+        "Repository Control Tower V0.2": {
+          "status": "in_progress",
+          "conclusion": null,
+          "event": "push",
+          "head_sha": "d73c38290b70b062f2321399672350d8db93853d",
+          "created_at": "2026-09-23T13:02:05Z",
+          "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/35864310811"
+        },
+        "JoyLab Repository Control Tower": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "06400b9b9b86d4ab4769a8a2b9c4efad63d92be3",
+          "created_at": "2026-09-23T12:59:49Z",
+          "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/35864054542"
+        },
+        "Control Tower CI": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "ace5584d6b2f914fa74328d468a7c3938e66c3a5",
+          "created_at": "2026-09-23T12:51:21Z",
+          "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/35863145938"
+        },
+        "Repository Control Tower V0.1": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "schedule",
+          "head_sha": "617ea9df70792fab46666ef87f0ec5659c7a9fda",
+          "created_at": "2026-09-23T00:31:23Z",
+          "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/35802431484"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/on_0720",
+      "portfolio": "Archive",
+      "business_owner": "CS Ops",
+      "purpose": "old empty prototype",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 0,
+      "archived": false,
+      "pushed_at": "2026-07-20T08:20:02Z",
+      "state": "ARCHIVE",
+      "code": "ARCHIVE_POLICY",
+      "reason": "governance portfolio is Archive or repository is archived",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/onboaring",
+      "portfolio": "Experiment",
+      "business_owner": "CS Ops",
+      "purpose": "onboarding prototype; currently empty",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 0,
+      "archived": false,
+      "pushed_at": "2026-07-20T08:12:58Z",
+      "state": "EMPTY",
+      "code": "EMPTY_REPOSITORY",
+      "reason": "repository size is 0",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/risk-zero",
+      "portfolio": "Archive",
+      "business_owner": "JoyLab",
+      "purpose": "one-off legacy prototype",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 30,
+      "archived": false,
+      "pushed_at": "2026-01-14T08:44:20Z",
+      "state": "ARCHIVE",
+      "code": "ARCHIVE_POLICY",
+      "reason": "governance portfolio is Archive or repository is archived",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/sales-point",
+      "portfolio": "Archive",
+      "business_owner": "JoyLab",
+      "purpose": "one-off legacy prototype",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 26,
+      "archived": false,
+      "pushed_at": "2025-12-18T08:33:45Z",
+      "state": "ARCHIVE",
+      "code": "ARCHIVE_POLICY",
+      "reason": "governance portfolio is Archive or repository is archived",
+      "workflow_state": {}
+    },
+    {
+      "repository": "ohbeopseok-ops/senior-toilet-finder",
+      "portfolio": "Product",
+      "business_owner": "JoyLab",
+      "purpose": "senior public toilet finder",
+      "visibility": "public",
+      "default_branch": "main",
+      "size_kb": 156,
+      "archived": false,
+      "pushed_at": "2026-09-23T09:46:28Z",
+      "state": "GREEN",
+      "code": "ACTIVE_AND_CLEAR",
+      "reason": "push activity within 14 days and no blocking workflow failure",
+      "workflow_state": {
+        "Geocode Public Toilet Addresses": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "88f694a3ec72901eb8d948cdb919dbf42b275b12",
+          "created_at": "2026-09-23T09:46:21Z",
+          "html_url": "https://github.com/ohbeopseok-ops/senior-toilet-finder/actions/runs/35844898427"
+        },
+        "Deploy GitHub Pages": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "88f694a3ec72901eb8d948cdb919dbf42b275b12",
+          "created_at": "2026-09-23T09:46:21Z",
+          "html_url": "https://github.com/ohbeopseok-ops/senior-toilet-finder/actions/runs/35844898387"
+        },
+        "Build Anyang Toilet Seed": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "66752738380e09aec273492ff986eaf4889bb7ca",
+          "created_at": "2026-09-23T09:35:02Z",
+          "html_url": "https://github.com/ohbeopseok-ops/senior-toilet-finder/actions/runs/35843793301"
+        },
+        "Sync Data.go.kr Public Toilets": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "4875ae5514d97e5e67cca21a363f98dffee3dd1d",
+          "created_at": "2026-09-23T09:15:41Z",
+          "html_url": "https://github.com/ohbeopseok-ops/senior-toilet-finder/actions/runs/35841885374"
+        }
+      }
+    },
+    {
+      "repository": "ohbeopseok-ops/title-triumphs-tool",
+      "portfolio": "Product",
+      "business_owner": "JoyLab Publishing",
+      "purpose": "title optimization tool",
+      "visibility": "private",
+      "default_branch": "main",
+      "size_kb": 448,
+      "archived": false,
+      "pushed_at": "2026-08-30T02:20:22Z",
+      "state": "RED",
+      "code": "RELEASE_GATE_FAILURE",
+      "reason": "critical workflow failed: JoyLab Release Gate",
+      "workflow_state": {
+        "JoyLab Release Gate": {
+          "status": "completed",
+          "conclusion": "failure",
+          "event": "push",
+          "head_sha": "292bc614ec70b7d4bfbcf5ac755defa0c8c10204",
+          "created_at": "2026-08-30T02:20:24Z",
+          "html_url": "https://github.com/ohbeopseok-ops/title-triumphs-tool/actions/runs/33287752957"
+        },
+        "CI": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "9266dca2221b238812e0c94aaf0e25db2222f88c",
+          "created_at": "2026-08-30T02:10:45Z",
+          "html_url": "https://github.com/ohbeopseok-ops/title-triumphs-tool/actions/runs/33287369241"
+        }
+      }
+    }
+  ]
+}
