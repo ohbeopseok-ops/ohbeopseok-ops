@@ -1,0 +1,283 @@
+{
+  "schema_version": "1.0",
+  "owner": "ohbeopseok-ops",
+  "policy": {
+    "allowed_portfolios": [
+      "Core",
+      "Product",
+      "Experiment",
+      "Reference",
+      "Archive"
+    ],
+    "health_states": [
+      "GREEN",
+      "YELLOW",
+      "RED",
+      "STALE",
+      "EMPTY",
+      "ARCHIVE"
+    ],
+    "active_days": 14,
+    "stale_days": 60,
+    "operational_failure_hours": 48
+  },
+  "repositories": {
+    "-": {
+      "portfolio": "Archive",
+      "owner": "JoyLab",
+      "purpose": "placeholder repository"
+    },
+    "-joylab-plan-ai": {
+      "portfolio": "Experiment",
+      "owner": "JoyLab",
+      "purpose": "planning AI experiment"
+    },
+    "basic-comics": {
+      "portfolio": "Experiment",
+      "owner": "JoyLab",
+      "purpose": "prototype; currently empty"
+    },
+    "codaro": {
+      "portfolio": "Reference",
+      "owner": "JoyLab",
+      "purpose": "reference codebase"
+    },
+    "copy-of-ai-meet": {
+      "portfolio": "Archive",
+      "owner": "JoyLab",
+      "purpose": "one-off copied prototype"
+    },
+    "cs-ops-skills": {
+      "portfolio": "Product",
+      "owner": "CS Ops",
+      "purpose": "customer-service operations skills"
+    },
+    "dartlab": {
+      "portfolio": "Reference",
+      "owner": "JoyLab",
+      "purpose": "reference codebase"
+    },
+    "desktop-tutorial": {
+      "portfolio": "Archive",
+      "owner": "JoyLab",
+      "purpose": "tutorial placeholder"
+    },
+    "Hermes-Agent_One-Click_Kit": {
+      "portfolio": "Reference",
+      "owner": "JoyLab",
+      "purpose": "agent kit reference"
+    },
+    "https-github.com-uxjoseph-ppt_team_agent": {
+      "portfolio": "Archive",
+      "owner": "JoyLab",
+      "purpose": "empty import placeholder"
+    },
+    "hyperframes": {
+      "portfolio": "Reference",
+      "owner": "JoyLab",
+      "purpose": "reference codebase"
+    },
+    "joylab-agent-os": {
+      "portfolio": "Product",
+      "owner": "JoyLab AI",
+      "purpose": "agent runtime/product"
+    },
+    "joylab-ai-voice-benchmark": {
+      "portfolio": "Product",
+      "owner": "JoyLab AI",
+      "purpose": "voice benchmark product"
+    },
+    "JoyLab-Book-Mining": {
+      "portfolio": "Product",
+      "owner": "JoyLab Books",
+      "purpose": "book capture/mining engine",
+      "critical_workflows": [
+        "Test Capture Engine",
+        "JoyLab Release Gate"
+      ]
+    },
+    "joylab-command-center": {
+      "portfolio": "Core",
+      "owner": "JoyLab",
+      "purpose": "multi-agent command center",
+      "critical_workflows": [
+        "CI"
+      ]
+    },
+    "joylab-content-os": {
+      "portfolio": "Core",
+      "owner": "JoyLab Content",
+      "purpose": "content scoring and ingestion",
+      "critical_workflows": [
+        "Daily Scoring",
+        "GSC Performance",
+        "NAVER Search Demand"
+      ]
+    },
+    "joylab-core8-engine": {
+      "portfolio": "Core",
+      "owner": "JoyLab Investment",
+      "purpose": "investment decision engine",
+      "critical_workflows": [
+        "JoyLab Release Gate",
+        "ci-standard-v1",
+        "test"
+      ],
+      "operational_workflows": [
+        "Investment Lab Portfolio Refresh",
+        "Investment Lab Dashboard Sync"
+      ]
+    },
+    "joylab-cs-accuracy-os": {
+      "portfolio": "Product",
+      "owner": "CS Ops",
+      "purpose": "CS accuracy tooling"
+    },
+    "joylab-cs-adaptive-learning": {
+      "portfolio": "Product",
+      "owner": "CS Ops",
+      "purpose": "adaptive learning product"
+    },
+    "joylab-etf-intelligence": {
+      "portfolio": "Product",
+      "owner": "JoyLab Investment",
+      "purpose": "ETF intelligence"
+    },
+    "joylab-html-tool": {
+      "portfolio": "Product",
+      "owner": "JoyLab",
+      "purpose": "HTML/Tauri utility"
+    },
+    "joylab-knowledge-os": {
+      "portfolio": "Core",
+      "owner": "JoyLab",
+      "purpose": "knowledge operating system"
+    },
+    "joylab-moment15-ios": {
+      "portfolio": "Product",
+      "owner": "JoyLab",
+      "purpose": "Moment15 iOS product"
+    },
+    "joylab-money-os": {
+      "portfolio": "Product",
+      "owner": "JoyLab",
+      "purpose": "money management utility"
+    },
+    "joylab-notes": {
+      "portfolio": "Core",
+      "owner": "JoyLab",
+      "purpose": "shared notes/data hub"
+    },
+    "joylab-portfolio-os": {
+      "portfolio": "Core",
+      "owner": "JoyLab Investment",
+      "purpose": "portfolio operating system"
+    },
+    "joylab-product-hub": {
+      "portfolio": "Core",
+      "owner": "JoyLab",
+      "purpose": "product registry/hub"
+    },
+    "joylab-publishing-os": {
+      "portfolio": "Core",
+      "owner": "JoyLab Publishing",
+      "purpose": "primary publishing platform",
+      "critical_workflows": [
+        "Build",
+        "Deploy to Cloudflare Workers",
+        "Article Hero Gate"
+      ]
+    },
+    "joylab-search-engine": {
+      "portfolio": "Core",
+      "owner": "JoyLab",
+      "purpose": "search engine"
+    },
+    "JoyLab-SEO": {
+      "portfolio": "Product",
+      "owner": "JoyLab Publishing",
+      "purpose": "SEO tooling"
+    },
+    "joylab-vercel-site": {
+      "portfolio": "Product",
+      "owner": "JoyLab",
+      "purpose": "Vercel web property"
+    },
+    "joylab_ai_coach_tutor": {
+      "portfolio": "Experiment",
+      "owner": "JoyLab",
+      "purpose": "AI coach prototype; currently empty"
+    },
+    "JoyLab_Vibe_Coding_OS_v1.0": {
+      "portfolio": "Product",
+      "owner": "JoyLab AI",
+      "purpose": "vibe coding operating system"
+    },
+    "kordoc": {
+      "portfolio": "Reference",
+      "owner": "JoyLab",
+      "purpose": "document/reference codebase"
+    },
+    "leaderdesk": {
+      "portfolio": "Product",
+      "owner": "CS Ops",
+      "purpose": "LeaderDesk Ops and Coaching"
+    },
+    "masterplan_0722": {
+      "portfolio": "Archive",
+      "owner": "JoyLab",
+      "purpose": "old empty planning repository"
+    },
+    "meeting": {
+      "portfolio": "Archive",
+      "owner": "JoyLab",
+      "purpose": "old empty meeting repository"
+    },
+    "ohbeopseok-ops": {
+      "portfolio": "Core",
+      "owner": "JoyLab",
+      "purpose": "account control tower and governance",
+      "critical_workflows": [
+        "Repository Control Tower V0.2"
+      ]
+    },
+    "onboaring": {
+      "portfolio": "Experiment",
+      "owner": "CS Ops",
+      "purpose": "onboarding prototype; currently empty"
+    },
+    "on_0720": {
+      "portfolio": "Archive",
+      "owner": "CS Ops",
+      "purpose": "old empty prototype"
+    },
+    "risk-zero": {
+      "portfolio": "Archive",
+      "owner": "JoyLab",
+      "purpose": "one-off legacy prototype"
+    },
+    "sales-point": {
+      "portfolio": "Archive",
+      "owner": "JoyLab",
+      "purpose": "one-off legacy prototype"
+    },
+    "senior-toilet-finder": {
+      "portfolio": "Product",
+      "owner": "JoyLab",
+      "purpose": "senior public toilet finder",
+      "critical_workflows": [
+        "Deploy GitHub Pages",
+        "Geocode Public Toilet Addresses"
+      ]
+    },
+    "title-triumphs-tool": {
+      "portfolio": "Product",
+      "owner": "JoyLab Publishing",
+      "purpose": "title optimization tool",
+      "critical_workflows": [
+        "CI",
+        "JoyLab Release Gate"
+      ]
+    }
+  }
+}
