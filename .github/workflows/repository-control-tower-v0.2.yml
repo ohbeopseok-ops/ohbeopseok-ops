@@ -58,15 +58,32 @@ jobs:
               raise SystemExit(f"Expected 44 governed repositories, got {len(p['repositories'])}")
           PY
 
-      - name: Commit registry changes
+      - name: Commit registry changes safely
         run: |
           CHANGES="$(git status --porcelain -- GITHUB_HEALTH_REGISTRY_V0.2.md control_tower/repository-health-v0.2.json)"
           if [ -z "$CHANGES" ]; then
             echo "No health-state changes."
             exit 0
           fi
+
           git config user.name "JoyLab Control Tower"
           git config user.email "actions@users.noreply.github.com"
+
+          cp GITHUB_HEALTH_REGISTRY_V0.2.md /tmp/GITHUB_HEALTH_REGISTRY_V0.2.md
+          cp control_tower/repository-health-v0.2.json /tmp/repository-health-v0.2.json
+
+          git fetch origin main
+          git reset --hard origin/main
+
+          mkdir -p control_tower
+          cp /tmp/GITHUB_HEALTH_REGISTRY_V0.2.md GITHUB_HEALTH_REGISTRY_V0.2.md
+          cp /tmp/repository-health-v0.2.json control_tower/repository-health-v0.2.json
+
+          if [ -z "$(git status --porcelain -- GITHUB_HEALTH_REGISTRY_V0.2.md control_tower/repository-health-v0.2.json)" ]; then
+            echo "Generated V0.2 report already matches current main."
+            exit 0
+          fi
+
           git add GITHUB_HEALTH_REGISTRY_V0.2.md control_tower/repository-health-v0.2.json
           git commit -m "chore(control-tower): refresh V0.2 repository health"
           git push
