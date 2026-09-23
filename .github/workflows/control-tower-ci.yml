@@ -4,6 +4,11 @@ on:
   pull_request:
     paths:
       - "control_tower/**"
+      - "scripts/repository_control_tower_v02.py"
+      - "docs/REPOSITORY_CONTROL_TOWER_V0.2.md"
+      - "docs/REPOSITORY_GOVERNANCE_V1.0.md"
+      - ".github/workflows/repository-control-tower-v0.2.yml"
+      - ".github/workflows/repository-control-tower-v0.1.yml"
       - ".github/workflows/control-tower-ci.yml"
 
 permissions:
@@ -18,7 +23,25 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Compile
-        run: python -m py_compile control_tower/control_tower.py
+
+      - name: Compile control tower code
+        run: |
+          python -m py_compile control_tower/control_tower.py
+          python -m py_compile scripts/repository_control_tower_v02.py
+
+      - name: Validate governance registry
+        run: |
+          python -m json.tool control_tower/repository-governance.json > /dev/null
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          g = json.loads(Path("control_tower/repository-governance.json").read_text())
+          repos = g["repositories"]
+          assert len(repos) == 44, f"expected 44 repositories, got {len(repos)}"
+          allowed = set(g["policy"]["allowed_portfolios"])
+          invalid = {name: r.get("portfolio") for name, r in repos.items() if r.get("portfolio") not in allowed}
+          assert not invalid, f"invalid portfolio assignments: {invalid}"
+          PY
+
       - name: Unit tests
         run: python -m unittest discover -s control_tower/tests -v
