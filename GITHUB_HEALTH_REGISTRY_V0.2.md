@@ -1,6 +1,6 @@
 # JoyLab Repository Control Tower V0.2
 
-Generated: 2026-09-23T13:02:12.232550+00:00
+Generated: 2026-09-24T00:30:18.253011+00:00
 Scope: **authenticated-owner-scan**
 Full scan: **YES**
 
@@ -10,9 +10,9 @@ Full scan: **YES**
 
 | State | Count |
 |---|---:|
-| RED | 4 |
-| YELLOW | 1 |
-| GREEN | 22 |
+| RED | 5 |
+| YELLOW | 2 |
+| GREEN | 20 |
 | STALE | 5 |
 | EMPTY | 3 |
 | ARCHIVE | 9 |
@@ -32,15 +32,16 @@ Full scan: **YES**
 | Repository | Portfolio | State | Code | Reason |
 |---|---|---|---|---|
 | ohbeopseok-ops/JoyLab-Book-Mining | Product | **RED** | RELEASE_GATE_FAILURE | critical workflow failed: JoyLab Release Gate |
-| ohbeopseok-ops/joylab-content-os | Core | **RED** | DATA_PIPELINE_FAILURE | critical workflow failed: Daily Scoring |
+| ohbeopseok-ops/joylab-command-center | Core | **RED** | CI_TEST_FAILURE | critical workflow failed: CI |
+| ohbeopseok-ops/joylab-content-os | Core | **RED** | DATA_PIPELINE_FAILURE | critical workflow failed: GSC Performance |
 | ohbeopseok-ops/joylab-money-os | Product | **RED** | BUILD_FAILURE | critical workflow failed: Build Portable EXE |
 | ohbeopseok-ops/title-triumphs-tool | Product | **RED** | RELEASE_GATE_FAILURE | critical workflow failed: JoyLab Release Gate |
 | ohbeopseok-ops/joylab-core8-engine | Core | **YELLOW** | OPERATIONAL_AUTOMATION_FAILURE | operational workflow needs attention: Investment Lab Portfolio Refresh |
+| ohbeopseok-ops/joylab-publishing-os | Core | **YELLOW** | ACTIONS_FAILURE | operational workflow needs attention: Rates Dashboard Refresh |
 | ohbeopseok-ops/-joylab-plan-ai | Experiment | **GREEN** | NO_KNOWN_BLOCKER | no known blocking failure in latest workflow state |
 | ohbeopseok-ops/cs-ops-skills | Product | **GREEN** | ACTIVE_AND_CLEAR | push activity within 14 days and no blocking workflow failure |
 | ohbeopseok-ops/joylab-agent-os | Product | **GREEN** | NO_KNOWN_BLOCKER | no known blocking failure in latest workflow state |
 | ohbeopseok-ops/joylab-ai-voice-benchmark | Product | **GREEN** | NO_KNOWN_BLOCKER | no known blocking failure in latest workflow state |
-| ohbeopseok-ops/joylab-command-center | Core | **GREEN** | ACTIVE_AND_CLEAR | push activity within 14 days and no blocking workflow failure |
 | ohbeopseok-ops/joylab-cs-accuracy-os | Product | **GREEN** | NO_KNOWN_BLOCKER | no known blocking failure in latest workflow state |
 | ohbeopseok-ops/joylab-cs-adaptive-learning | Product | **GREEN** | NO_KNOWN_BLOCKER | no known blocking failure in latest workflow state |
 | ohbeopseok-ops/joylab-etf-intelligence | Product | **GREEN** | ACTIVE_AND_CLEAR | push activity within 14 days and no blocking workflow failure |
@@ -50,7 +51,6 @@ Full scan: **YES**
 | ohbeopseok-ops/joylab-notes | Core | **GREEN** | ACTIVE_AND_CLEAR | push activity within 14 days and no blocking workflow failure |
 | ohbeopseok-ops/joylab-portfolio-os | Core | **GREEN** | NO_KNOWN_BLOCKER | no known blocking failure in latest workflow state |
 | ohbeopseok-ops/joylab-product-hub | Core | **GREEN** | NO_KNOWN_BLOCKER | no known blocking failure in latest workflow state |
-| ohbeopseok-ops/joylab-publishing-os | Core | **GREEN** | ACTIVE_AND_CLEAR | push activity within 14 days and no blocking workflow failure |
 | ohbeopseok-ops/joylab-search-engine | Core | **GREEN** | NO_KNOWN_BLOCKER | no known blocking failure in latest workflow state |
 | ohbeopseok-ops/JoyLab-SEO | Product | **GREEN** | ACTIVE_AND_CLEAR | push activity within 14 days and no blocking workflow failure |
 | ohbeopseok-ops/joylab-vercel-site | Product | **GREEN** | NO_KNOWN_BLOCKER | no known blocking failure in latest workflow state |
