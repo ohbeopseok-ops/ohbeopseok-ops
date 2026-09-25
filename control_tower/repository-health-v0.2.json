@@ -1,16 +1,16 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-24T00:30:18.253011+00:00",
+  "generated_at": "2026-09-25T00:33:07.309535+00:00",
   "owner": "ohbeopseok-ops",
   "scope_mode": "authenticated-owner-scan",
   "private_repositories_included": true,
   "scan_complete": true,
   "counts": {
     "ARCHIVE": 9,
-    "GREEN": 20,
+    "GREEN": 21,
     "EMPTY": 3,
     "STALE": 5,
-    "RED": 5,
+    "RED": 4,
     "YELLOW": 2
   },
   "portfolio_counts": {
@@ -105,9 +105,9 @@
       "purpose": "customer-service operations skills",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 1127,
+      "size_kb": 1140,
       "archived": false,
-      "pushed_at": "2026-09-13T22:15:37Z",
+      "pushed_at": "2026-09-24T09:34:22Z",
       "state": "GREEN",
       "code": "ACTIVE_AND_CLEAR",
       "reason": "push activity within 14 days and no blocking workflow failure",
@@ -316,20 +316,20 @@
       "purpose": "multi-agent command center",
       "visibility": "private",
       "default_branch": "main",
-      "size_kb": 77,
+      "size_kb": 138,
       "archived": false,
-      "pushed_at": "2026-09-23T14:48:08Z",
-      "state": "RED",
-      "code": "CI_TEST_FAILURE",
-      "reason": "critical workflow failed: CI",
+      "pushed_at": "2026-09-24T13:21:37Z",
+      "state": "GREEN",
+      "code": "ACTIVE_AND_CLEAR",
+      "reason": "push activity within 14 days and no blocking workflow failure",
       "workflow_state": {
         "CI": {
           "status": "completed",
-          "conclusion": "failure",
-          "event": "pull_request",
-          "head_sha": "819679f9b64d68b1445ba3a80cc17a59ff2f7ea6",
-          "created_at": "2026-09-23T14:48:13Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-command-center/actions/runs/35876864934"
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "353ef0b899cad55316db3ebd17f5933f53500fac",
+          "created_at": "2026-09-24T13:21:40Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-command-center/actions/runs/36005118620"
         }
       }
     },
@@ -352,24 +352,24 @@
           "conclusion": "success",
           "event": "schedule",
           "head_sha": "96827eaf5ff9e49d2bd0ac89a9691890575dbcff",
-          "created_at": "2026-09-24T00:25:07Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-content-os/actions/runs/35938329737"
+          "created_at": "2026-09-25T00:29:11Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-content-os/actions/runs/36077748017"
         },
         "GSC Performance": {
           "status": "completed",
           "conclusion": "failure",
           "event": "schedule",
           "head_sha": "96827eaf5ff9e49d2bd0ac89a9691890575dbcff",
-          "created_at": "2026-09-23T23:56:58Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-content-os/actions/runs/35936077130"
+          "created_at": "2026-09-24T23:59:41Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-content-os/actions/runs/36075426745"
         },
         "NAVER Search Demand": {
           "status": "completed",
           "conclusion": "success",
           "event": "schedule",
           "head_sha": "96827eaf5ff9e49d2bd0ac89a9691890575dbcff",
-          "created_at": "2026-09-23T23:53:57Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-content-os/actions/runs/35935841069"
+          "created_at": "2026-09-24T23:58:26Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-content-os/actions/runs/36075336088"
         },
         "Weekly Review": {
           "status": "completed",
@@ -388,9 +388,9 @@
       "purpose": "investment decision engine",
       "visibility": "private",
       "default_branch": "main",
-      "size_kb": 670,
+      "size_kb": 672,
       "archived": false,
-      "pushed_at": "2026-09-23T12:59:57Z",
+      "pushed_at": "2026-09-24T12:53:48Z",
       "state": "YELLOW",
       "code": "OPERATIONAL_AUTOMATION_FAILURE",
       "reason": "operational workflow needs attention: Investment Lab Portfolio Refresh",
@@ -400,24 +400,24 @@
           "conclusion": "success",
           "event": "schedule",
           "head_sha": "b0e282c5d56fb22d80dd2855e2b8a14685d3b8bb",
-          "created_at": "2026-09-23T12:59:41Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-core8-engine/actions/runs/35864041706"
+          "created_at": "2026-09-24T12:53:28Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-core8-engine/actions/runs/36001965468"
         },
         "Investment Lab Portfolio Refresh": {
           "status": "completed",
           "conclusion": "failure",
           "event": "schedule",
           "head_sha": "b0e282c5d56fb22d80dd2855e2b8a14685d3b8bb",
-          "created_at": "2026-09-23T12:43:48Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-core8-engine/actions/runs/35862331304"
+          "created_at": "2026-09-24T12:42:16Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-core8-engine/actions/runs/36000736273"
         },
         "day004-auto-snapshot": {
           "status": "completed",
           "conclusion": "success",
           "event": "schedule",
           "head_sha": "b0e282c5d56fb22d80dd2855e2b8a14685d3b8bb",
-          "created_at": "2026-09-23T12:40:39Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-core8-engine/actions/runs/35861991950"
+          "created_at": "2026-09-24T12:39:21Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-core8-engine/actions/runs/36000424791"
         },
         "JoyLab Release Gate": {
           "status": "completed",
@@ -544,8 +544,8 @@
           "conclusion": "success",
           "event": "schedule",
           "head_sha": "8a4aaa8e6660fa6b832278cb36dcc9f4b420b11f",
-          "created_at": "2026-09-23T07:51:46Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-etf-intelligence/actions/runs/35833953672"
+          "created_at": "2026-09-24T07:41:51Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-etf-intelligence/actions/runs/35971016811"
         },
         "JoyLab Release Gate": {
           "status": "completed",
@@ -796,9 +796,9 @@
       "purpose": "primary publishing platform",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 5051,
+      "size_kb": 5435,
       "archived": false,
-      "pushed_at": "2026-09-23T23:31:41Z",
+      "pushed_at": "2026-09-25T00:09:50Z",
       "state": "YELLOW",
       "code": "ACTIONS_FAILURE",
       "reason": "operational workflow needs attention: Rates Dashboard Refresh",
@@ -807,57 +807,97 @@
           "status": "completed",
           "conclusion": "failure",
           "event": "schedule",
-          "head_sha": "599a0ffc1864467775028062d8452205b06c7a3c",
-          "created_at": "2026-09-24T00:29:11Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35938625661"
-        },
-        "Production Health": {
-          "status": "completed",
-          "conclusion": "success",
-          "event": "schedule",
-          "head_sha": "599a0ffc1864467775028062d8452205b06c7a3c",
-          "created_at": "2026-09-23T23:41:25Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35934831197"
-        },
-        "Deploy to Cloudflare Workers": {
-          "status": "completed",
-          "conclusion": "success",
-          "event": "push",
-          "head_sha": "599a0ffc1864467775028062d8452205b06c7a3c",
-          "created_at": "2026-09-23T23:31:44Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35934042830"
+          "head_sha": "990e1bf7c2c539ca0eaad965be629a6196cd8cd6",
+          "created_at": "2026-09-25T00:32:36Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/36078018465"
         },
         "Build": {
           "status": "completed",
           "conclusion": "success",
           "event": "push",
-          "head_sha": "599a0ffc1864467775028062d8452205b06c7a3c",
-          "created_at": "2026-09-23T23:31:44Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35934042746"
+          "head_sha": "990e1bf7c2c539ca0eaad965be629a6196cd8cd6",
+          "created_at": "2026-09-25T00:09:53Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/36076254573"
         },
-        "Book Web Reader V1": {
+        "Responsive Visual Gate V2": {
+          "status": "completed",
+          "conclusion": "failure",
+          "event": "push",
+          "head_sha": "990e1bf7c2c539ca0eaad965be629a6196cd8cd6",
+          "created_at": "2026-09-25T00:09:53Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/36076254558"
+        },
+        "Deploy to Cloudflare Workers": {
           "status": "completed",
           "conclusion": "success",
-          "event": "pull_request",
-          "head_sha": "ecad5238d06dc8c6a0c15b2fac747e12ae09ce54",
-          "created_at": "2026-09-23T23:28:53Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35933806156"
+          "event": "push",
+          "head_sha": "990e1bf7c2c539ca0eaad965be629a6196cd8cd6",
+          "created_at": "2026-09-25T00:09:53Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/36076254553"
+        },
+        "Mobile Visual Regression Gate V1": {
+          "status": "completed",
+          "conclusion": "failure",
+          "event": "push",
+          "head_sha": "990e1bf7c2c539ca0eaad965be629a6196cd8cd6",
+          "created_at": "2026-09-25T00:09:53Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/36076254491"
         },
         "Books Visual QA V1": {
           "status": "completed",
           "conclusion": "success",
           "event": "pull_request",
-          "head_sha": "ecad5238d06dc8c6a0c15b2fac747e12ae09ce54",
-          "created_at": "2026-09-23T23:28:53Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35933805864"
+          "head_sha": "2e33f163b26490e6e386a0767b163c58bfaa16af",
+          "created_at": "2026-09-25T00:01:25Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/36075572868"
         },
         "Book SEO Analytics Gate": {
           "status": "completed",
           "conclusion": "success",
           "event": "pull_request",
-          "head_sha": "ecad5238d06dc8c6a0c15b2fac747e12ae09ce54",
-          "created_at": "2026-09-23T23:28:53Z",
-          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/35933805744"
+          "head_sha": "2e33f163b26490e6e386a0767b163c58bfaa16af",
+          "created_at": "2026-09-25T00:01:25Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/36075572840"
+        },
+        "Book Web Reader V1": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "2e33f163b26490e6e386a0767b163c58bfaa16af",
+          "created_at": "2026-09-25T00:01:25Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/36075572800"
+        },
+        "Distribution Execution GOLD": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "637e51a33435ef6d8bd6a10e1dc66cbe02c19fe5",
+          "created_at": "2026-09-24T23:59:01Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/36075375947"
+        },
+        "GSC Direct API Sync": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "bc320f032803d25c5d366be4274c8e9d845b6c1f",
+          "created_at": "2026-09-24T23:56:12Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/36075168588"
+        },
+        "Research Evidence Audit": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "bc320f032803d25c5d366be4274c8e9d845b6c1f",
+          "created_at": "2026-09-24T23:56:12Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/36075168513"
+        },
+        "GSC Manual Import": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "pull_request",
+          "head_sha": "bc320f032803d25c5d366be4274c8e9d845b6c1f",
+          "created_at": "2026-09-24T23:56:12Z",
+          "html_url": "https://github.com/ohbeopseok-ops/joylab-publishing-os/actions/runs/36075168468"
         }
       }
     },
@@ -1072,9 +1112,9 @@
       "purpose": "account control tower and governance",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 138,
+      "size_kb": 105,
       "archived": false,
-      "pushed_at": "2026-09-23T13:02:37Z",
+      "pushed_at": "2026-09-24T00:30:53Z",
       "state": "GREEN",
       "code": "ACTIVE_AND_CLEAR",
       "reason": "push activity within 14 days and no blocking workflow failure",
@@ -1083,9 +1123,9 @@
           "status": "in_progress",
           "conclusion": null,
           "event": "schedule",
-          "head_sha": "13adef93f7d8695a2e640aaa42f278bbf25f7c8f",
-          "created_at": "2026-09-24T00:30:13Z",
-          "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/35938702287"
+          "head_sha": "74cc8ec7e80a2fd1c1bd9ab7176a1661492856e9",
+          "created_at": "2026-09-25T00:33:00Z",
+          "html_url": "https://github.com/ohbeopseok-ops/ohbeopseok-ops/actions/runs/36078049554"
         },
         "JoyLab Repository Control Tower": {
           "status": "completed",
@@ -1180,52 +1220,36 @@
       "purpose": "senior public toilet finder",
       "visibility": "public",
       "default_branch": "main",
-      "size_kb": 178,
+      "size_kb": 422,
       "archived": false,
-      "pushed_at": "2026-09-23T23:07:10Z",
+      "pushed_at": "2026-09-25T00:23:32Z",
       "state": "GREEN",
       "code": "ACTIVE_AND_CLEAR",
       "reason": "push activity within 14 days and no blocking workflow failure",
       "workflow_state": {
-        "Geocode Public Toilet Addresses": {
-          "status": "completed",
-          "conclusion": "success",
-          "event": "schedule",
-          "head_sha": "2a1c4264ab8b3a2eb27938d6ca5a838c4d733047",
-          "created_at": "2026-09-23T23:06:59Z",
-          "html_url": "https://github.com/ohbeopseok-ops/senior-toilet-finder/actions/runs/35931936431"
-        },
-        "Sync Public Toilet Data": {
-          "status": "completed",
-          "conclusion": "success",
-          "event": "schedule",
-          "head_sha": "510de25b1902d79187ac084ebf2e56e0b88e8751",
-          "created_at": "2026-09-23T22:57:50Z",
-          "html_url": "https://github.com/ohbeopseok-ops/senior-toilet-finder/actions/runs/35931143488"
-        },
-        "Sync Data.go.kr Public Toilets": {
-          "status": "completed",
-          "conclusion": "success",
-          "event": "schedule",
-          "head_sha": "510de25b1902d79187ac084ebf2e56e0b88e8751",
-          "created_at": "2026-09-23T22:13:41Z",
-          "html_url": "https://github.com/ohbeopseok-ops/senior-toilet-finder/actions/runs/35927137045"
-        },
         "Deploy GitHub Pages": {
           "status": "completed",
           "conclusion": "success",
           "event": "push",
-          "head_sha": "88f694a3ec72901eb8d948cdb919dbf42b275b12",
-          "created_at": "2026-09-23T09:46:21Z",
-          "html_url": "https://github.com/ohbeopseok-ops/senior-toilet-finder/actions/runs/35844898387"
+          "head_sha": "2eb0e7f41bad7651a972d8ca525be70bf100271e",
+          "created_at": "2026-09-25T00:23:34Z",
+          "html_url": "https://github.com/ohbeopseok-ops/senior-toilet-finder/actions/runs/36077321808"
         },
-        "Build Anyang Toilet Seed": {
+        "Android TWA Build": {
           "status": "completed",
           "conclusion": "success",
           "event": "push",
-          "head_sha": "66752738380e09aec273492ff986eaf4889bb7ca",
-          "created_at": "2026-09-23T09:35:02Z",
-          "html_url": "https://github.com/ohbeopseok-ops/senior-toilet-finder/actions/runs/35843793301"
+          "head_sha": "af2a3589a1651106ec4ae8c4cc963d8a596221cf",
+          "created_at": "2026-09-25T00:20:43Z",
+          "html_url": "https://github.com/ohbeopseok-ops/senior-toilet-finder/actions/runs/36077103260"
+        },
+        "Deploy Nearby Worker": {
+          "status": "completed",
+          "conclusion": "success",
+          "event": "push",
+          "head_sha": "e41ea272c5c095c4ef4c2bb2a65e96453efc35cf",
+          "created_at": "2026-09-24T23:46:50Z",
+          "html_url": "https://github.com/ohbeopseok-ops/senior-toilet-finder/actions/runs/36074424949"
         }
       }
     },
